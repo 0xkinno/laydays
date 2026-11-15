@@ -196,7 +196,7 @@ The contract has 22 tests run with `npm run test:sol`: every happy path, every r
 
 ### Measured against what courts decided
 
-Seven reported English judgments, opened and confirmed on the National Archives site and committed before they were run ([`proof/court-replay`](proof/court-replay)). No prompt was tuned on any of them.
+Eight reported English judgments, opened and confirmed on the National Archives site and committed before they were run ([`proof/court-replay`](proof/court-replay)). No prompt was tuned on any of them.
 
 | Case | Court | Laydays |
 |---|---|---|
@@ -207,8 +207,9 @@ Seven reported English judgments, opened and confirmed on the National Archives 
 | [Eagle Valencia](https://caselaw.nationalarchives.gov.uk/ewca/civ/2010/713) | notice invalid, laytime does not run | abstained |
 | [Waterfront v Trafigura](https://caselaw.nationalarchives.gov.uk/ewhc/comm/2007/2482) | barred (signed pumping logs missing) | agreed |
 | [The Abqaiq](https://caselaw.nationalarchives.gov.uk/ewca/civ/2011/1127) | not barred (all documents arrived in time) | abstained, clause names no documents |
+| [Trans Trade v Sebat](https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/950) | invalid notice, no waiver: laytime does not start | agreed |
 
-**3 of 7 agreed, interval 16% to 75%.** Documents wrongly passed 1, wrongly flagged 0, abstained 3. Seven cases is a small sample, the interval says so, and the one miss points the dangerous way. Plain `gpt-6-luna`, Multipath, Kronos plus Multipath and Shadow Agent scored 2, 1, 3 and 3 of 7 on the same cases: a case or two apart, which is noise, so this test cannot say Multipath helps. The first five cases were run first; two more were found by searching the National Archives site and were committed before they were run.
+**4 of 8 agreed, interval 22% to 78%.** Documents wrongly passed 1, wrongly flagged 0, abstained 3. Eight cases is a small sample, the interval says so, and the one miss points the dangerous way. Plain `gpt-6-luna`, Multipath, Kronos plus Multipath and Shadow Agent scored 3, 2, 4 and 4 of 8 on the same cases: a case or two apart, which is noise, so this test cannot say Multipath helps. The first five cases were run first; three more were found by searching the National Archives site (about 30 candidate judgments screened over three searches) and each was committed before it was run.
 
 **A wider test with answers set by code.** Seeded generated voyages ([`lib/laytime/generator.ts`](lib/laytime/generator.ts)), 12 new seeds, 96 intervals. Rulebook version 1: 62 agreed (55% to 73%), 33 sent to a person, 1 wrong. Version 2, five rules drafted by SERV from version 1's failures and from four Reppo critiques and approved by the owner before they ran: 65 agreed (58% to 76%), 31 sent to a person, none wrong. The gain is within noise; fog closures rose from 7 to 12 of 12, and the two kinds the rules targeted stayed at 0 of 12 because our cause-clause check, not the rules, holds them. In 24 of the abstentions the model's effect was already right. Detail in [PROOF.md](PROOF.md).
 
@@ -216,7 +217,7 @@ Seven reported English judgments, opened and confirmed on the National Archives 
 
 **Also measured:** the whole two-party flow runs in a browser against the live site with two wallets (8 steps, every one a real transaction); Lighthouse on the live landing page scores 99 performance, 100 accessibility, 100 best practices, 100 SEO; the SERV probe answers nine questions in [FINDINGS.md](FINDINGS.md).
 
-**Not measured:** cost and latency percentiles over many full-voyage runs, and a court set larger than seven. Reppo was used as an outside evaluator of rulings and drove one rulebook change, which is measured above; whether that earns the Reppo track is left to the entrant.
+**Not measured:** cost and latency percentiles over many full-voyage runs, and a court set larger than eight. Reppo was used as an outside evaluator of rulings and drove one rulebook change, which is measured above; whether that earns the Reppo track is left to the entrant.
 
 A recording of the guided tour, the base of the demo video, is in [`docs/video/tour.webm`](docs/video/tour.webm).
 

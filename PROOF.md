@@ -22,7 +22,7 @@ Four scripted bad models run through the real checks on `/break`: count everythi
 
 ## Court replay (done)
 
-Seven reported English judgments, opened on caselaw.nationalarchives.gov.uk on 15 November 2026. The first five were committed before any run in [`3e93ac5`](proof/court-replay); two more found by search were committed in [`9155e73`](proof/court-replay) before they were run. Files in [`proof/court-replay/cases`](proof/court-replay/cases), results in `proof/runs/replay-*.json`, summary in `proof/runs/replay.facts.json`.
+Eight reported English judgments, opened on caselaw.nationalarchives.gov.uk on 15 November 2026. The first five were committed before any run in [`3e93ac5`](proof/court-replay); two more found by search in [`9155e73`](proof/court-replay) and one more in [`75ee22f`](proof/court-replay), each before it was run. Files in [`proof/court-replay/cases`](proof/court-replay/cases), results in `proof/runs/replay-*.json`, summary in `proof/runs/replay.facts.json`.
 
 | Case | Court | Laydays (Kronos plus Multipath) |
 |---|---|---|
@@ -33,12 +33,13 @@ Seven reported English judgments, opened on caselaw.nationalarchives.gov.uk on 1
 | AET v Arcadia (Eagle Valencia) [2010] EWCA Civ 713 | notice invalid, laytime does not run | abstained |
 | Waterfront v Trafigura [2007] EWHC 2482 (Comm) | barred | agreed |
 | National Shipping of Saudi Arabia v BP (The Abqaiq) [2011] EWCA Civ 1127 | not barred | abstained: the clause names no documents |
+| Trans Trade RK v Sebat [2026] EWHC 950 (Comm) | invalid notice, no waiver: laytime does not start | agreed |
 
-3 of 7 agreed, interval 16% to 75%. Both error directions: documents wrongly passed 1, wrongly flagged 0, abstained 3. Seven cases is a small sample and the interval says so. The seed list had ten cases; five could not be opened and confirmed and were dropped, and a search of the National Archives site added two. Other judgments were screened and left out because their holding was about something else or too entangled to encode honestly. No prompt was tuned on any case.
+4 of 8 agreed, interval 22% to 78%. Both error directions: documents wrongly passed 1, wrongly flagged 0, abstained 3. Eight cases is a small sample and the interval says so. The seed list had ten cases; five could not be opened and confirmed and were dropped, and three searches of the National Archives site added three (about 30 judgments screened). Other judgments were screened and left out because their holding was about something else or too entangled to encode honestly. No prompt was tuned on any case.
 
-## Ablation (done, same seven cases)
+## Ablation (done, same eight cases)
 
-Plain `gpt-6-luna` (three runs per case, majority) 2 of 7; Multipath 1 of 7; Kronos plus Multipath 3 of 7; plus Shadow Agent 3 of 7. A difference of one or two cases out of seven is noise. Median latency 2.6 to 3.0 s on every arm, token cost between $0.001 and $0.004 per arm.
+Plain `gpt-6-luna` (three runs per case, majority) 3 of 8; Multipath 2 of 8; Kronos plus Multipath 4 of 8; plus Shadow Agent 4 of 8. A difference of one or two cases out of eight is noise. Median latency 2.6 to 3.0 s on every arm, token cost between $0.001 and $0.004 per arm.
 
 ## Rulebook loop (done, generated voyages, answers set by code)
 
@@ -59,5 +60,5 @@ One x402 payment settled for a paid ruling (`proof/runs/x402-paid-call.json`). T
 ## Not yet run
 
 - Cost and latency percentiles over many full-voyage runs (one full run is recorded).
-- A court set larger than seven.
+- A court set larger than eight.
 - The first scheduled time bar watch record (scheduled, read from runtime logs when it has run).

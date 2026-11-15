@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T10:17:24.896Z",
+  "generatedAt": "2026-11-15T10:42:52.564Z",
   "demo_intervals": 22,
   "demo_observed": 21,
   "demo_review": 1,
@@ -15,24 +15,24 @@
   "onchain_summary": "6 transactions, 5 refusals",
   "onchain_transactions": 6,
   "onchain_refusals": 5,
-  "court_agree": 3,
-  "court_total": 7,
-  "court_summary": "3 of 7, interval 16% to 75%; 3 abstained, 1 wrong",
-  "ablation_summary": "A 2/7, B 1/7, C 3/7, D 3/7",
+  "court_agree": 4,
+  "court_total": 8,
+  "court_summary": "4 of 8, interval 22% to 78%; 3 abstained, 1 wrong",
+  "ablation_summary": "A 3/8, B 2/8, C 4/8, D 4/8",
   "errors_summary": "documents wrongly passed 1, wrongly flagged 0, abstained 3",
   "replay_arms": {
     "a": {
       "label": "plain gpt-6-luna",
-      "agree": 2,
+      "agree": 3,
       "abstain": 3,
       "wrongPassed": 1,
       "wrongFlagged": 1,
       "wrongOther": 0,
-      "n": 7,
-      "runs": 21,
-      "runAgree": 8,
-      "medianMs": 2950,
-      "tokenCostUsd": 0.00531479,
+      "n": 8,
+      "runs": 24,
+      "runAgree": 11,
+      "medianMs": 3030,
+      "tokenCostUsd": 0.00660699,
       "perCase": {
         "amalie-essberger-2019": "barred (court not_barred)",
         "eagle-valencia-2010": "abstained (court excepted)",
@@ -40,21 +40,22 @@
         "lukoil-ocean-neptune-2018": "barred (court barred)",
         "tricon-mtm-2020": "not_barred (court barred)",
         "abqaiq-bp-2011": "abstained (court not_barred)",
-        "waterfront-trafigura-2007": "barred (court barred)"
+        "waterfront-trafigura-2007": "barred (court barred)",
+        "trans-trade-sebat-2026": "excepted (court excepted)"
       }
     },
     "b": {
       "label": "Multipath",
-      "agree": 1,
+      "agree": 2,
       "abstain": 4,
       "wrongPassed": 1,
       "wrongFlagged": 1,
       "wrongOther": 0,
-      "n": 7,
-      "runs": 7,
-      "runAgree": 1,
-      "medianMs": 2305,
-      "tokenCostUsd": 0.00136877,
+      "n": 8,
+      "runs": 8,
+      "runAgree": 2,
+      "medianMs": 2617,
+      "tokenCostUsd": 0.00181701,
       "perCase": {
         "amalie-essberger-2019": "barred (court not_barred)",
         "eagle-valencia-2010": "abstained (court excepted)",
@@ -62,21 +63,22 @@
         "lukoil-ocean-neptune-2018": "barred (court barred)",
         "tricon-mtm-2020": "not_barred (court barred)",
         "abqaiq-bp-2011": "abstained (court not_barred)",
-        "waterfront-trafigura-2007": "abstained (court barred)"
+        "waterfront-trafigura-2007": "abstained (court barred)",
+        "trans-trade-sebat-2026": "excepted (court excepted)"
       }
     },
     "c": {
       "label": "Kronos plus Multipath",
-      "agree": 3,
+      "agree": 4,
       "abstain": 3,
       "wrongPassed": 1,
       "wrongFlagged": 0,
       "wrongOther": 0,
-      "n": 7,
-      "runs": 7,
-      "runAgree": 3,
-      "medianMs": 2752,
-      "tokenCostUsd": 0.0021104200000000004,
+      "n": 8,
+      "runs": 8,
+      "runAgree": 4,
+      "medianMs": 3985,
+      "tokenCostUsd": 0.0032249100000000005,
       "perCase": {
         "amalie-essberger-2019": "not_barred (court not_barred)",
         "eagle-valencia-2010": "abstained (court excepted)",
@@ -84,21 +86,22 @@
         "lukoil-ocean-neptune-2018": "barred (court barred)",
         "tricon-mtm-2020": "not_barred (court barred)",
         "abqaiq-bp-2011": "abstained (court not_barred)",
-        "waterfront-trafigura-2007": "barred (court barred)"
+        "waterfront-trafigura-2007": "barred (court barred)",
+        "trans-trade-sebat-2026": "excepted (court excepted)"
       }
     },
     "d": {
       "label": "Kronos plus Multipath plus Shadow Agent",
-      "agree": 3,
+      "agree": 4,
       "abstain": 3,
       "wrongPassed": 1,
       "wrongFlagged": 0,
       "wrongOther": 0,
-      "n": 7,
-      "runs": 7,
-      "runAgree": 3,
-      "medianMs": 6874,
-      "tokenCostUsd": 0.00220337,
+      "n": 8,
+      "runs": 8,
+      "runAgree": 4,
+      "medianMs": 7592,
+      "tokenCostUsd": 0.00291356,
       "perCase": {
         "amalie-essberger-2019": "not_barred (court not_barred)",
         "eagle-valencia-2010": "abstained (court excepted)",
@@ -106,7 +109,8 @@
         "lukoil-ocean-neptune-2018": "barred (court barred)",
         "tricon-mtm-2020": "not_barred (court barred)",
         "abqaiq-bp-2011": "abstained (court not_barred)",
-        "waterfront-trafigura-2007": "barred (court barred)"
+        "waterfront-trafigura-2007": "barred (court barred)",
+        "trans-trade-sebat-2026": "excepted (court excepted)"
       }
     }
   },

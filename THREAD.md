@@ -16,7 +16,7 @@ Models read and rule. Code keeps the clock and the money. Meera, the analyst, si
 A contract on Base Sepolia refuses a late claim (TimeBarred) and a claim with a document missing (MissingSupportingDocuments). Both refusals are mined and linked: https://laydays.vercel.app/proof
 
 4/
-Measured against seven reported English judgments: Laydays agreed with the court on 3, abstained on 3, and wrongly passed 1. Small sample, wide interval, misses published. Plain model against Multipath is within noise at n=7, and I say so.
+Measured against eight reported English judgments: Laydays agreed with the court on 4, abstained on 3, and wrongly passed 1. Small sample, wide interval, misses published. Plain model against Multipath is within noise at n=8, and I say so.
 
 5/
 The paid route takes a real x402 payment: 0.02 USDC for one ruling, 0.0004 USD of model cost. Contract verified, repo public: https://github.com/0xkinno/laydays
