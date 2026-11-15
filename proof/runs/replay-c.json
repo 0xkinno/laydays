@@ -1,0 +1,101 @@
+{
+  "arm": "c",
+  "label": "Kronos plus Multipath",
+  "model": "gpt-6-luna-serv-kronos-multipath",
+  "tools": [],
+  "at": "2026-11-15T08:54:50.427Z",
+  "results": [
+    {
+      "case": "amalie-essberger-2019",
+      "rep": 1,
+      "court": "not_barred",
+      "answer": "not_barred",
+      "agree": true,
+      "required": [
+        "port_log",
+        "nor",
+        "pumping",
+        "protest"
+      ],
+      "missing": [],
+      "barDays": 90,
+      "requestId": "fb9a1ddd-2c10-450e-8ae7-f07c1b44861c",
+      "latencyMs": 7909,
+      "costUsd": 0.00033215
+    },
+    {
+      "case": "eagle-valencia-2010",
+      "rep": 1,
+      "court": "excepted",
+      "answer": "abstained",
+      "agree": false,
+      "effect": "ambiguous",
+      "clauses": [
+        "CP-22.1",
+        "CP-22.3",
+        "L-2"
+      ],
+      "verdict": "REVIEW",
+      "problems": [
+        "ambiguous after code precedence"
+      ],
+      "requestId": "ec7f8366-a439-45fd-bad0-d6a8f63b886c",
+      "latencyMs": 130811,
+      "costUsd": 0.00101439
+    },
+    {
+      "case": "kassiopi-adventure-2015",
+      "rep": 1,
+      "court": "barred",
+      "answer": "abstained",
+      "agree": false,
+      "required": [],
+      "missing": [],
+      "barDays": 90,
+      "requestId": "3b5feee1-e127-49ae-a223-1a7d193ff677",
+      "latencyMs": 1949,
+      "costUsd": 0.00011635000000000001
+    },
+    {
+      "case": "lukoil-ocean-neptune-2018",
+      "rep": 1,
+      "court": "barred",
+      "answer": "barred",
+      "agree": true,
+      "required": [
+        "nor",
+        "sof",
+        "pumping",
+        "bol",
+        "manifest"
+      ],
+      "missing": [
+        "nor",
+        "sof",
+        "pumping",
+        "bol",
+        "manifest"
+      ],
+      "barDays": 90,
+      "requestId": "f68bfcd8-7ff5-48ae-b3c9-f58046d1d0c1",
+      "latencyMs": 2560,
+      "costUsd": 0.00015509
+    },
+    {
+      "case": "tricon-mtm-2020",
+      "rep": 1,
+      "court": "barred",
+      "answer": "not_barred",
+      "agree": false,
+      "required": [
+        "sof",
+        "nor"
+      ],
+      "missing": [],
+      "barDays": 90,
+      "requestId": "21859836-c048-42e8-ae8e-88adc6b28596",
+      "latencyMs": 1769,
+      "costUsd": 0.00012869999999999998
+    }
+  ]
+}

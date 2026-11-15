@@ -69,7 +69,7 @@ export type ClauseReaderOut = z.infer<typeof clauseReaderZ>;
 export type RulingOut = ClauseReaderOut["intervals"][number];
 
 /* ---------- Time-bar Clerk ---------- */
-export const DOC_KEYS = ["nor", "sof", "bol", "pumping", "manifest", "statement", "notices", "charter_party", "invoice", "survey", "other"] as const;
+export const DOC_KEYS = ["nor", "sof", "bol", "pumping", "manifest", "statement", "notices", "port_log", "time_sheet", "protest", "charter_party", "invoice", "survey", "other"] as const;
 export const timeBarSchema = {
   type: "object", additionalProperties: false, required: ["bar_days", "required_keys", "reason"],
   properties: {

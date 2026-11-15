@@ -30,7 +30,8 @@ const handler = async (req: NextRequest): Promise<NextResponse> => {
   const { interval, clauses, portRules } = parsed.data;
   const lineId = "L01";
   const built = [{ id: interval.id, from: interval.from, to: interval.to, startLine: lineId, endLine: lineId, kind: "waiting" as const, cause: "none" as const, text: interval.text }];
-  const res = await clauseReader({ cp: clauses, port: portRules, lines: [{ id: lineId, text: interval.text }], intervals: built, offsetMinutes: 0 });
+  // The paid route defaults to a plain model: a Multipath cache miss is slow and billed beyond the visible tokens, which would cost more than the 0.02 price. X402_MODEL overrides it.
+  const res = await clauseReader({ cp: clauses, port: portRules, lines: [{ id: lineId, text: interval.text }], intervals: built, offsetMinutes: 0 }, { model: process.env.X402_MODEL ?? "gpt-6-luna", plain: !/multipath|kronos/.test(process.env.X402_MODEL ?? "") });
   if (!res.ok) return NextResponse.json({ error: `ruling not made: ${res.error}`, refusedBy: res.refusedBy ?? null, requestId: res.requestId }, { status: 502 });
   const catalog = { charter_party: new Set(clauses.map((c) => c.id)), laytime_definitions: new Set(DEFINITION_IDS), port_rules: new Set(portRules.map((c) => c.id)) };
   const [checked] = checkRulings([interval.id], res.value!.intervals, catalog, new Set([lineId]), new Map([[interval.id, { startLine: lineId, endLine: lineId }]]));

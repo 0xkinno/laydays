@@ -1,0 +1,293 @@
+{
+  "arm": "a",
+  "label": "plain gpt-6-luna",
+  "model": "gpt-6-luna",
+  "tools": [],
+  "at": "2026-11-15T08:52:18.216Z",
+  "results": [
+    {
+      "case": "amalie-essberger-2019",
+      "rep": 1,
+      "court": "not_barred",
+      "answer": "barred",
+      "agree": false,
+      "required": [
+        "time_sheet",
+        "port_log",
+        "notices",
+        "pumping",
+        "protest",
+        "statement"
+      ],
+      "missing": [
+        "notices"
+      ],
+      "barDays": 90,
+      "requestId": "d4519c87-746e-4cd6-9bdf-407bb7dbebf7",
+      "latencyMs": 6192,
+      "costUsd": 0.00023920000000000001
+    },
+    {
+      "case": "eagle-valencia-2010",
+      "rep": 1,
+      "court": "excepted",
+      "answer": "abstained",
+      "agree": false,
+      "effect": "ambiguous",
+      "clauses": [
+        "CP-22.3"
+      ],
+      "verdict": "REVIEW",
+      "problems": [
+        "clause  is not in laytime_definitions",
+        "silent branch laytime_definitions cites ",
+        "clause  is not in port_rules",
+        "silent branch port_rules cites ",
+        "ambiguous after code precedence"
+      ],
+      "requestId": "2cdbf107-a21a-4597-a517-56212e4da128",
+      "latencyMs": 13604,
+      "costUsd": 0.0006799000000000001
+    },
+    {
+      "case": "kassiopi-adventure-2015",
+      "rep": 1,
+      "court": "barred",
+      "answer": "abstained",
+      "agree": false,
+      "required": [],
+      "missing": [],
+      "barDays": 90,
+      "requestId": "f770448d-a9e1-4d0b-a28b-50f6ba8ae7a0",
+      "latencyMs": 2479,
+      "costUsd": 0.00012545
+    },
+    {
+      "case": "lukoil-ocean-neptune-2018",
+      "rep": 1,
+      "court": "barred",
+      "answer": "barred",
+      "agree": true,
+      "required": [
+        "nor",
+        "sof",
+        "pumping"
+      ],
+      "missing": [
+        "nor",
+        "sof",
+        "pumping"
+      ],
+      "barDays": 90,
+      "requestId": "8cfc968d-e5f0-4d4b-938c-d34f0408fca4",
+      "latencyMs": 2950,
+      "costUsd": 0.00017589
+    },
+    {
+      "case": "tricon-mtm-2020",
+      "rep": 1,
+      "court": "barred",
+      "answer": "not_barred",
+      "agree": false,
+      "required": [
+        "sof",
+        "nor"
+      ],
+      "missing": [],
+      "barDays": 90,
+      "requestId": "56c87dd6-c686-4e3d-ac19-c7c9a72c67aa",
+      "latencyMs": 2215,
+      "costUsd": 0.00017680000000000001
+    },
+    {
+      "case": "amalie-essberger-2019",
+      "rep": 2,
+      "court": "not_barred",
+      "answer": "barred",
+      "agree": false,
+      "required": [
+        "port_log",
+        "notices",
+        "pumping",
+        "protest"
+      ],
+      "missing": [
+        "notices"
+      ],
+      "barDays": 90,
+      "requestId": "18d661b5-81e8-4b27-9c26-859a07d73f3a",
+      "latencyMs": 2476,
+      "costUsd": 0.00015405
+    },
+    {
+      "case": "eagle-valencia-2010",
+      "rep": 2,
+      "court": "excepted",
+      "answer": "abstained",
+      "agree": false,
+      "effect": "ambiguous",
+      "clauses": [
+        "CP-22.3"
+      ],
+      "verdict": "REVIEW",
+      "problems": [
+        "clause  is not in laytime_definitions",
+        "silent branch laytime_definitions cites ",
+        "clause  is not in port_rules",
+        "silent branch port_rules cites ",
+        "ambiguous after code precedence"
+      ],
+      "requestId": "8a75e6f9-467f-42f8-88e1-76c52bf2f8b5",
+      "latencyMs": 7882,
+      "costUsd": 0.00065
+    },
+    {
+      "case": "kassiopi-adventure-2015",
+      "rep": 2,
+      "court": "barred",
+      "answer": "abstained",
+      "agree": false,
+      "required": [],
+      "missing": [],
+      "barDays": 90,
+      "requestId": "06fac076-f644-4bf8-a1c3-eb05ab1302e7",
+      "latencyMs": 3394,
+      "costUsd": 0.00013519999999999998
+    },
+    {
+      "case": "lukoil-ocean-neptune-2018",
+      "rep": 2,
+      "court": "barred",
+      "answer": "barred",
+      "agree": true,
+      "required": [
+        "nor",
+        "sof",
+        "pumping",
+        "bol",
+        "manifest"
+      ],
+      "missing": [
+        "nor",
+        "sof",
+        "pumping",
+        "bol",
+        "manifest"
+      ],
+      "barDays": 90,
+      "requestId": "ec625845-0849-47aa-a2ec-18f790654ff3",
+      "latencyMs": 2838,
+      "costUsd": 0.00019474
+    },
+    {
+      "case": "tricon-mtm-2020",
+      "rep": 2,
+      "court": "barred",
+      "answer": "barred",
+      "agree": true,
+      "required": [
+        "nor",
+        "sof",
+        "bol"
+      ],
+      "missing": [
+        "bol"
+      ],
+      "barDays": 90,
+      "requestId": "68e79f93-e64e-43c7-a393-8c06dc5eef1e",
+      "latencyMs": 2976,
+      "costUsd": 0.00023725
+    },
+    {
+      "case": "amalie-essberger-2019",
+      "rep": 3,
+      "court": "not_barred",
+      "answer": "not_barred",
+      "agree": true,
+      "required": [
+        "port_log",
+        "time_sheet",
+        "nor",
+        "pumping",
+        "protest"
+      ],
+      "missing": [],
+      "barDays": 90,
+      "requestId": "3d846756-f4af-4a57-ae75-02e11471208e",
+      "latencyMs": 3030,
+      "costUsd": 0.00022035000000000002
+    },
+    {
+      "case": "eagle-valencia-2010",
+      "rep": 3,
+      "court": "excepted",
+      "answer": "abstained",
+      "agree": false,
+      "effect": "ambiguous",
+      "clauses": [
+        "CP-22.3"
+      ],
+      "verdict": "REVIEW",
+      "problems": [
+        "clause  is not in laytime_definitions",
+        "silent branch laytime_definitions cites ",
+        "clause  is not in port_rules",
+        "silent branch port_rules cites ",
+        "ambiguous after code precedence"
+      ],
+      "requestId": "2835dbab-cdd9-4197-b8d7-a722e0d01df2",
+      "latencyMs": 9035,
+      "costUsd": 0.00077025
+    },
+    {
+      "case": "kassiopi-adventure-2015",
+      "rep": 3,
+      "court": "barred",
+      "answer": "abstained",
+      "agree": false,
+      "required": [],
+      "missing": [],
+      "barDays": 90,
+      "requestId": "e0a69a07-6fcd-44f1-858f-f7353f1a7980",
+      "latencyMs": 2382,
+      "costUsd": 0.00013455000000000002
+    },
+    {
+      "case": "lukoil-ocean-neptune-2018",
+      "rep": 3,
+      "court": "barred",
+      "answer": "barred",
+      "agree": true,
+      "required": [
+        "nor",
+        "sof",
+        "pumping"
+      ],
+      "missing": [
+        "nor",
+        "sof",
+        "pumping"
+      ],
+      "barDays": 90,
+      "requestId": "93c67739-217d-49e6-be31-6a6a89e11858",
+      "latencyMs": 2442,
+      "costUsd": 0.00014079
+    },
+    {
+      "case": "tricon-mtm-2020",
+      "rep": 3,
+      "court": "barred",
+      "answer": "not_barred",
+      "agree": false,
+      "required": [
+        "sof",
+        "nor"
+      ],
+      "missing": [],
+      "barDays": 90,
+      "requestId": "c4df7f93-5e84-4c68-a06c-c1a49baee477",
+      "latencyMs": 2534,
+      "costUsd": 0.00016835000000000003
+    }
+  ]
+}

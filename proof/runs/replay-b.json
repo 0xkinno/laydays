@@ -1,0 +1,101 @@
+{
+  "arm": "b",
+  "label": "Multipath",
+  "model": "gpt-6-luna-serv-multipath",
+  "tools": [],
+  "at": "2026-11-15T08:55:20.121Z",
+  "results": [
+    {
+      "case": "amalie-essberger-2019",
+      "rep": 1,
+      "court": "not_barred",
+      "answer": "barred",
+      "agree": false,
+      "required": [
+        "port_log",
+        "notices",
+        "pumping",
+        "protest"
+      ],
+      "missing": [
+        "notices"
+      ],
+      "barDays": 90,
+      "requestId": "c52ca086-e9e9-4f9f-9c15-e7ba905df286",
+      "latencyMs": 6028,
+      "costUsd": 0.00018200000000000003
+    },
+    {
+      "case": "eagle-valencia-2010",
+      "rep": 1,
+      "court": "excepted",
+      "answer": "abstained",
+      "agree": false,
+      "effect": "ambiguous",
+      "clauses": [
+        "CP-22.1",
+        "CP-22.3"
+      ],
+      "verdict": "REVIEW",
+      "problems": [
+        "clause  is not in laytime_definitions",
+        "silent branch laytime_definitions cites ",
+        "clause  is not in port_rules",
+        "silent branch port_rules cites ",
+        "ambiguous after code precedence"
+      ],
+      "requestId": "bd370b21-03bb-4152-a0a1-ac2e6c81b448",
+      "latencyMs": 8537,
+      "costUsd": 0.00050869
+    },
+    {
+      "case": "kassiopi-adventure-2015",
+      "rep": 1,
+      "court": "barred",
+      "answer": "abstained",
+      "agree": false,
+      "required": [],
+      "missing": [],
+      "barDays": 90,
+      "requestId": "8df1a735-7cd5-4dbf-a83a-e835965de1b9",
+      "latencyMs": 2180,
+      "costUsd": 0.00014105
+    },
+    {
+      "case": "lukoil-ocean-neptune-2018",
+      "rep": 1,
+      "court": "barred",
+      "answer": "barred",
+      "agree": true,
+      "required": [
+        "nor",
+        "statement",
+        "pumping"
+      ],
+      "missing": [
+        "nor",
+        "pumping"
+      ],
+      "barDays": 90,
+      "requestId": "3cf993d0-e2ba-4ecc-bb93-8c1c8c1aba24",
+      "latencyMs": 2617,
+      "costUsd": 0.00016159
+    },
+    {
+      "case": "tricon-mtm-2020",
+      "rep": 1,
+      "court": "barred",
+      "answer": "not_barred",
+      "agree": false,
+      "required": [
+        "statement",
+        "nor"
+      ],
+      "missing": [],
+      "barDays": 90,
+      "requestId": "61e6ea8c-9bd3-41a4-ab53-5760fdb852ca",
+      "latencyMs": 2305,
+      "costUsd": 0.000143
+    }
+  ]
+}

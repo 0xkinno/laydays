@@ -1,0 +1,89 @@
+{
+  "court_agree": 2,
+  "court_total": 5,
+  "court_summary": "2 of 5, interval 12% to 77%; 2 abstained, 1 wrong",
+  "ablation_summary": "A 1/5, B 1/5, C 2/5, D 2/5",
+  "errors_summary": "documents wrongly passed 1, wrongly flagged 0, abstained 2",
+  "replay_arms": {
+    "a": {
+      "label": "plain gpt-6-luna",
+      "agree": 1,
+      "abstain": 2,
+      "wrongPassed": 1,
+      "wrongFlagged": 1,
+      "wrongOther": 0,
+      "n": 5,
+      "runs": 15,
+      "runAgree": 5,
+      "medianMs": 2950,
+      "tokenCostUsd": 0.004202770000000001,
+      "perCase": {
+        "amalie-essberger-2019": "barred (court not_barred)",
+        "eagle-valencia-2010": "abstained (court excepted)",
+        "kassiopi-adventure-2015": "abstained (court barred)",
+        "lukoil-ocean-neptune-2018": "barred (court barred)",
+        "tricon-mtm-2020": "not_barred (court barred)"
+      }
+    },
+    "b": {
+      "label": "Multipath",
+      "agree": 1,
+      "abstain": 2,
+      "wrongPassed": 1,
+      "wrongFlagged": 1,
+      "wrongOther": 0,
+      "n": 5,
+      "runs": 5,
+      "runAgree": 1,
+      "medianMs": 2617,
+      "tokenCostUsd": 0.00113633,
+      "perCase": {
+        "amalie-essberger-2019": "barred (court not_barred)",
+        "eagle-valencia-2010": "abstained (court excepted)",
+        "kassiopi-adventure-2015": "abstained (court barred)",
+        "lukoil-ocean-neptune-2018": "barred (court barred)",
+        "tricon-mtm-2020": "not_barred (court barred)"
+      }
+    },
+    "c": {
+      "label": "Kronos plus Multipath",
+      "agree": 2,
+      "abstain": 2,
+      "wrongPassed": 1,
+      "wrongFlagged": 0,
+      "wrongOther": 0,
+      "n": 5,
+      "runs": 5,
+      "runAgree": 2,
+      "medianMs": 2560,
+      "tokenCostUsd": 0.0017466800000000002,
+      "perCase": {
+        "amalie-essberger-2019": "not_barred (court not_barred)",
+        "eagle-valencia-2010": "abstained (court excepted)",
+        "kassiopi-adventure-2015": "abstained (court barred)",
+        "lukoil-ocean-neptune-2018": "barred (court barred)",
+        "tricon-mtm-2020": "not_barred (court barred)"
+      }
+    },
+    "d": {
+      "label": "Kronos plus Multipath plus Shadow Agent",
+      "agree": 2,
+      "abstain": 2,
+      "wrongPassed": 1,
+      "wrongFlagged": 0,
+      "wrongOther": 0,
+      "n": 5,
+      "runs": 5,
+      "runAgree": 2,
+      "medianMs": 6874,
+      "tokenCostUsd": 0.00189553,
+      "perCase": {
+        "amalie-essberger-2019": "not_barred (court not_barred)",
+        "eagle-valencia-2010": "abstained (court excepted)",
+        "kassiopi-adventure-2015": "abstained (court barred)",
+        "lukoil-ocean-neptune-2018": "barred (court barred)",
+        "tricon-mtm-2020": "not_barred (court barred)"
+      }
+    }
+  }
+}

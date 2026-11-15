@@ -193,7 +193,7 @@ The contract has 20 tests (every happy path, every refusal, three fuzz propertie
 
 ### Not yet measured, and said so
 
-Court replay of reported English judgments, the Multipath on against off ablation, both error directions, the Reppo feedback loop, a settled x402 payment, the SERV probe answers and the unattended time bar run are specified in [PROOF_PLAN](PROOF.md) but have not been run in this release. The Proof page shows each of them as "not yet run" rather than a number. [TASK.md](TASK.md) lists exactly what is done and what is not.
+Court replay of reported English judgments, the Multipath on against off ablation, both error directions, the Reppo feedback loop, a settled x402 payment, the SERV probe answers and the unattended time bar run are specified in [PROOF.md](PROOF.md) but have not been run in this release. The Proof page shows each of them as "not yet run" rather than a number. [PROGRESS.md](PROGRESS.md) lists exactly what is done and what is not.
 
 ## What is live, substituted, designed
 
@@ -243,7 +243,7 @@ Environment names are in [`.env.example`](.env.example). Deploying: connect the 
 
 ## Docs
 
-[ARCHITECTURE](ARCHITECTURE.md) · [THESIS](THESIS.md) · [MOMENT](MOMENT.md) · [DESIGN](DESIGN.md) · [FINDINGS](FINDINGS.md) · [PROOF](PROOF.md) · [EVIDENCE](EVIDENCE.md) · [RISK](RISK.md) · [JUDGE](JUDGE.md) · [SDK_SURFACE](SDK_SURFACE.md) · [TASK](TASK.md) · [PROGRESS](PROGRESS.md) · [MILESTONES](MILESTONES.md)
+[ARCHITECTURE](ARCHITECTURE.md) · [THESIS](THESIS.md) · [MOMENT](MOMENT.md) · [DESIGN](DESIGN.md) · [FINDINGS](FINDINGS.md) · [PROOF](PROOF.md) · [EVIDENCE](EVIDENCE.md) · [RISK](RISK.md) · [JUDGE](JUDGE.md) · [SDK_SURFACE](SDK_SURFACE.md) · [PROGRESS](PROGRESS.md) · [MILESTONES](MILESTONES.md)
 
 ## Licence
 
