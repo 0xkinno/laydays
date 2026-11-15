@@ -57,6 +57,7 @@ export function ProofTables() {
               ...Object.keys(cmp.v1.summary.byKind).map((k) => [k.replace(/_/g, " "), `${cmp.v1.summary.byKind[k].agree} of ${cmp.v1.summary.byKind[k].n}`, `${cmp.v2.summary.byKind[k].agree} of ${cmp.v2.summary.byKind[k].n}`]),
             ]} /></div>
           ) : <P>Version 2 has not finished running on new seeds.</P>}
+          {cmp && <P>What this shows, plainly: version 2 gained {cmp.v2.summary.agree - cmp.v1.summary.agree} of {cmp.v1.summary.n} intervals, which is within noise, and the two failure kinds the new rules were written for did not move (0 of 12 under both). Fog closures, where the charter party and the port rules disagree, went from 7 to 12 of 12. In 24 of the {cmp.v1.summary.abstained} version 1 abstentions the model's effect was already the right one: it ruled that a rain or hose stoppage counts once the vessel is on demurrage, citing the once-on-demurrage clause, and our check held it for a person because it did not also name the rain or hose clause. That is the check being conservative, not the model being wrong. Changing the check after seeing these results would contaminate the comparison, so it is left as is and listed as the next fix.</P>}
         </>
       )}
       {paid && paid.status === 200 && (
