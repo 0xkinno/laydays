@@ -90,7 +90,7 @@ export function DocsCard({ docs }: { docs: { label: string; present: boolean }[]
       {docs.map((d, i) => (
         <motion.li key={d.label} className="flex items-center justify-between gap-3 rounded-[10px] bg-paper/70 px-3 py-2 text-sm" initial={reduce ? false : { opacity: 0, x: -14 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: i * 0.09 }}>
           <span>{d.label}</span>
-          {d.present ? <motion.span initial={reduce ? false : { scale: 0 }} animate={inView ? { scale: 1 } : {}} transition={{ delay: 0.3 + i * 0.09, type: "spring", stiffness: 300, damping: 14 }} className="grid size-5 place-items-center rounded-full bg-signal ring-1 ring-ink/30"><Check size={12} strokeWidth={3} /></motion.span> : <span className="font-mono text-[11px] text-flare">missing</span>}
+          {d.present ? <motion.span initial={reduce ? false : { scale: 0 }} animate={inView ? { scale: 1 } : {}} transition={{ delay: 0.3 + i * 0.09, type: "spring", stiffness: 300, damping: 14 }} className="grid size-5 place-items-center rounded-full bg-signal ring-1 ring-ink/30"><Check size={12} strokeWidth={3} /></motion.span> : <span className="font-mono text-[11px] text-flare-ink">missing</span>}
         </motion.li>
       ))}
     </ul>
@@ -114,7 +114,7 @@ export function ReceiptStamp() {
     <div className="relative rounded-[12px] border hair bg-white/80 p-4 font-mono text-[11px]">
       <p className="text-ink-soft">present(voyage, amount, digest, root, mask)</p>
       <p className="mt-1">block 59,0xx · base sepolia</p>
-      <motion.div className="absolute -right-2 top-5 rotate-[-9deg] rounded-[8px] border-2 border-flare px-3 py-1.5 text-flare" initial={reduce ? false : { scale: 2.2, opacity: 0, rotate: -22 }} whileInView={{ scale: 1, opacity: 1, rotate: -9 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 260, damping: 14, delay: 0.3 }}>
+      <motion.div className="absolute -right-2 top-5 rotate-[-9deg] rounded-[8px] border-2 border-flare px-3 py-1.5 text-flare-ink" initial={reduce ? false : { scale: 2.2, opacity: 0, rotate: -22 }} whileInView={{ scale: 1, opacity: 1, rotate: -9 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 260, damping: 14, delay: 0.3 }}>
         <span className="tag text-[11px]">TimeBarred</span>
       </motion.div>
       <p className="mt-8 text-ink-soft">refused: day 91, nothing moved</p>

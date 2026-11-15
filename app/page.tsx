@@ -51,7 +51,7 @@ export default function Home() {
           </div>
           <Stagger className="mt-12 divide-y hair border-y hair" gap={0.06}>
             {SOURCES.map(([t, href, who]) => (
-              <StaggerItem key={t}><div className="flex flex-col gap-1.5 py-3.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"><span className="text-sm">{t}</span><a href={href} className="shrink-0 font-mono text-xs underline underline-offset-4" target="_blank" rel="noreferrer">{who} &rarr;</a></div></StaggerItem>
+              <StaggerItem key={t}><div className="flex flex-col gap-1.5 py-3.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"><span className="text-sm">{t}</span><a href={href} className="inline-flex min-h-[44px] shrink-0 items-center font-mono text-xs underline underline-offset-4" target="_blank" rel="noreferrer">{who} &rarr;</a></div></StaggerItem>
             ))}
           </Stagger>
           <p className="mt-3 text-xs text-ink-soft">Each source was opened and the sentence confirmed on 15 November 2026. Meera, Dan, the vessel and both companies are fictional.</p>
@@ -65,7 +65,7 @@ export default function Home() {
 
         <Chapter n="03" tag="The ruling" title="One hour, three rulebooks, no safe guess." tone="dark">
           <RulingShowcase quote={closure.text.replace(/^\d{4}-\d{2}-\d{2}T\S+\s*/, "")} meta={`${closure.startLine} to ${closure.endLine} · ${local(closure.from)} to ${local(closure.to)} local · ${closure.minutes} minutes`} branches={closure.branches} hash={`rulebook ${s.rulebookVersion.slice(0, 24)}… · SERV request ${s.steps.find((x) => x.role.startsWith("Clause"))?.requestId ?? "n/a"}`} />
-          <Link href={`/trace/${closure.id}`} className="mt-8 inline-block text-sm underline underline-offset-4">Open the trace of this ruling</Link>
+          <Link href={`/trace/${closure.id}`} className="mt-8 inline-flex min-h-[44px] items-center text-sm underline underline-offset-4">Open the trace of this ruling</Link>
         </Chapter>
 
         <Chapter n="04" tag="The clock and the bar" title="A complete claim, before day 90, or nothing.">
@@ -82,7 +82,7 @@ export default function Home() {
             <StaggerItem><GlowCard className="h-full p-6"><p className="tag text-ink-soft">Cost of the demo claim</p><p className="display mt-2 text-4xl">${s.costUsd.toFixed(3)}</p><p className="mt-2 text-sm text-ink-soft">{s.intervals.length} intervals ruled in the recorded live run.</p></GlowCard></StaggerItem>
             <StaggerItem><GlowCard className="h-full p-6"><p className="tag text-ink-soft">Needs a person</p><p className="display mt-2 text-4xl">{s.reviewCount} of {s.intervals.length}</p><p className="mt-2 text-sm text-ink-soft">Intervals the system refused to decide alone.</p></GlowCard></StaggerItem>
           </Stagger>
-          <Link href="/proof" className="mt-6 inline-block text-sm underline underline-offset-4">Read the full scorecard, including the misses</Link>
+          <Link href="/proof" className="mt-6 inline-flex min-h-[44px] items-center text-sm underline underline-offset-4">Read the full scorecard, including the misses</Link>
         </Chapter>
 
         <Chapter n="07" tag="For agents" title="Pay two cents, get one ruling.">

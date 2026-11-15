@@ -28,8 +28,8 @@ export default function Proof() {
           <div key={t} className="rounded-[18px] border hair bg-paper-deep p-6"><p className="tag text-ink-soft">{t}</p><p className="display mt-2 break-words text-3xl">{v}</p><p className="mt-3 text-sm text-ink-soft">{d}</p></div>
         ))}
       </div>
-      <h2 className="display mt-14 text-3xl">Onchain record</h2>
-      <p className="mt-3 max-w-2xl text-sm text-ink-soft">Base Sepolia, test USDC, at testnet scale of one cent of demurrage to one millionth of a USDC. Ledger {ledger ? <a className="font-mono underline" href={addrUrl(ledger)} target="_blank" rel="noreferrer">{ledger}</a> : "not configured"}, source verified on Basescan. Recorded {chain?.at.slice(0, 10) ?? "not yet"}.</p>
+      <h2 id="onchain" className="display mt-14 text-3xl">Onchain record</h2>
+      <p className="mt-3 max-w-2xl text-sm text-ink-soft">Base Sepolia, test USDC, at testnet scale of one cent of demurrage to one millionth of a USDC. Ledger {ledger ? <a className="break-all font-mono underline" href={addrUrl(ledger)} target="_blank" rel="noreferrer">{ledger}</a> : "not configured"}, source verified on Basescan. Recorded {chain?.at.slice(0, 10) ?? "not yet"}.</p>
       <div className="mt-4"><OnchainRecord run={chain} /></div>
       <h2 className="display mt-14 text-3xl">Counterfactual on the demo voyage</h2>
       <p className="mt-3 max-w-2xl text-[17px] leading-relaxed text-ink-soft">The spreadsheet way counts every hour and does not check documents. Laydays rules the same log.</p>

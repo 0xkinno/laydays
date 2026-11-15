@@ -33,7 +33,7 @@ export function BreakPanel() {
             <button onClick={() => run(a.mode)} disabled={r === "loading"} className="mt-4 h-11 rounded-[10px] bg-signal px-5 text-sm font-medium disabled:opacity-60">{r === "loading" ? "Running the checks…" : "Run the attack"}</button>
             {d && (
               <div role="status" className="mt-4 rounded-[10px] border border-ink/20 bg-paper p-3 text-sm">
-                {d.error ? <p className="text-flare">{d.error}</p> : (
+                {d.error ? <p className="text-flare-ink">{d.error}</p> : (
                   <>
                     <p className="font-medium">{refused ? "Refused by code." : "Not refused."}</p>
                     {d.total !== undefined && <p className="mt-1 font-mono text-xs">{d.refusedCount} of {d.total} intervals sent to review</p>}

@@ -48,10 +48,10 @@ export function VoyageView({ v }: { v: VoyageProps }) {
         <GlowCard className="flex items-center gap-4 p-4"><Dial day={Math.max(0, dayNow)} size={110} /><div className="text-sm"><p className="tag text-ink-soft">Time bar</p><p>Day {Math.max(0, dayNow)} of 90</p><p className="text-ink-soft">{barred ? "The bar has passed" : `${Math.max(0, 90 - dayNow)} days left`}</p></div></GlowCard>
       </header>
 
-      <section className="mt-10" aria-label="The wait">
+      <section id="tide" className="mt-10" aria-label="The wait">
         <div className="flex items-baseline justify-between"><p className="tag text-ink-soft">The wait</p><p className="font-mono text-xs text-ink-soft">{v.intervals.length} intervals · click one to open its ruling</p></div>
         <div className="mt-3 overflow-x-auto pb-2">
-          <div className="min-w-[760px]"><TideStrip items={rows.map((r) => ({ id: r.id, minutes: r.minutes, effect: r.final }))} height={84} activeId={sel} onSelect={setSel} /></div>
+          <div className="min-w-[1060px]"><TideStrip items={rows.map((r) => ({ id: r.id, minutes: r.minutes, effect: r.final }))} height={84} activeId={sel} onSelect={setSel} /></div>
         </div>
         <div className="mt-2 flex flex-wrap gap-4 text-xs text-ink-soft">
           <span className="flex items-center gap-1.5"><i className="inline-block size-3 rounded-[3px] border border-ink/25 bg-signal" />counts</span>
@@ -63,7 +63,7 @@ export function VoyageView({ v }: { v: VoyageProps }) {
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_340px]">
         <GlowCard className="p-6">
-          <div className="flex flex-wrap items-center justify-between gap-3">
+          <div id="ruling" className="flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="tag text-ink-soft">Interval {active.id}</p>
               <p className="font-mono text-xs text-ink-soft">{LOCAL(active.from)} to {LOCAL(active.to)} local · {formatDhm(active.minutes)} · {active.startLine} to {active.endLine}</p>
@@ -118,7 +118,7 @@ export function VoyageView({ v }: { v: VoyageProps }) {
           {docs.map((d) => (
             <GlowCard key={d.key} className="p-4">
               <p className="text-sm font-medium">{d.label}</p>
-              <p className={`mt-1 font-mono text-xs ${d.present ? "text-ink-soft" : "text-flare"}`}>{d.present ? `sha256 ${d.sha256.slice(0, 14)}…` : "missing"}</p>
+              <p className={`mt-1 font-mono text-xs ${d.present ? "text-ink-soft" : "text-flare-ink"}`}>{d.present ? `sha256 ${d.sha256.slice(0, 14)}…` : "missing"}</p>
               {!d.present && d.key === "bol" && <button onClick={() => setBolAttached(true)} className="mt-3 h-11 rounded-[10px] bg-signal px-4 text-sm font-medium">Attach from the email thread</button>}
             </GlowCard>
           ))}

@@ -75,13 +75,13 @@ export function Hero({ items, totalCents, spreadsheetCents, cards }: { items: St
         </motion.p>
         <motion.div initial={reduce ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.15, duration: 0.8 }} className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <Magnetic><Link href="/voyage/orla-jansen" className="group inline-flex h-13 items-center gap-2 rounded-[14px] bg-ink px-6 py-3.5 font-medium text-paper shadow-[0_18px_50px_-18px_rgba(20,22,15,.7)] transition hover:-translate-y-0.5"><span className="rounded-md bg-signal px-1.5 py-0.5 text-[11px] font-semibold text-ink">LIVE</span>Open the Orla Jansen claim<ArrowRight size={17} className="transition group-hover:translate-x-1" /></Link></Magnetic>
-          <Magnetic><Link href="/judge?tour=1" className="glass inline-flex h-13 items-center gap-2 rounded-[14px] px-6 py-3.5 font-medium transition hover:-translate-y-0.5"><Play size={15} />Watch the 60-second tour</Link></Magnetic>
+          <Magnetic><Link href="/?tour=1&s=0" className="glass inline-flex h-13 items-center gap-2 rounded-[14px] px-6 py-3.5 font-medium transition hover:-translate-y-0.5"><Play size={15} />Watch the 60-second tour</Link></Magnetic>
         </motion.div>
         <p className="mt-4 text-xs text-ink-soft">MT Orla Jansen, Saltmarsh Tankers and Gulfline Trading are fictional. Rulings are recorded live SERV runs.</p>
       </motion.div>
 
       <motion.div initial={reduce ? false : { opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.3, duration: 0.9, ease: [0.22, 1, 0.36, 1] }} className="mx-auto mt-16 max-w-5xl">
-        <div className="glass edge rounded-[24px] p-5 sm:p-8">
+        <div id="hero-card" className="glass edge rounded-[24px] p-5 sm:p-8">
           <div className="flex flex-wrap items-end justify-between gap-5">
             <div>
               <p className="tag text-ink-soft">The wait, ruled</p>

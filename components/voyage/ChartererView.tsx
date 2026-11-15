@@ -133,7 +133,7 @@ export function ChartererView({ v }: { v: VoyageProps }) {
               <li key={l.id} className="flex items-center justify-between gap-3 py-2.5 text-sm">
                 <div><span className="font-mono text-xs">{l.id}</span> <span className="text-ink-soft">{fmtLocal(l.from, -300).slice(5)} to {fmtLocal(l.to, -300).slice(5)} · {l.demurrageMinutes} min</span></div>
                 <div className="flex items-center gap-3"><span className="font-mono text-xs">{formatUsd(lineCents(l.demurrageMinutes))}</span>
-                  <button aria-pressed={!!disputed[l.id]} disabled={stage !== 2} onClick={() => setDisputed((d) => ({ ...d, [l.id]: !d[l.id] }))} className={`h-9 min-w-[88px] rounded-[8px] border px-3 text-xs ${disputed[l.id] ? "border-flare text-flare" : "border-ink/20 bg-signal"} disabled:opacity-50`}>{disputed[l.id] ? "Disputed" : "Accepted"}</button></div>
+                  <button aria-pressed={!!disputed[l.id]} disabled={stage !== 2} onClick={() => setDisputed((d) => ({ ...d, [l.id]: !d[l.id] }))} className={`h-11 min-w-[96px] rounded-[8px] border px-3 text-xs ${disputed[l.id] ? "border-flare text-flare-ink" : "border-ink/20 bg-signal"} disabled:opacity-50`}>{disputed[l.id] ? "Disputed" : "Accepted"}</button></div>
               </li>
             ))}
           </ul>
@@ -156,7 +156,7 @@ export function ChartererView({ v }: { v: VoyageProps }) {
         {stage === 3 && <a href={`/dispute/${v.slug}${ck.query ? "?" + ck.query : ""}`} className="inline-flex h-12 items-center rounded-[12px] bg-ink px-6 font-medium text-paper">Go to the dispute room</a>}
       </div>
       {busy && <p className="mt-4 text-sm" role="status">Waiting for your wallet or the chain…</p>}
-      {msg && <div role="status" className={`mt-4 rounded-[10px] border p-3 text-sm ${msg.kind === "err" ? "border-flare text-flare" : "border-ink/20"}`}>{msg.text} {msg.hash && <a className="underline" href={txUrl(msg.hash)} target="_blank" rel="noreferrer">View on Basescan</a>}</div>}
+      {msg && <div role="status" className={`mt-4 rounded-[10px] border p-3 text-sm ${msg.kind === "err" ? "border-flare text-flare-ink" : "border-ink/20"}`}>{msg.text} {msg.hash && <a className="underline" href={txUrl(msg.hash)} target="_blank" rel="noreferrer">View on Basescan</a>}</div>}
     </main>
   );
 }

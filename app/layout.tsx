@@ -5,6 +5,8 @@ import { GeistMono } from "geist/font/mono";
 import { Providers } from "@/components/Providers";
 import { CapsuleNav } from "@/components/nav/CapsuleNav";
 import { ScrollProgress, SmoothScroll } from "@/components/motion/primitives";
+import { Suspense } from "react";
+import { Tour } from "@/components/Tour";
 import "./globals.css";
 
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", axes: ["opsz", "SOFT"], style: ["normal", "italic"] });
@@ -24,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SmoothScroll />
           <CapsuleNav />
           {children}
+          <Suspense><Tour /></Suspense>
         </Providers>
       </body>
     </html>

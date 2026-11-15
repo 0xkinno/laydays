@@ -13,7 +13,7 @@ export function TideStrip({ items, height = 64, animate = false, activeId, onSel
   return (
     <div className="flex w-full" style={{ height, gap: 2 }} role="list" aria-label="Intervals of the ship's wait">
       {items.map((it, idx) => {
-        const common = { flexGrow: it.minutes, flexBasis: 0, minWidth: 6 } as const;
+        const common = { flexGrow: it.minutes, flexBasis: 0, minWidth: onSelect ? 44 : 6 } as const;
         const body = (
           <>
             {it.effect === "counts" && <span className="absolute inset-0 bg-signal" />}

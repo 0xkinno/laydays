@@ -128,7 +128,7 @@ export function PresentPanel({ v, rows, stmtCents, reviewLeft, missing, bolAttac
       {busy && <p className="mt-4 text-sm" role="status">Waiting for your wallet or the chain…</p>}
       {link && <div className="mt-4 break-all rounded-[10px] border hair bg-paper p-3 font-mono text-xs">{link}</div>}
       {msg && (
-        <div role="status" className={`mt-4 rounded-[10px] border p-3 text-sm ${msg.kind === "err" ? "border-flare text-flare" : "border-ink/20"}`}>
+        <div role="status" className={`mt-4 rounded-[10px] border p-3 text-sm ${msg.kind === "err" ? "border-flare text-flare-ink" : "border-ink/20"}`}>
           {msg.text} {msg.hash && <a className="underline" href={txUrl(msg.hash)} target="_blank" rel="noreferrer">View on Basescan</a>}
         </div>
       )}

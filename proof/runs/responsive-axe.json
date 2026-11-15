@@ -1,0 +1,697 @@
+{
+ "at": "2026-11-15T08:13:53.294Z",
+ "report": [
+  {
+   "w": 360,
+   "route": "/",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 360,
+   "route": "/desk",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 360,
+   "route": "/voyage/orla-jansen",
+   "overflow": 0,
+   "small": 18
+  },
+  {
+   "w": 360,
+   "route": "/voyage/orla-jansen/charterer",
+   "overflow": 0,
+   "small": 8
+  },
+  {
+   "w": 360,
+   "route": "/dispute/orla-jansen",
+   "overflow": 0,
+   "small": 1
+  },
+  {
+   "w": 360,
+   "route": "/trace/I02",
+   "overflow": 0,
+   "small": 1
+  },
+  {
+   "w": 360,
+   "route": "/proof",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 360,
+   "route": "/break",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 360,
+   "route": "/judge",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 360,
+   "route": "/register",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 360,
+   "route": "/agents",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 360,
+   "route": "/voyage/new",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 360,
+   "route": "console",
+   "errors": []
+  },
+  {
+   "w": 390,
+   "route": "/",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 390,
+   "route": "/desk",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 390,
+   "route": "/voyage/orla-jansen",
+   "overflow": 0,
+   "small": 18
+  },
+  {
+   "w": 390,
+   "route": "/voyage/orla-jansen/charterer",
+   "overflow": 0,
+   "small": 8
+  },
+  {
+   "w": 390,
+   "route": "/dispute/orla-jansen",
+   "overflow": 0,
+   "small": 1
+  },
+  {
+   "w": 390,
+   "route": "/trace/I02",
+   "overflow": 0,
+   "small": 1
+  },
+  {
+   "w": 390,
+   "route": "/proof",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 390,
+   "route": "/break",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 390,
+   "route": "/judge",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 390,
+   "route": "/register",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 390,
+   "route": "/agents",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 390,
+   "route": "/voyage/new",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 390,
+   "route": "console",
+   "errors": []
+  },
+  {
+   "w": 430,
+   "route": "/",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 430,
+   "route": "/desk",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 430,
+   "route": "/voyage/orla-jansen",
+   "overflow": 0,
+   "small": 18
+  },
+  {
+   "w": 430,
+   "route": "/voyage/orla-jansen/charterer",
+   "overflow": 0,
+   "small": 8
+  },
+  {
+   "w": 430,
+   "route": "/dispute/orla-jansen",
+   "overflow": 0,
+   "small": 1
+  },
+  {
+   "w": 430,
+   "route": "/trace/I02",
+   "overflow": 0,
+   "small": 1
+  },
+  {
+   "w": 430,
+   "route": "/proof",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 430,
+   "route": "/break",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 430,
+   "route": "/judge",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 430,
+   "route": "/register",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 430,
+   "route": "/agents",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 430,
+   "route": "/voyage/new",
+   "overflow": 0,
+   "small": 0
+  },
+  {
+   "w": 430,
+   "route": "console",
+   "errors": []
+  },
+  {
+   "w": 768,
+   "route": "/",
+   "overflow": 0,
+   "small": 2
+  },
+  {
+   "w": 768,
+   "route": "/desk",
+   "overflow": 0,
+   "small": 2
+  },
+  {
+   "w": 768,
+   "route": "/voyage/orla-jansen",
+   "overflow": 0,
+   "small": 20
+  },
+  {
+   "w": 768,
+   "route": "/voyage/orla-jansen/charterer",
+   "overflow": 0,
+   "small": 10
+  },
+  {
+   "w": 768,
+   "route": "/dispute/orla-jansen",
+   "overflow": 0,
+   "small": 3
+  },
+  {
+   "w": 768,
+   "route": "/trace/I02",
+   "overflow": 0,
+   "small": 3
+  },
+  {
+   "w": 768,
+   "route": "/proof",
+   "overflow": 0,
+   "small": 2
+  },
+  {
+   "w": 768,
+   "route": "/break",
+   "overflow": 0,
+   "small": 2
+  },
+  {
+   "w": 768,
+   "route": "/judge",
+   "overflow": 0,
+   "small": 2
+  },
+  {
+   "w": 768,
+   "route": "/register",
+   "overflow": 0,
+   "small": 2
+  },
+  {
+   "w": 768,
+   "route": "/agents",
+   "overflow": 0,
+   "small": 2
+  },
+  {
+   "w": 768,
+   "route": "/voyage/new",
+   "overflow": 0,
+   "small": 2
+  },
+  {
+   "w": 768,
+   "route": "console",
+   "errors": []
+  },
+  {
+   "w": 1024,
+   "route": "/",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1024,
+   "route": "/desk",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1024,
+   "route": "/voyage/orla-jansen",
+   "overflow": 0,
+   "small": 21
+  },
+  {
+   "w": 1024,
+   "route": "/voyage/orla-jansen/charterer",
+   "overflow": 0,
+   "small": 13
+  },
+  {
+   "w": 1024,
+   "route": "/dispute/orla-jansen",
+   "overflow": 0,
+   "small": 6
+  },
+  {
+   "w": 1024,
+   "route": "/trace/I02",
+   "overflow": 0,
+   "small": 6
+  },
+  {
+   "w": 1024,
+   "route": "/proof",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1024,
+   "route": "/break",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1024,
+   "route": "/judge",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1024,
+   "route": "/register",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1024,
+   "route": "/agents",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1024,
+   "route": "/voyage/new",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1024,
+   "route": "console",
+   "errors": []
+  },
+  {
+   "w": 1280,
+   "route": "/",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1280,
+   "route": "/desk",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1280,
+   "route": "/voyage/orla-jansen",
+   "overflow": 0,
+   "small": 18
+  },
+  {
+   "w": 1280,
+   "route": "/voyage/orla-jansen/charterer",
+   "overflow": 0,
+   "small": 13
+  },
+  {
+   "w": 1280,
+   "route": "/dispute/orla-jansen",
+   "overflow": 0,
+   "small": 6
+  },
+  {
+   "w": 1280,
+   "route": "/trace/I02",
+   "overflow": 0,
+   "small": 6
+  },
+  {
+   "w": 1280,
+   "route": "/proof",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1280,
+   "route": "/break",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1280,
+   "route": "/judge",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1280,
+   "route": "/register",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1280,
+   "route": "/agents",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1280,
+   "route": "/voyage/new",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1280,
+   "route": "console",
+   "errors": []
+  },
+  {
+   "w": 1440,
+   "route": "/",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1440,
+   "route": "/desk",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1440,
+   "route": "/voyage/orla-jansen",
+   "overflow": 0,
+   "small": 18
+  },
+  {
+   "w": 1440,
+   "route": "/voyage/orla-jansen/charterer",
+   "overflow": 0,
+   "small": 13
+  },
+  {
+   "w": 1440,
+   "route": "/dispute/orla-jansen",
+   "overflow": 0,
+   "small": 6
+  },
+  {
+   "w": 1440,
+   "route": "/trace/I02",
+   "overflow": 0,
+   "small": 6
+  },
+  {
+   "w": 1440,
+   "route": "/proof",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1440,
+   "route": "/break",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1440,
+   "route": "/judge",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1440,
+   "route": "/register",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1440,
+   "route": "/agents",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1440,
+   "route": "/voyage/new",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1440,
+   "route": "console",
+   "errors": []
+  },
+  {
+   "w": 1920,
+   "route": "/",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1920,
+   "route": "/desk",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1920,
+   "route": "/voyage/orla-jansen",
+   "overflow": 0,
+   "small": 18
+  },
+  {
+   "w": 1920,
+   "route": "/voyage/orla-jansen/charterer",
+   "overflow": 0,
+   "small": 13
+  },
+  {
+   "w": 1920,
+   "route": "/dispute/orla-jansen",
+   "overflow": 0,
+   "small": 6
+  },
+  {
+   "w": 1920,
+   "route": "/trace/I02",
+   "overflow": 0,
+   "small": 6
+  },
+  {
+   "w": 1920,
+   "route": "/proof",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1920,
+   "route": "/break",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1920,
+   "route": "/judge",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1920,
+   "route": "/register",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1920,
+   "route": "/agents",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1920,
+   "route": "/voyage/new",
+   "overflow": 0,
+   "small": 5
+  },
+  {
+   "w": 1920,
+   "route": "console",
+   "errors": []
+  }
+ ],
+ "axe": [
+  {
+   "w": 390,
+   "route": "/",
+   "violations": [
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 1,
+     "sample": ".shadow-\\[0_18px_50px_-18px_rgba\\(20\\,22\\,15\\,\\.7\\)\\]"
+    }
+   ]
+  },
+  {
+   "w": 390,
+   "route": "/voyage/orla-jansen",
+   "violations": []
+  },
+  {
+   "w": 390,
+   "route": "/proof",
+   "violations": []
+  },
+  {
+   "w": 390,
+   "route": "/break",
+   "violations": []
+  },
+  {
+   "w": 390,
+   "route": "/agents",
+   "violations": []
+  },
+  {
+   "w": 390,
+   "route": "/desk",
+   "violations": []
+  },
+  {
+   "w": 1440,
+   "route": "/",
+   "violations": [
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "nodes": 1,
+     "sample": ".shadow-\\[0_18px_50px_-18px_rgba\\(20\\,22\\,15\\,\\.7\\)\\]"
+    }
+   ]
+  },
+  {
+   "w": 1440,
+   "route": "/voyage/orla-jansen",
+   "violations": []
+  },
+  {
+   "w": 1440,
+   "route": "/proof",
+   "violations": []
+  },
+  {
+   "w": 1440,
+   "route": "/break",
+   "violations": []
+  },
+  {
+   "w": 1440,
+   "route": "/agents",
+   "violations": []
+  },
+  {
+   "w": 1440,
+   "route": "/desk",
+   "violations": []
+  }
+ ]
+}

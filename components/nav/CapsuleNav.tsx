@@ -12,7 +12,7 @@ const LINKS = [
   { href: "/proof", label: "Proof" },
   { href: "/break", label: "Break it" },
   { href: "/agents", label: "For agents" },
-  { href: "/judge", label: "Guided tour" },
+  { href: "/?tour=1&s=0", label: "Guided tour" },
 ];
 
 export function CapsuleNav() {
@@ -39,7 +39,7 @@ export function CapsuleNav() {
               {c.name}
             </button>
           ))}
-          {error && <p className="px-3 py-2 text-xs text-flare">{error.message.slice(0, 120)}</p>}
+          {error && <p className="px-3 py-2 text-xs text-flare-ink">{error.message.slice(0, 120)}</p>}
         </div>
       )}
     </div>
@@ -52,7 +52,7 @@ export function CapsuleNav() {
         className="fixed left-1/2 top-4 z-50 flex h-14 w-[min(1120px,calc(100%-24px))] -translate-x-1/2 items-center justify-between rounded-[14px] border border-ink/10 bg-paper/70 px-3 backdrop-blur-xl"
         aria-label="Primary"
       >
-        <Link href="/" className="flex items-center gap-2" aria-label="Laydays home">
+        <Link href="/" className="flex min-h-[44px] items-center gap-2" aria-label="Laydays home">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/art/mark.svg" alt="" width={30} height={30} />
           <span className="display text-xl">Laydays</span>
