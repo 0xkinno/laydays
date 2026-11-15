@@ -212,9 +212,11 @@ Seven reported English judgments, opened and confirmed on the National Archives 
 
 **A wider test with answers set by code.** Seeded generated voyages ([`lib/laytime/generator.ts`](lib/laytime/generator.ts)), 12 new seeds, 96 intervals. Rulebook version 1: 62 agreed (55% to 73%), 33 sent to a person, 1 wrong. Version 2, five rules drafted by SERV from version 1's failures and from four Reppo critiques and approved by the owner before they ran: 65 agreed (58% to 76%), 31 sent to a person, none wrong. The gain is within noise; fog closures rose from 7 to 12 of 12, and the two kinds the rules targeted stayed at 0 of 12 because our cause-clause check, not the rules, holds them. In 24 of the abstentions the model's effect was already right. Detail in [PROOF.md](PROOF.md).
 
+**Reppo, before and after.** The same eight intervals (one per trap kind, lowest new seed, no picking) were ruled by version 1 and by version 2, and both rulings were sent to Reppo de-identified, without saying which was which: mean score 97.6 for version 1 and 100 for version 2, version 2 higher on 1 interval, 7 tied, version 1 higher on none (16 evaluations, 7,040 credits, all routed `ship` but one `review`). Read this carefully: Reppo scores sit at the ceiling for almost every item, so this measurement cannot separate the two versions. The one interval that moved was a clean wait that version 1 had ruled correctly but explained less completely (81, `review`) and version 2 explained fully (100, `ship`). It shows version 2 did no harm and may have helped, and no more than that.
+
 **Also measured:** the whole two-party flow runs in a browser against the live site with two wallets (8 steps, every one a real transaction); Lighthouse on the live landing page scores 99 performance, 100 accessibility, 100 best practices, 100 SEO; the SERV probe answers nine questions in [FINDINGS.md](FINDINGS.md).
 
-**Not measured:** cost and latency percentiles over many full-voyage runs, and a court set larger than seven.
+**Not measured:** cost and latency percentiles over many full-voyage runs, and a court set larger than seven. Reppo was used as an outside evaluator of rulings and drove one rulebook change, which is measured above; whether that earns the Reppo track is left to the entrant.
 
 A recording of the guided tour, the base of the demo video, is in [`docs/video/tour.webm`](docs/video/tour.webm).
 

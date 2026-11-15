@@ -44,6 +44,10 @@ Plain `gpt-6-luna` (three runs per case, majority) 2 of 7; Multipath 1 of 7; Kro
 
 `lib/laytime/generator.ts` builds seeded voyages whose correct answers come from the charter party table before any model sees them. Version 1 on 12 development seeds: 58 of 96 agreed, 38 sent to a person, none wrong. Reppo evaluated four failing rulings, de-identified (scores 71 to 96, all routed `review`). SERV drafted five corrective rules and the owner approved them ([`proof/runs/loop-approval.json`](proof/runs/loop-approval.json)). On 12 new seeds: version 1 62 of 96 (interval 55% to 73%), version 2 65 of 96 (58% to 76%). The gain is within noise. The two kinds the rules targeted stayed at 0 of 12. Fog closures went from 7 to 12 of 12. In 24 of the version 1 abstentions the model's effect was already right and our cause-clause check held it for a person.
 
+## Reppo before and after (done)
+
+`scripts/reppo-compare.ts` and `scripts/reppo-compare-finish.ts`, results in `proof/runs/reppo-compare.json`. For each of the 8 trap kinds the lowest-numbered new seed was taken, and the ruling that version 1 gave and the one version 2 gave for that interval were both evaluated by Reppo, de-identified and unlabelled: 16 evaluations, 7,040 credits. Mean score 97.6 for version 1 and 100 for version 2; version 2 higher on 1 interval, 7 ties, version 1 higher on none. The scores sit at the ceiling, so Reppo cannot separate the versions here. The one interval that moved was a clean wait: version 1 scored 81 and `review`, version 2 scored 100 and `ship`.
+
 ## SERV probe (done)
 
 [FINDINGS.md](FINDINGS.md), nine questions, request ids in `proof/runs/serv-probe.json`.

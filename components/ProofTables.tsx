@@ -28,6 +28,7 @@ export function ProofTables() {
   const paid = read<{ status: number; settlement: { transaction?: string } | null; at: string; body?: { serv?: { costUsd: number } } }>("proof/runs/x402-paid-call.json");
   const c = facts?.replay_arms?.c;
   const stats = read<{ calls: number; successful: number; medianMs: number; p95Ms: number; byRole: Record<string, { calls: number; ok: number; medianMs: number; p95Ms: number; totalTokenCostUsd: number }>; note: string }>("proof/runs/runs-stats.json");
+  const rc = read<{ meanV1: number; meanV2: number; v2Higher: number; v1Higher: number; ties: number; creditsUsed: number; paired: { kind: string; v1: number | null; v2: number | null; v1Route: string | null; v2Route: string | null }[] }>("proof/runs/reppo-compare.json");
   const e2e = read<{ passed: boolean; at: string; steps: string[] }>("proof/runs/e2e-flow.json");
 
   return (
@@ -59,6 +60,13 @@ export function ProofTables() {
             ]} /></div>
           ) : <P>Version 2 has not finished running on new seeds.</P>}
           {cmp && <P>What this shows, plainly: version 2 gained {cmp.v2.summary.agree - cmp.v1.summary.agree} of {cmp.v1.summary.n} intervals, which is within noise, and the two failure kinds the new rules were written for did not move (0 of 12 under both). Fog closures, where the charter party and the port rules disagree, went from 7 to 12 of 12. In 24 of the {cmp.v1.summary.abstained} version 1 abstentions the model's effect was already the right one: it ruled that a rain or hose stoppage counts once the vessel is on demurrage, citing the once-on-demurrage clause, and our check held it for a person because it did not also name the rain or hose clause. That is the check being conservative, not the model being wrong. Changing the check after seeing these results would contaminate the comparison, so it is left as is and listed as the next fix.</P>}
+        </>
+      )}
+      {rc && (
+        <>
+          <H>Reppo, before and after</H>
+          <P>Eight matched intervals, one per trap kind, the lowest new seed each (no picking). The ruling that version 1 gave and the one version 2 gave were both sent to Reppo de-identified and unlabelled: {rc.creditsUsed.toLocaleString("en-US")} credits. Mean score {rc.meanV1.toFixed(1)} for version 1 and {rc.meanV2.toFixed(1)} for version 2; version 2 higher on {rc.v2Higher}, {rc.ties} tied, version 1 higher on {rc.v1Higher}. Reppo scores sit at the ceiling for almost every item, so this cannot separate the versions. It shows version 2 did no harm.</P>
+          <div className="mt-4"><Table head={["Trap kind", "Version 1", "Version 2"]} rows={rc.paired.map((p) => [p.kind.split("_").join(" "), `${p.v1 ?? "n/a"} ${p.v1Route ?? ""}`, `${p.v2 ?? "n/a"} ${p.v2Route ?? ""}`])} /></div>
         </>
       )}
       {stats && (

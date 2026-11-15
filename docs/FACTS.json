@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T10:03:24.864Z",
+  "generatedAt": "2026-11-15T10:17:24.896Z",
   "demo_intervals": 22,
   "demo_observed": 21,
   "demo_review": 1,
@@ -110,6 +110,8 @@
       }
     }
   },
+  "reppo_before_after": "Reppo mean score 97.6 for version 1 and 100.0 for version 2 over 8 matched intervals",
+  "reppo_credits_total": 7040,
   "reppo_summary": "ruling 98 ship, statement 95 ship",
   "reppo_credits_used": 880,
   "runs_summary": "123 successful SERV calls, median 20.8 s, p95 38.1 s",

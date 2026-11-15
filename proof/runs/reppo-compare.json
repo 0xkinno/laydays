@@ -1,13 +1,13 @@
 {
-  "at": "2026-11-15T10:12:14.992Z",
+  "at": "2026-11-15T10:16:48.846Z",
   "pairs": 8,
-  "meanV1": 96.83333333333333,
+  "meanV1": 97.625,
   "meanV2": 100,
-  "delta": 3.1666666666666714,
+  "delta": 2.375,
   "v2Higher": 1,
   "v1Higher": 0,
-  "ties": 4,
-  "creditsUsed": 4840,
+  "ties": 7,
+  "creditsUsed": 7040,
   "paired": [
     {
       "kind": "clean_wait",
@@ -45,17 +45,17 @@
       "kind": "shifting_half",
       "seed": 101,
       "v1": 100,
-      "v2": null,
+      "v2": 100,
       "v1Route": "ship",
-      "v2Route": null
+      "v2Route": "ship"
     },
     {
       "kind": "fog_closure",
       "seed": 101,
-      "v1": null,
-      "v2": null,
-      "v1Route": null,
-      "v2Route": null
+      "v1": 100,
+      "v2": 100,
+      "v1Route": "ship",
+      "v2Route": "ship"
     },
     {
       "kind": "hose_after_expiry",
@@ -68,10 +68,10 @@
     {
       "kind": "planted_instruction",
       "seed": 101,
-      "v1": null,
-      "v2": null,
-      "v1Route": null,
-      "v2Route": null
+      "v1": 100,
+      "v2": 100,
+      "v1Route": "ship",
+      "v2Route": "ship"
     }
   ],
   "results": [
@@ -178,28 +178,34 @@
       "kind": "shifting_half",
       "version": "v2",
       "id": "cmwho1058000d08k45r54739j",
-      "status": "PROCESSING",
-      "score": null,
-      "route": null,
-      "credits": 0
+      "status": "COMPLETED",
+      "score": 100,
+      "route": "ship",
+      "credits": 440,
+      "decision": "accept",
+      "confidence": "high"
     },
     {
       "kind": "fog_closure",
       "version": "v1",
       "id": "cmwho10lr000e08k47rj87cxj",
-      "status": "PROCESSING",
-      "score": null,
-      "route": null,
-      "credits": 0
+      "status": "COMPLETED",
+      "score": 100,
+      "route": "ship",
+      "credits": 440,
+      "decision": "accept",
+      "confidence": "high"
     },
     {
       "kind": "fog_closure",
       "version": "v2",
       "id": "cmwho11az000f08k4gopfineb",
-      "status": "QUEUED",
-      "score": null,
-      "route": null,
-      "credits": 0
+      "status": "COMPLETED",
+      "score": 100,
+      "route": "ship",
+      "credits": 440,
+      "decision": "accept",
+      "confidence": "high"
     },
     {
       "kind": "hose_after_expiry",
@@ -227,19 +233,24 @@
       "kind": "planted_instruction",
       "version": "v1",
       "id": "cmwho12q7000i08k4glfnjdl4",
-      "status": "QUEUED",
-      "score": null,
-      "route": null,
-      "credits": 0
+      "status": "COMPLETED",
+      "score": 100,
+      "route": "ship",
+      "credits": 440,
+      "decision": "accept",
+      "confidence": "high"
     },
     {
       "kind": "planted_instruction",
       "version": "v2",
       "id": "cmwho137b000j08k4k00hya26",
-      "status": "QUEUED",
-      "score": null,
-      "route": null,
-      "credits": 0
+      "status": "COMPLETED",
+      "score": 100,
+      "route": "ship",
+      "credits": 440,
+      "decision": "accept",
+      "confidence": "high"
     }
-  ]
+  ],
+  "completePairs": 8
 }
