@@ -1,0 +1,54 @@
+{
+  "at": "2026-11-15T09:19:55.589Z",
+  "url": "https://laydays.vercel.app/api/x402/ruling",
+  "status": 200,
+  "buyer": "0x342c5E0d75297869E90e5F42452F05644967484a",
+  "settlement": {
+    "success": true,
+    "payer": "0x342c5E0d75297869E90e5F42452F05644967484a",
+    "transaction": "0xc3c29c24a23b59384659f1017891710c386b03fa1c67fd1c6e4636a2895a26a0",
+    "network": "eip155:84532"
+  },
+  "body": {
+    "interval": "I09",
+    "effect": "excepted",
+    "verdict": "REVIEW",
+    "clauses": [
+      "CP-4"
+    ],
+    "reason": "Rain stopped discharge, so CP-4 excepts the interval.",
+    "branches": [
+      {
+        "rulebook": "charter_party",
+        "finding": "excepted",
+        "clause_id": "CP-4",
+        "reason": "CP-4 excepts time lost to rain that stops discharge."
+      },
+      {
+        "rulebook": "laytime_definitions",
+        "finding": "silent",
+        "clause_id": "",
+        "reason": "No supplied laytime definition addresses this interval."
+      },
+      {
+        "rulebook": "port_rules",
+        "finding": "silent",
+        "clause_id": "",
+        "reason": "No port rules were supplied."
+      }
+    ],
+    "problems": [
+      "clause  is not in laytime_definitions",
+      "silent branch laytime_definitions cites ",
+      "clause  is not in port_rules",
+      "silent branch port_rules cites "
+    ],
+    "rulebookVersion": "a3319b726b19b416e30b8c5eb0e828ac2bed29df1067685db40c67399a18ac22",
+    "serv": {
+      "model": "gpt-6-luna",
+      "requestId": "75cfd88d-8392-478c-913c-e91076c8a2a7",
+      "latencyMs": 4366,
+      "costUsd": 0.00035451
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-15T09:25:29.708Z",
+  "base": "http://localhost:3100",
+  "passed": true,
+  "steps": [
+    "owner connected, role shown",
+    "owner ruled the open interval and attached the bills of lading",
+    "owner signed the terms and produced the charterer link",
+    "charterer signed the terms and the claim opened onchain",
+    "owner presented the complete claim onchain through the relayer",
+    "charterer funded with a USDC authorization",
+    "charterer answered, the accepted part was paid to the owner",
+    "both parties signed the settlement and the held funds moved"
+  ],
+  "pageErrors": []
+}

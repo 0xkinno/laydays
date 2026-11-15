@@ -59,6 +59,9 @@ export function checkRulings(
     }
     if ((seen.get(id) ?? 0) > 1) problems.push("interval ruled more than once");
 
+    // A silent branch that returns an empty clause id means none. The format is normalised, the substance is not.
+    for (const b of r.branches) if (b.clause_id.trim() === "") b.clause_id = "none";
+    r.clause_ids = r.clause_ids.filter((c) => c.trim() !== "");
     for (const b of r.branches) {
       if (b.clause_id !== "none" && !catalog[b.rulebook].has(b.clause_id)) problems.push(`clause ${b.clause_id} is not in ${b.rulebook}`);
       if (b.finding === "silent" && b.clause_id !== "none") problems.push(`silent branch ${b.rulebook} cites ${b.clause_id}`);

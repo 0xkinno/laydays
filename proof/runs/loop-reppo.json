@@ -1,0 +1,53 @@
+{
+  "at": "2026-11-15T09:24:49.121Z",
+  "evaluations": [
+    {
+      "kind": "hose_after_expiry",
+      "truth": "counts",
+      "model": "counts",
+      "id": "cmwhmi19f000407l5x7fluv83",
+      "status": "COMPLETED",
+      "score": 92,
+      "route": "review",
+      "decision": "accept",
+      "reason": "The ruling is accepted (score 92) but routed to review because, while the conclusion is correct, the confidence is only medium rather than high. The main concern is that the reasoning acknowledges CP-6 covers shore breakdowns but doesn't explicitly analyze why it fails to stop demurrage counting, which the code checker flagged as incomplete consideration of the applicable clause.",
+      "creditsCharged": 440
+    },
+    {
+      "kind": "rain_after_expiry",
+      "truth": "counts",
+      "model": "counts",
+      "id": "cmwhmjxeh000507l5auqhebfd",
+      "status": "COMPLETED",
+      "score": 96,
+      "route": "review",
+      "decision": "accept",
+      "reason": "The submission was accepted with a score of 96 but routed to review because the confidence level is medium, below the required high threshold. This reflects evaluator disagreement, with a 3.5-point score spread between assessors ranging from 93 to 100.",
+      "creditsCharged": 440
+    },
+    {
+      "kind": "fog_closure",
+      "truth": "excepted",
+      "model": "ambiguous",
+      "id": "cmwhmmjf6000607l5m9wq23mt",
+      "status": "COMPLETED",
+      "score": 71,
+      "route": "review",
+      "decision": "accept",
+      "reason": "The ruling was routed to review with a low-confidence accept because its correctness score was very low (25) given the proposed ruling was ambiguous instead of excepted. This low correctness score dragged the winning evaluator's overall score down to 71, which is just above the accept threshold but below the auto-accept range.",
+      "creditsCharged": 440
+    },
+    {
+      "kind": "clean_wait",
+      "truth": "counts",
+      "model": "ambiguous",
+      "id": "cmwhmn5f1000707l51oml5z1u",
+      "status": "COMPLETED",
+      "score": 85,
+      "route": "review",
+      "decision": "accept",
+      "reason": "The proposed ruling is accepted with a score of 85, but it has been routed for review because the confidence level was only medium. The main driver for the score not being higher is a \"correctness\" rubric dimension score of 50.",
+      "creditsCharged": 440
+    }
+  ]
+}
