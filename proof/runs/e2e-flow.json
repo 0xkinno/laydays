@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-15T09:25:29.708Z",
-  "base": "http://localhost:3100",
+  "at": "2026-11-15T09:38:08.445Z",
+  "base": "https://laydays.vercel.app",
   "passed": true,
   "steps": [
     "owner connected, role shown",

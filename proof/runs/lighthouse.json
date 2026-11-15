@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-15T09:38:59.749Z",
+  "url": "https://laydays.vercel.app",
+  "preset": "desktop",
+  "scores": {
+    "performance": 99,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "lcp": "0.9 s",
+  "tbt": "30 ms",
+  "cls": "0.003"
+}

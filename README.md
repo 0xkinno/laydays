@@ -31,6 +31,9 @@ Laydays is a demurrage desk for the analyst who bills a charterer for a ship's w
 | **Built with** | SERV Reasoning (Multipath, Kronos, Shadow Agent, Prompt Guard, strict structured output), Base Sepolia, x402, Next.js on Vercel |
 | **Contract** | `LaydaysLedger` at [`0x73a25bd6…a1a4`](https://sepolia.basescan.org/address/0x73a25bd619a7ebdaa1d5773866a13e127358a1a4#code), source verified on Basescan |
 | **Onchain proof** | 6 transactions and 5 refusals recorded, each with a Basescan link, in [Proof](#proof-that-could-have-failed) below |
+| **Settled x402 payment** | [`0xc3c29c24…26a0`](https://sepolia.basescan.org/tx/0xc3c29c24a23b59384659f1017891710c386b03fa1c67fd1c6e4636a2895a26a0): 0.02 test USDC for one paid ruling, model cost $0.00035 |
+| **Two-wallet browser test** | 8 steps pass against the live site, every step a real transaction ([`tests/e2e/flow.cjs`](tests/e2e/flow.cjs)) |
+| **Lighthouse, desktop** | performance 99, accessibility 100, best practices 100, SEO 100 |
 | **Cost of the demo claim** | $0.0176 in token charges, 22 intervals ruled (see the billing caveat under [What we learned about SERV](#what-we-learned-about-serv)) |
 
 | | |
@@ -189,7 +192,7 @@ Everything below is on Base Sepolia with test USDC. Testnet scale: one cent of d
 
 The money moved exactly as signed: 3,993,750 units reached the owner and 181,250 went back to the charterer, with nothing left in the contract. Full table with gas and signers: [Proof](https://laydays.vercel.app/proof), raw record in [`proof/runs/`](proof/runs).
 
-The contract has 20 tests (every happy path, every refusal, three fuzz properties) run with `npm run test:sol`. The clock has unit and property tests run with `npm test`.
+The contract has 22 tests run with `npm run test:sol`: every happy path, every refusal, three fuzz properties, and two invariants (the ledger's token balance always equals funded minus paid minus refunded across all claims, and no claim is ever overfunded). The clock has unit and property tests run with `npm test`.
 
 ### Not yet measured, and said so
 
@@ -204,9 +207,9 @@ Court replay of reported English judgments, the Multipath on against off ablatio
 | LaydaysLedger, signatures, refusals | **Live** on Base Sepolia |
 | Funding with a USDC authorization | **Live**, test USDC |
 | Relayer that pays gas | **Live**, capped, testnet key only, and every page also offers "send it from my wallet" |
-| x402 paid ruling route | **Live** route returning a real 402 with price and payee. No settled payment is recorded yet |
+| x402 paid ruling route | **Live**, one payment settled (linked above). It defaults to a plain model, because a Multipath cache miss is slow and billed beyond the visible tokens, which would cost more than the price |
 | Reppo evaluation | **Live as advice**: the disputed ruling scored 98 and the statement 95, both routed `ship`, de-identified before sending. The feedback loop that changes the rulebook is not built, so the Reppo track is not entered |
-| Nightly time bar watch | **Designed**, not scheduled in this release |
+| Time bar watch | **Live** as a scheduled route (`/api/cron/watch`, daily). Its run record is read from the deployment's runtime logs |
 | Guided tour, dispute room, agents page | **Live** |
 | Try your own log | **Live** behind caps: 3 rulings an hour per visitor, a daily dollar budget, a kill switch |
 
