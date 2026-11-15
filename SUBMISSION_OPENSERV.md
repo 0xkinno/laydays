@@ -26,6 +26,6 @@ Laydays is a demurrage desk for the analyst who bills a charterer for a ship's w
 
 **What happens next.** The analyst presents the claim with her own wallet signature. A contract on Base Sepolia refuses a late claim and a claim with a required document missing, funds move only on the parties' own signatures, and the accepted part pays the same day the charterer answers.
 
-**What is real.** The contract is deployed and verified, and six transactions and five refusals are recorded with Basescan links. The court replay of five reported English judgments agreed on 2 of 5 and the misses are published on the Proof page. One x402 payment settled for a paid ruling route. All people, vessels and companies in the demo are fictional.
+**What is real.** The contract is deployed and verified, and six transactions and five refusals are recorded with Basescan links. The court replay of seven reported English judgments agreed on 3 of 7 and the misses are published on the Proof page. One x402 payment settled for a paid ruling route. All people, vessels and companies in the demo are fictional.
 
 **Track.** Open Track. Built during the event.

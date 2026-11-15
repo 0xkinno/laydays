@@ -1,0 +1,120 @@
+{
+  "at": "2026-11-15T10:02:33.871Z",
+  "calls": 133,
+  "successful": 123,
+  "medianMs": 20775,
+  "p95Ms": 38073,
+  "byRole": {
+    "port_clerk": {
+      "calls": 4,
+      "ok": 4,
+      "refused": 0,
+      "failed": 0,
+      "medianMs": 19228,
+      "p95Ms": 26251,
+      "medianCostUsd": 0.0016242200000000002,
+      "p95CostUsd": 0.00166777,
+      "totalTokenCostUsd": 0.00634478
+    },
+    "clause_reader": {
+      "calls": 14,
+      "ok": 4,
+      "refused": 0,
+      "failed": 10,
+      "medianMs": 21773,
+      "p95Ms": 29216,
+      "medianCostUsd": 0.00137722,
+      "p95CostUsd": 0.00144625,
+      "totalTokenCostUsd": 0.00511212
+    },
+    "senior_reader": {
+      "calls": 1,
+      "ok": 1,
+      "refused": 0,
+      "failed": 0,
+      "medianMs": 26710,
+      "p95Ms": 26710,
+      "medianCostUsd": 0.0144768,
+      "p95CostUsd": 0.0144768,
+      "totalTokenCostUsd": 0.0144768
+    },
+    "smoke": {
+      "calls": 1,
+      "ok": 1,
+      "refused": 0,
+      "failed": 0,
+      "medianMs": 2054,
+      "p95Ms": 2054,
+      "medianCostUsd": 0.000038219999999999997,
+      "p95CostUsd": 0.000038219999999999997,
+      "totalTokenCostUsd": 0.000038219999999999997
+    },
+    "replay_a": {
+      "calls": 21,
+      "ok": 21,
+      "refused": 0,
+      "failed": 0,
+      "medianMs": 2950,
+      "p95Ms": 9035,
+      "medianCostUsd": 0.00017680000000000001,
+      "p95CostUsd": 0.0006799000000000001,
+      "totalTokenCostUsd": 0.00531479
+    },
+    "replay_c": {
+      "calls": 7,
+      "ok": 7,
+      "refused": 0,
+      "failed": 0,
+      "medianMs": 2752,
+      "p95Ms": 130811,
+      "medianCostUsd": 0.00015509,
+      "p95CostUsd": 0.00101439,
+      "totalTokenCostUsd": 0.0021104200000000004
+    },
+    "replay_b": {
+      "calls": 7,
+      "ok": 7,
+      "refused": 0,
+      "failed": 0,
+      "medianMs": 2305,
+      "p95Ms": 8537,
+      "medianCostUsd": 0.000143,
+      "p95CostUsd": 0.00050869,
+      "totalTokenCostUsd": 0.00136877
+    },
+    "replay_d": {
+      "calls": 7,
+      "ok": 7,
+      "refused": 0,
+      "failed": 0,
+      "medianMs": 6874,
+      "p95Ms": 30218,
+      "medianCostUsd": 0.00022074,
+      "p95CostUsd": 0.0010891400000000002,
+      "totalTokenCostUsd": 0.00220337
+    },
+    "loop": {
+      "calls": 70,
+      "ok": 70,
+      "refused": 0,
+      "failed": 0,
+      "medianMs": 25341,
+      "p95Ms": 38521,
+      "medianCostUsd": 0.00214409,
+      "p95CostUsd": 0.00316173,
+      "totalTokenCostUsd": 0.15671408999999997
+    },
+    "loop_draft": {
+      "calls": 1,
+      "ok": 1,
+      "refused": 0,
+      "failed": 0,
+      "medianMs": 14395,
+      "p95Ms": 14395,
+      "medianCostUsd": 0.0008147100000000001,
+      "p95CostUsd": 0.0008147100000000001,
+      "totalTokenCostUsd": 0.0008147100000000001
+    }
+  },
+  "note": "Token cost only, from the usage field. Multipath, Kronos and Shadow Agent are billed beyond the visible tokens (see FINDINGS.md)."
+}

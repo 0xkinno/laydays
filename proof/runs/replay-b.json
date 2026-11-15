@@ -3,7 +3,7 @@
   "label": "Multipath",
   "model": "gpt-6-luna-serv-multipath",
   "tools": [],
-  "at": "2026-11-15T08:55:20.121Z",
+  "at": "2026-11-15T10:01:22.906Z",
   "results": [
     {
       "case": "amalie-essberger-2019",
@@ -96,6 +96,32 @@
       "requestId": "61e6ea8c-9bd3-41a4-ab53-5760fdb852ca",
       "latencyMs": 2305,
       "costUsd": 0.000143
+    },
+    {
+      "case": "abqaiq-bp-2011",
+      "rep": 1,
+      "court": "not_barred",
+      "answer": "abstained",
+      "agree": false,
+      "required": [],
+      "missing": [],
+      "barDays": 90,
+      "requestId": "e53c2cf4-43a5-4426-9a64-84a54f781891",
+      "latencyMs": 2159,
+      "costUsd": 0.00011583
+    },
+    {
+      "case": "waterfront-trafigura-2007",
+      "rep": 1,
+      "court": "barred",
+      "answer": "abstained",
+      "agree": false,
+      "required": [],
+      "missing": [],
+      "barDays": 90,
+      "requestId": "73271e75-e5b5-4c4e-96a2-b1f0308d88d2",
+      "latencyMs": 2217,
+      "costUsd": 0.00011661000000000001
     }
   ]
 }

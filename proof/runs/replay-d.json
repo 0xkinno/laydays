@@ -5,7 +5,7 @@
   "tools": [
     "shadow_agent"
   ],
-  "at": "2026-11-15T08:56:17.860Z",
+  "at": "2026-11-15T10:01:37.498Z",
   "results": [
     {
       "case": "amalie-essberger-2019",
@@ -96,6 +96,38 @@
       "requestId": "1a6ee8e2-094f-4003-926c-b6f8323de82a",
       "latencyMs": 7592,
       "costUsd": 0.00023855
+    },
+    {
+      "case": "abqaiq-bp-2011",
+      "rep": 1,
+      "court": "not_barred",
+      "answer": "abstained",
+      "agree": false,
+      "required": [],
+      "missing": [],
+      "barDays": 90,
+      "requestId": "109b2b4a-9af3-4e1d-a44b-f04bea8e9c4e",
+      "latencyMs": 6276,
+      "costUsd": 0.00010608000000000001
+    },
+    {
+      "case": "waterfront-trafigura-2007",
+      "rep": 1,
+      "court": "barred",
+      "answer": "barred",
+      "agree": true,
+      "required": [
+        "pumping",
+        "protest"
+      ],
+      "missing": [
+        "pumping",
+        "protest"
+      ],
+      "barDays": 90,
+      "requestId": "ba2c3ca6-658f-4a97-a578-27bff346d0a0",
+      "latencyMs": 7736,
+      "costUsd": 0.00020176
     }
   ]
 }
