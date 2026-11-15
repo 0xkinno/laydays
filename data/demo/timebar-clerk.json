@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-15T10:43:33.254Z",
+  "model": "gpt-6-luna-serv-kronos",
+  "requestId": "310cc075-2f69-49c2-824e-cc3876e13485",
+  "latencyMs": 5699,
+  "costUsd": 0.00012480000000000002,
+  "barDays": 90,
+  "requiredKeys": [
+    "bol",
+    "manifest",
+    "nor",
+    "notices",
+    "pumping",
+    "sof",
+    "statement"
+  ],
+  "declaredKeys": [
+    "bol",
+    "manifest",
+    "nor",
+    "notices",
+    "pumping",
+    "sof",
+    "statement"
+  ],
+  "matchesDeclared": true,
+  "reason": "The claim must be presented within 90 days of completion of discharge with the listed documents."
+}

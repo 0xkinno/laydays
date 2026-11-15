@@ -10,6 +10,7 @@ import { computeStatement } from "@/lib/laytime/clock";
 import { formatDhm, formatUsd } from "@/lib/laytime/money";
 import { fmtLocal } from "@/lib/laytime/intervals";
 import { PresentPanel } from "./PresentPanel";
+import { ClerkPanel, CoverNotePanel } from "./ClausePanels";
 import type { VoyageProps } from "@/lib/voyageData";
 import { useRole } from "@/lib/useRole";
 
@@ -36,6 +37,19 @@ export function VoyageView({ v }: { v: VoyageProps }) {
   const dayNow = Math.floor((Date.now() / 1000 - v.completionTs) / 86400);
   const barred = Date.now() / 1000 > v.completionTs + 90 * 86400;
   const active = rows.find((r) => r.id === sel) ?? rows[0];
+  const [dl, setDl] = useState<string | null>(null);
+  async function download(kind: "statement" | "pack") {
+    setDl(kind);
+    try {
+      const res = await fetch(kind === "statement" ? "/api/statement" : "/api/pack", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ overrides: own, bol: bolAttached }) });
+      const blob = await res.blob();
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = kind === "statement" ? "laytime-statement-orla-jansen.pdf" : "claim-pack-orla-jansen.zip";
+      a.click();
+      URL.revokeObjectURL(a.href);
+    } finally { setDl(null); }
+  }
 
   return (
     <main className="mx-auto max-w-6xl px-4 pb-24 pt-28 sm:px-6">
@@ -124,6 +138,18 @@ export function VoyageView({ v }: { v: VoyageProps }) {
           ))}
         </div>
       </section>
+
+      <section id="statement" className="mt-8 scroll-mt-28">
+        <p className="tag text-ink-soft">The laytime statement</p>
+        <p className="mt-2 max-w-2xl text-sm text-ink-soft">The statement is the sheet the analyst already sends, as a PDF with every interval, its ruling and clause, running totals, and the digest that is signed onchain. The claim pack adds the log, the documents index, the document hashes and proofs, the cover note and the Time-bar Clerk's read of the clause.</p>
+        <div className="mt-3 flex flex-wrap gap-3">
+          <button onClick={() => download("statement")} disabled={dl !== null} className="h-11 rounded-[10px] border border-ink/20 px-4 text-sm hover:bg-paper-deep disabled:opacity-60">{dl === "statement" ? "Building the PDF…" : "Download the statement (PDF)"}</button>
+          <button onClick={() => download("pack")} disabled={dl !== null} className="h-11 rounded-[10px] border border-ink/20 px-4 text-sm hover:bg-paper-deep disabled:opacity-60">{dl === "pack" ? "Building the pack…" : "Download the claim pack (zip)"}</button>
+        </div>
+      </section>
+
+      <ClerkPanel clerk={v.clerk} declared={v.docs.map((d) => ({ key: d.key, label: d.label }))} />
+      <CoverNotePanel note={v.coverNote} />
 
       <section id="present" className="mt-10 scroll-mt-28">
         <PresentPanel v={v} rows={rows} stmtCents={stmt.demurrageCents} reviewLeft={reviewLeft} missing={missing.map((m) => m.label)} bolAttached={bolAttached} barred={barred} role={role} />

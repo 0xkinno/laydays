@@ -32,6 +32,10 @@ export async function POST(req: Request) {
   zip.file("statement-of-facts.txt", DEMO.sof);
   zip.file("documents-index.json", JSON.stringify(docs.map((d) => ({ bit: d.bit, key: d.key, label: d.label, sha256: d.sha256 })), null, 2));
   zip.file("merkle.json", JSON.stringify({ root: tree.root, providedDocsMask: tree.mask, proofs: tree.proofs }, null, 2));
+  const note = existsSync(path.join(root, "data/demo/cover-note.json")) ? JSON.parse(readFileSync(path.join(root, "data/demo/cover-note.json"), "utf8")) : null;
+  if (note) zip.file("cover-note.txt", `${note.note}\n\nWritten by SERV (request ${note.requestId}). Every number in this note appears in the statement facts.\n`);
+  const clerk = existsSync(path.join(root, "data/demo/timebar-clerk.json")) ? readFileSync(path.join(root, "data/demo/timebar-clerk.json"), "utf8") : null;
+  if (clerk) zip.file("time-bar-clerk-read.json", clerk);
   zip.file("receipt.json", JSON.stringify({ digest, tx: b.tx ?? null, note: b.tx ? "presented onchain" : "not yet presented" }, null, 2));
   const out = await zip.generateAsync({ type: "uint8array" });
   return new NextResponse(Buffer.from(out), { headers: { "content-type": "application/zip", "content-disposition": 'attachment; filename="claim-pack-orla-jansen.zip"' } });

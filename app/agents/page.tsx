@@ -42,6 +42,9 @@ export default function Agents() {
       ) : (
         <p className="mt-3 max-w-2xl rounded-[12px] border border-dashed border-ink p-4 text-sm">No settled payment is recorded yet. The route returns a real 402 today. A paid call also spends one SERV ruling, and the SERV credit for it has not been topped up, so this section stays empty until it is run. It will show the transaction hash when it is.</p>
       )}
+      <h2 className="display mt-12 text-3xl">Or use the MCP door, free and capped</h2>
+      <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-ink-soft">The same checks are an MCP server over Streamable HTTP. Three tools: <span className="font-mono">laydays_rule_interval</span>, <span className="font-mono">laydays_check_time_bar</span> (the Time-bar Clerk reads a clause into a document list, code finds what is missing) and <span className="font-mono">laydays_get_claim</span> (reads the ledger, no model). The two that use SERV are limited per visitor and per day.</p>
+      <pre tabIndex={0} className="mt-3 overflow-x-auto rounded-[14px] border hair bg-paper-deep p-4 font-mono text-xs leading-relaxed">{`claude mcp add --transport http laydays https://laydays.vercel.app/api/mcp`}</pre>
       <h2 className="display mt-12 text-3xl">Pricing is a hypothesis</h2>
       <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-ink-soft">An analyst who spends 2,520 to 4,200 hours a year on manual claim processing (<a className="underline" href="https://www.voyagerportal.com/resources/manual-paperwork-in-shipping/">Voyager</a>) would pay a per-claim desk price far above the cost of a run, and an agent that needs one ruling can pay per ruling. Neither price has been tested with a buyer.</p>
     </Page>

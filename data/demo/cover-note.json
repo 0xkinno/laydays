@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-15T10:43:46.202Z",
+  "source": "model",
+  "model": "gpt-6-luna",
+  "requestId": "babd5fdf-c8ae-488f-bacb-19dc7204b98c",
+  "attempts": 1,
+  "note": "Please find the demurrage claim for MT Orla Jansen, fictional, at Houston. Laytime expired on 2026-08-19 18:00, with time on demurrage of 2d 07h 40m at $18,000 per day. The claim amount is $41,750.00. The statement includes 22 intervals ruled, 4 excepted intervals, 1 half rate interval, and 1 interval ruled by the analyst. The time bar is 90 days from completion of discharge. 7 documents are enclosed.",
+  "facts": {
+    "vessel": "MT Orla Jansen, fictional",
+    "port": "Houston",
+    "noticeOfReadiness": "2026-08-17 10:30",
+    "laytimeAllowed": "1d 12h 00m",
+    "laytimeExpired": "2026-08-19 18:00",
+    "timeOnDemurrage": "2d 07h 40m",
+    "demurrageRate": "$18,000 per day",
+    "claimAmount": "$41,750.00",
+    "intervalsRuled": 22,
+    "exceptedIntervals": 4,
+    "halfRateIntervals": 1,
+    "intervalsRuledByTheAnalyst": 1,
+    "timeBar": "90 days from completion of discharge",
+    "documentsEnclosed": 7
+  },
+  "numbersNotInFacts": [],
+  "houseStyleViolations": []
+}

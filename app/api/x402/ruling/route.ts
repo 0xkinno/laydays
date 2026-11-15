@@ -3,10 +3,7 @@ import { withX402, x402ResourceServer } from "@x402/next";
 import { HTTPFacilitatorClient } from "@x402/core/server";
 import { ExactEvmScheme } from "@x402/evm/exact/server";
 import { z } from "zod";
-import { clauseReader } from "@/lib/serv/crew/crew";
-import { checkRulings } from "@/lib/verify/citations";
-import { DEFINITION_IDS } from "@/lib/pipeline";
-import { RULEBOOK_VERSION_SHA } from "@/lib/serv/crew/prompts";
+import { ruleOneInterval } from "@/lib/serv/ruleOne";
 
 export const maxDuration = 120;
 export const dynamic = "force-dynamic";
@@ -27,18 +24,9 @@ const bodyZ = z.object({
 const handler = async (req: NextRequest): Promise<NextResponse> => {
   const parsed = bodyZ.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "bad request", issues: parsed.error.issues.slice(0, 3) }, { status: 400 });
-  const { interval, clauses, portRules } = parsed.data;
-  const lineId = "L01";
-  const built = [{ id: interval.id, from: interval.from, to: interval.to, startLine: lineId, endLine: lineId, kind: "waiting" as const, cause: "none" as const, text: interval.text }];
-  // The paid route defaults to a plain model: a Multipath cache miss is slow and billed beyond the visible tokens, which would cost more than the 0.02 price. X402_MODEL overrides it.
-  const res = await clauseReader({ cp: clauses, port: portRules, lines: [{ id: lineId, text: interval.text }], intervals: built, offsetMinutes: 0 }, { model: process.env.X402_MODEL ?? "gpt-6-luna", plain: !/multipath|kronos/.test(process.env.X402_MODEL ?? "") });
-  if (!res.ok) return NextResponse.json({ error: `ruling not made: ${res.error}`, refusedBy: res.refusedBy ?? null, requestId: res.requestId }, { status: 502 });
-  const catalog = { charter_party: new Set(clauses.map((c) => c.id)), laytime_definitions: new Set(DEFINITION_IDS), port_rules: new Set(portRules.map((c) => c.id)) };
-  const [checked] = checkRulings([interval.id], res.value!.intervals, catalog, new Set([lineId]), new Map([[interval.id, { startLine: lineId, endLine: lineId }]]));
-  return NextResponse.json({
-    interval: interval.id, effect: checked.resolvedEffect, verdict: checked.verdict, clauses: checked.clause_ids, reason: checked.reason, branches: checked.branches, problems: checked.problems,
-    rulebookVersion: RULEBOOK_VERSION_SHA, serv: { model: res.model, requestId: res.requestId, latencyMs: res.latencyMs, costUsd: res.costUsd },
-  });
+  const r = await ruleOneInterval(parsed.data);
+  if (!r.ok) return NextResponse.json({ error: r.error, refusedBy: r.refusedBy, requestId: r.requestId }, { status: 502 });
+  return NextResponse.json(r.body);
 };
 
 export const POST = withX402(handler, {

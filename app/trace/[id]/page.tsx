@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Page } from "@/components/shell/Page";
 import { demoSummary, local, dhm } from "@/lib/view";
+import { existsSync, readFileSync } from "node:fs";
 
 export default async function Trace({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -12,6 +13,7 @@ export default async function Trace({ params }: { params: Promise<{ id: string }
   const batch = Math.floor(idx / 7) + 1;
   const step = s.steps.find((x) => x.role === `Clause Reader (batch ${batch})`);
   const senior = s.steps.find((x) => x.role === "Senior Reader");
+  const rs = existsSync(`data/demo/reasoning-${id}.json`) ? (JSON.parse(readFileSync(`data/demo/reasoning-${id}.json`, "utf8")) as { summaries: string[]; requestId: string; model: string; effort: string; attempts?: number; latencyMs: number; at: string }) : null;
   const rows: [string, string][] = [
     ["Interval", `${i.id}, ${local(i.from)} to ${local(i.to)} local, ${dhm(i.minutes)}`],
     ["Log lines", `${i.startLine} to ${i.endLine}`],
@@ -40,7 +42,16 @@ export default async function Trace({ params }: { params: Promise<{ id: string }
           <div key={b.rulebook} className="rounded-[12px] border hair p-4"><p className="tag text-ink-soft">{b.rulebook.replace("_", " ")}</p><p className="display text-2xl capitalize">{b.finding}</p><p className="font-mono text-xs">{b.clause_id}</p><p className="mt-2 text-sm text-ink-soft">{b.reason}</p></div>
         ))}
       </div>
-      <p className="mt-6 text-sm text-ink-soft">Reasoning summaries from the Responses endpoint are not captured for this recorded run. FINDINGS.md records what that endpoint does with the Multipath suffix.</p>
+      {rs && rs.summaries.length > 0 ? (
+        <section className="mt-10">
+          <h2 className="display text-3xl">Reasoning summary</h2>
+          <p className="mt-2 max-w-2xl text-sm text-ink-soft">Captured from SERV&rsquo;s <span className="font-mono">/v1/responses</span> endpoint with <span className="font-mono">reasoning.summary: auto</span>, model {rs.model}, effort {rs.effort}, on {rs.at.slice(0, 10)}. The endpoint sometimes returns an empty summary: three earlier calls in this session returned none, so treat this as one sample. A summary is the model&rsquo;s own short account, not a ruling, and this one is mostly about how to shape the output.</p>
+          {rs.summaries.map((t, k) => <blockquote key={k} className="mt-4 whitespace-pre-line rounded-[14px] border hair bg-paper-deep p-5 text-[15px] leading-relaxed">{t.replace(/\*\*/g, "")}</blockquote>)}
+          <p className="mt-3 break-all font-mono text-[11px] text-ink-soft">SERV request {rs.requestId} · {(rs.latencyMs / 1000).toFixed(1)} s</p>
+        </section>
+      ) : (
+        <p className="mt-6 text-sm text-ink-soft">A reasoning summary is captured for interval I02 only, from the Responses endpoint. Open <a className="underline" href="/trace/I02">I02</a> to read it.</p>
+      )}
       <Link href="/voyage/orla-jansen" className="mt-6 inline-block text-sm underline underline-offset-4">Back to the voyage</Link>
     </Page>
   );
