@@ -1,4 +1,7 @@
+Run 1 (local server, 15 Nov 2026), official MCP client:
 tools: laydays_rule_interval, laydays_check_time_bar, laydays_get_claim
-claim: { "claim": "orla-jansen", "ledger": "0x73a25bd619a7ebdaa1d5773866a13e127358a1a4", "stage": "Settled", "claimUnits": "4175000", "fundedUnits": "4175000", "acceptedUnits": "3812500", "paidToOwnerUnits": "3993750", "refundedUnits": "181250", "timeBarDeadline": "2026-11-20T19:10:00.000Z", "note": "Testn
-time bar: { "verdict": "incomplete", "barDays": 90, "required": [ "nor", "sof", "bol", "pumping" ], "presented": [ "nor", "sof", "pumping" ], "missing": [ "bol" ], "note": "The model lists what the clause demands. Code decides what is missing.", "serv": { "model": "gpt-6-luna-serv-kronos", "requestId": "19893285-3644-4817-920c-eea00f10b2be", "latencyMs": 2689, "costUsd": 0.00013104000000
-rule: Limit of 3 live rulings an hour reached. isError true
+claim: stage Settled, claimUnits 4175000, fundedUnits 4175000, acceptedUnits 3812500, paidToOwnerUnits 3993750, refundedUnits 181250
+time bar: verdict incomplete, barDays 90, required nor sof bol pumping, presented nor sof pumping, missing bol (SERV request 7882bfc7-f2fc-4546-b8d3-804964a99783)
+rule: effect excepted, verdict OBSERVED, clauses CP-5, "The terminal strike time is excepted under CP-5, including while the vessel is on demurrage."
+
+Run 2, immediately after (same client IP): the per-visitor cap of 3 live rulings an hour applied to the third call, which returned "Limit of 3 live rulings an hour reached." as designed. The ledger read and the first model call are the same as run 1.
