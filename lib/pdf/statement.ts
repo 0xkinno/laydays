@@ -60,6 +60,7 @@ export async function buildStatementPdf(i: StatementInput): Promise<Uint8Array> 
   T(`DEMURRAGE DUE ${formatUsd(st.demurrageCents)}`, 30, y - 26, { f: bold, s: 14 });
   const foot = page.getHeight() - 590;
   void foot;
+  if (Object.keys(i.overrides).length) T("* ruled by the analyst herself and recorded as hers", 30, 46, { s: 7, c: SOFT });
   T(`Statement digest ${i.digest}`, 30, 36, { f: mono, s: 6.5, c: SOFT });
   T(`Rulebook version ${i.rulebook}`, 30, 27, { f: mono, s: 6.5, c: SOFT });
   T(i.txHash ? `Presented onchain: ${i.txHash}` : "Not yet presented onchain", 30, 18, { f: mono, s: 6.5, c: SOFT });
