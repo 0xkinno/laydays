@@ -1,3 +1,7 @@
+# Launch thread
+
+Posted by 0xkinno, with the demo video: https://x.com/0xkiddok/status/2122010353496101129
+
 # X thread draft (0xkinno posts it; tag @openservai)
 
 1/

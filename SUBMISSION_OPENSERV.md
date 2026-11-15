@@ -12,9 +12,9 @@ Form: https://openserv.typeform.com/submissions02 (fields read on 15 November 20
 | What is your project called? | **Laydays** |
 | Tell us about the project | See below |
 | Project URL (demo, website or repository) | https://laydays.vercel.app and https://github.com/0xkinno/laydays |
-| X post URL | OWNER (draft in THREAD.md) |
+| X post URL (with the demo video) | https://x.com/0xkiddok/status/2122010353496101129 |
 | One additional project URL | https://laydays.vercel.app/judge (sixty-second walk) |
-| Logo or icon | `docs/art/mark.png` |
+| Logo or icon | `docs/art/laydays-logo.png` |
 | Is data collection enabled? | No. Laydays stores nothing a visitor types. The server keeps run logs on Vercel only |
 | Team, experience, country, company, role, profile URL, SERV experience, quote permission, updates | OWNER |
 

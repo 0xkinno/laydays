@@ -8,7 +8,8 @@
   <a href="https://laydays.vercel.app">Live app</a> ·
   <a href="https://laydays.vercel.app/judge">60-second judge door</a> ·
   <a href="https://sepolia.basescan.org/address/0x73a25bd619a7ebdaa1d5773866a13e127358a1a4#code">Verified contract</a> ·
-  <a href="https://laydays.vercel.app/proof">Proof</a>
+  <a href="https://laydays.vercel.app/proof">Proof</a> ·
+  <a href="https://x.com/0xkiddok/status/2122010353496101129">Demo video</a>
 </p>
 
 <p align="center">
@@ -222,9 +223,9 @@ Eight reported English judgments, opened and confirmed on the National Archives 
 
 **Also measured:** the whole two-party flow runs in a browser against the live site with two wallets (8 steps, every one a real transaction); Lighthouse on the live landing page scores 99 performance, 100 accessibility, 100 best practices, 100 SEO; the SERV probe answers nine questions in [FINDINGS.md](FINDINGS.md).
 
-**Not measured:** cost and latency percentiles over many full-voyage runs, and a court set larger than eight. Reppo was used as an outside evaluator of rulings and drove one rulebook change, which is measured above; whether that earns the Reppo track is left to the entrant.
+**Measured over five full live voyages:** median 93 s, p95 117 s, token cost median $0.0207. **Not measured:** a court set larger than eight. Reppo was used as an outside evaluator of rulings and drove one rulebook change, which is measured above; whether that earns the Reppo track is left to the entrant.
 
-A recording of the guided tour, the base of the demo video, is in [`docs/video/tour.webm`](docs/video/tour.webm).
+The demo video is in the [launch post on X](https://x.com/0xkiddok/status/2122010353496101129). A recording of the guided tour is in [`docs/video/tour.webm`](docs/video/tour.webm).
 
 ## What is live, substituted, designed
 
