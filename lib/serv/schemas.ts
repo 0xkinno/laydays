@@ -8,7 +8,7 @@ export const EVENT_KINDS = [
   "pilot_on_board", "all_fast", "formalities", "inspection", "ops_commenced", "stoppage_start", "stoppage_end",
   "shifting_start", "shifting_end", "ops_completed", "departure", "remark", "other",
 ] as const;
-export const CAUSES = ["rain", "shore_equipment", "strike", "terminal_request", "port_closure", "waiting_documents", "none", "other"] as const;
+export const CAUSES = ["rain", "shore_equipment", "strike", "terminal_request", "port_closure", "waiting_documents", "shifting", "none", "other"] as const;
 
 /* ---------- Port Clerk ---------- */
 export const portClerkSchema = {
@@ -26,9 +26,9 @@ export const portClerkSchema = {
   },
 } as const;
 export const portClerkZ = z.object({
-  events: z.array(z.object({ line_id: z.string(), at: z.string(), kind: z.enum(EVENT_KINDS), cause: z.enum(CAUSES) })),
+  events: z.array(z.object({ line_id: z.string(), at: z.string(), kind: z.enum(EVENT_KINDS), cause: z.enum(CAUSES) }).strict()),
   instructions_found: z.array(z.string()),
-});
+}).strict();
 export type PortEvent = z.infer<typeof portClerkZ>["events"][number];
 
 /* ---------- Clause Reader / Senior Reader ---------- */

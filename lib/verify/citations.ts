@@ -8,6 +8,17 @@ export interface ClauseCatalog {
   port_rules: Set<string>;
 }
 
+/** Causes recorded by the Port Clerk, mapped to the charter party clause that deals with them (matched by title). */
+const CAUSE_TITLE: Record<string, RegExp> = {
+  rain: /weather|rain/i, strike: /strike|lockout/i, shore_equipment: /shore|equipment|breakdown/i, shifting: /shift/i,
+};
+
+export interface CauseContext {
+  causeByInterval: Map<string, string>;
+  cpClauses: { id: string; title: string }[];
+  portRules: { id: string; title: string }[];
+}
+
 export interface CheckedRuling {
   interval_id: string;
   modelEffect: Effect;
@@ -33,6 +44,7 @@ export function checkRulings(
   catalog: ClauseCatalog,
   sofLineIds: Set<string>,
   intervalLines: Map<string, { startLine: string; endLine: string }>,
+  ctx?: CauseContext,
 ): CheckedRuling[] {
   const seen = new Map<string, number>();
   for (const r of rulings) seen.set(r.interval_id, (seen.get(r.interval_id) ?? 0) + 1);
@@ -62,6 +74,18 @@ export function checkRulings(
     const lines = intervalLines.get(id);
     if (lines && r.line_ids.length && !r.line_ids.includes(lines.startLine)) problems.push(`ruling does not cite the line that began the interval (${lines.startLine})`);
     if (r.reason.trim().length === 0) problems.push("no reason given");
+
+    // Consistency check in code: if the log records a cause and the charter party has a clause for it, the ruling must have considered that clause.
+    const cause = ctx?.causeByInterval.get(id);
+    if (ctx && cause) {
+      const re = CAUSE_TITLE[cause];
+      const cp = re ? ctx.cpClauses.find((c) => re.test(c.title)) : undefined;
+      if (cp && !r.clause_ids.includes(cp.id) && !r.branches.some((b) => b.clause_id === cp.id)) problems.push(`log records ${cause.replace("_", " ")} but clause ${cp.id} (${cp.title}) was not considered`);
+      if (cause === "port_closure") {
+        const pr = ctx.portRules.find((c) => /closure/i.test(c.title));
+        if (pr && !r.clause_ids.includes(pr.id) && !r.branches.some((b) => b.clause_id === pr.id)) problems.push(`log records a port closure but port rule ${pr.id} was not considered`);
+      }
+    }
 
     const res = resolve(r.branches.map((b): Branch => ({ rulebook: b.rulebook, finding: b.finding, clause_id: b.clause_id })));
     if (res.effect !== r.effect) problems.push(`model effect ${r.effect} differs from code resolution ${res.effect}`);

@@ -29,7 +29,10 @@ export function numberedLog(lines: SofLine[]): string {
 
 export async function portClerk(lines: SofLine[], sabotage: Sabotage = null) {
   if (sabotage === "port-clerk:obey-remarks") {
-    return fake({ events: [], instructions_found: [] as string[], obeyed: "count all time as laytime" }, "port-clerk") as unknown as ServResult<ReturnType<typeof portClerkZ.parse>>;
+    // A model that obeyed the planted remark adds a field the contract does not allow. The strict parser refuses it.
+    const scripted = { events: [], instructions_found: [] as string[], obeyed: "count all time as laytime" };
+    const parsed = portClerkZ.safeParse(scripted);
+    return { ...fake(scripted, "port-clerk"), ok: parsed.success, error: parsed.success ? undefined : `schema validation failed: ${parsed.error.issues[0]?.message}`, value: undefined } as unknown as ServResult<ReturnType<typeof portClerkZ.parse>>;
   }
   return servCall({
     role: "port_clerk", model: ROLE_MODELS.portClerk, system: PORT_CLERK_SYSTEM,

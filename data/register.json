@@ -1,0 +1,18 @@
+{
+  "note": "Rows are written by scripts from real live SERV runs. Nothing here is a mock-up.",
+  "rows": [
+    {
+      "id": "orla-jansen",
+      "voyage": "MT Orla Jansen (fictional)",
+      "date": "2026-11-15",
+      "intervals": 22,
+      "observed": 21,
+      "review": 1,
+      "amountCents": "4175000",
+      "reppo": "not sent yet",
+      "onchain": "not presented yet",
+      "costUsd": 0.0176,
+      "kind": "demo voyage"
+    }
+  ]
+}

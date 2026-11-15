@@ -114,7 +114,8 @@ export async function ruleVoyage(args: { sofRaw: string; cp: CpData; calendar: C
     progress({ stage: "clause_reader", detail: `Ruled batch ${finished} of ${batches.length}`, done: finished, total: batches.length });
   }));
 
-  let checked = checkRulings(tl.intervals.map((i) => i.id), raw, catalog, lineIds, intervalLines);
+  const ctx = { causeByInterval: new Map(tl.intervals.filter((i) => /_start$/.test(i.kind)).map((i) => [i.id, i.cause as string])), cpClauses: args.cp.clauses, portRules: args.calendar.rules };
+  let checked = checkRulings(tl.intervals.map((i) => i.id), raw, catalog, lineIds, intervalLines, ctx);
   const byId = new Map<string, "serv" | "senior" | "person">(checked.map((c) => [c.interval_id, "serv"]));
   const reqByInterval = new Map<string, { requestId: string | null; model: string }>();
   for (const s of steps) void s;
@@ -127,7 +128,7 @@ export async function ruleVoyage(args: { sofRaw: string; cp: CpData; calendar: C
     const res = await clauseReader({ cp: args.cp.clauses, port: args.calendar.rules, lines: log.usable, intervals: subset, offsetMinutes: args.offsetMinutes }, { senior: true });
     steps.push({ role: "Senior Reader", model: res.model, requestId: res.requestId, latencyMs: res.latencyMs, costUsd: res.costUsd, tokens: res.usage, note: res.ok ? undefined : res.error });
     if (res.ok) {
-      const re = checkRulings(subset.map((i) => i.id), res.value!.intervals, catalog, lineIds, intervalLines);
+      const re = checkRulings(subset.map((i) => i.id), res.value!.intervals, catalog, lineIds, intervalLines, ctx);
       checked = checked.map((c) => { const n = re.find((x) => x.interval_id === c.interval_id); if (n && n.verdict === "OBSERVED") { byId.set(c.interval_id, "senior"); return n; } return c; });
     }
   }
