@@ -8,7 +8,8 @@ import { ledgerAbi, STAGES } from "@/lib/chain/abi";
 import { BASE_SEPOLIA_USDC, txUrl } from "@/lib/chain/addresses";
 import { buildDocsTree } from "@/lib/chain/docsTree";
 import { statementDigest } from "@/lib/chain/digest";
-import { openTyped, presentTyped, voyageIdOf } from "@/lib/chain/eip712";
+import { openTyped, presentTyped } from "@/lib/chain/eip712";
+import { newClaimQuery, useClaimKey } from "@/lib/claimKey";
 import { encode, explainError, viaRelayer } from "@/lib/chain/actions";
 import type { VoyageProps } from "@/lib/voyageData";
 import { formatUsd } from "@/lib/laytime/money";
@@ -29,7 +30,8 @@ export function PresentPanel({ v, rows, stmtCents, reviewLeft, missing, bolAttac
   const [msg, setMsg] = useState<{ kind: "ok" | "err"; text: string; hash?: string } | null>(null);
   const [link, setLink] = useState<string | null>(null);
   const ledger = (v.ledger || "") as `0x${string}`;
-  const voyageId = useMemo(() => voyageIdOf(v.slug), [v.slug]);
+  const ck = useClaimKey(v.slug, v.completionTs);
+  const voyageId = ck.voyageId;
 
   const refresh = useCallback(async () => {
     if (!ledger || !pub) return;
@@ -46,7 +48,7 @@ export function PresentPanel({ v, rows, stmtCents, reviewLeft, missing, bolAttac
   else if (role !== "Owner") reasons.push("Connect the owner wallet (Meera)");
   if (reviewLeft > 0) reasons.push(`${reviewLeft} interval still in review, rule it yourself`);
   if (missing.length) reasons.push(`${missing.join(", ")} missing`);
-  if (barred) reasons.push("The time bar has passed. The contract will refuse it");
+  if (barred && !ck.fresh) reasons.push("The time bar has passed. The contract will refuse it");
   const ready = reasons.length === 0;
 
   const body = useMemo(() => ({
@@ -61,9 +63,9 @@ export function PresentPanel({ v, rows, stmtCents, reviewLeft, missing, bolAttac
       if (chainId !== baseSepolia.id) { switchChain({ chainId: baseSepolia.id }); throw new Error("Switching to Base Sepolia. Try again."); }
       const nonce = (await pub.readContract({ address: ledger, abi: ledgerAbi, functionName: "nonces", args: [address] })) as bigint;
       const deadline = BigInt(Math.floor(Date.now() / 1000) + 3 * 86400);
-      const terms = { owner: v.ownerAddress as `0x${string}`, charterer: v.chartererAddress as `0x${string}`, token: BASE_SEPOLIA_USDC, completionOfDischarge: BigInt(v.completionTs), timeBarDays: 90, requiredDocsMask: v.requiredMask, charterPartyHash: v.charterPartyHash, rulebookHash: ("0x" + v.rulebookVersion) as Hex };
+      const terms = { owner: v.ownerAddress as `0x${string}`, charterer: v.chartererAddress as `0x${string}`, token: BASE_SEPOLIA_USDC, completionOfDischarge: BigInt(ck.completionTs), timeBarDays: 90, requiredDocsMask: v.requiredMask, charterPartyHash: v.charterPartyHash, rulebookHash: ("0x" + v.rulebookVersion) as Hex };
       const sig = await signTypedDataAsync(openTyped(ledger, voyageId, terms, nonce, deadline));
-      setLink(`${location.origin}/voyage/${v.slug}/charterer?ownerSig=${sig}&deadline=${deadline}`);
+      setLink(`${location.origin}/voyage/${v.slug}/charterer?${ck.query ? ck.query + "&" : ""}ownerSig=${sig}&deadline=${deadline}`);
       setMsg({ kind: "ok", text: "Terms signed by you. Send this link to Dan. He signs the same terms and opens the claim." });
     } catch (e) { setMsg({ kind: "err", text: explainError(e) }); } finally { setBusy(false); }
   }
@@ -117,9 +119,11 @@ export function PresentPanel({ v, rows, stmtCents, reviewLeft, missing, bolAttac
           <button disabled={!ready || busy} onClick={() => present(true)} className="h-12 rounded-[12px] border border-ink/20 px-6 font-medium hover:bg-paper-deep disabled:cursor-not-allowed disabled:opacity-50">Send it from my wallet</button>
         </div>
       ) : (
-        <p className="mt-5 rounded-[10px] border hair p-3 text-sm">This claim is {stageName.toLowerCase()}. Dan answers on <a className="underline" href={`/voyage/${v.slug}/charterer`}>his page</a>.</p>
+        <p className="mt-5 rounded-[10px] border hair p-3 text-sm">This claim is {stageName.toLowerCase()}. Dan answers on <a className="underline" href={`/voyage/${v.slug}/charterer${ck.query ? "?" + ck.query : ""}`}>his page</a>.</p>
       )}
 
+      {ck.fresh && <p className="mt-3 rounded-[10px] border border-dashed border-ink p-3 text-xs">Demo clock: this fresh claim restates completion of discharge as 83 days before it was opened, so the walkthrough is always on day 83. The statement keeps the real log dates.</p>}
+      {(stage === 4 || stage === 3) && !ck.fresh && <a href={`?${newClaimQuery()}`} className="mt-4 inline-flex h-11 items-center rounded-[12px] bg-ink px-5 text-sm font-medium text-paper">Start a fresh claim to try it yourself</a>}
       {reasons.length > 0 && <ul className="mt-4 space-y-1 text-sm text-ink-soft">{reasons.map((r) => <li key={r}>Waiting: {r}</li>)}</ul>}
       {busy && <p className="mt-4 text-sm" role="status">Waiting for your wallet or the chain…</p>}
       {link && <div className="mt-4 break-all rounded-[10px] border hair bg-paper p-3 font-mono text-xs">{link}</div>}

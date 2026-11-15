@@ -22,7 +22,7 @@ const run = recorded as unknown as {
 
 export function demoIntervals(): VInterval[] {
   return run.intervals.map((i) => ({
-    id: i.id, from: i.from, to: i.to, minutes: i.to - i.from, startLine: i.startLine, endLine: i.endLine, text: i.text,
+    id: i.id, from: i.from, to: i.to, minutes: i.to - i.from, startLine: i.startLine, endLine: i.endLine, text: String(i.text).replace(/^\d{4}-\d{2}-\d{2}T\S+\s*/, ""),
     effect: i.finalEffect, verdict: i.finalEffect ? "OBSERVED" : "REVIEW", clauseIds: i.ruling.clause_ids, lineIds: i.ruling.line_ids,
     reason: i.ruling.reason, decidedBy: i.ruling.decidedBy, problems: i.ruling.problems, branches: i.ruling.branches, appliesOnDemurrage: i.appliesOnDemurrage,
   }));

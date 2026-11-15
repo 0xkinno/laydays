@@ -126,7 +126,7 @@ export function Bento({ docs, total, day }: { docs: { label: string; present: bo
   return (
     <Stagger className="grid auto-rows-[minmax(0,auto)] gap-4 md:grid-cols-6">
       <StaggerItem className="md:col-span-3">
-        <GlowCard className="h-full p-6"><div className="flex items-start justify-between"><div><p className="tag text-ink-soft">The clock</p><h3 className="display mt-1 text-3xl">Ninety days, counted</h3><p className="mt-2 max-w-xs text-sm text-ink-soft">From completion of discharge. The last seven ticks turn flare.</p></div><Dial day={day} size={150} /></div></GlowCard>
+        <GlowCard className="h-full p-6"><p className="tag text-ink-soft">The clock</p><h3 className="display mt-1 text-3xl">Ninety days, counted</h3><p className="mt-2 max-w-sm text-sm text-ink-soft">From completion of discharge on 22 August 2026. Today is day {day}. The last seven ticks turn flare.</p><div className="mt-4 flex justify-center"><Dial day={day} size={230} /></div></GlowCard>
       </StaggerItem>
       <StaggerItem className="md:col-span-3">
         <GlowCard className="h-full p-6"><p className="tag text-ink-soft">The documents</p><h3 className="display mt-1 text-3xl">Seven the clause demands</h3><div className="mt-4"><DocsCard docs={docs} /></div></GlowCard>

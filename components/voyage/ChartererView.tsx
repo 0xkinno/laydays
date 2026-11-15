@@ -7,7 +7,8 @@ import { keccak256, toBytes, type Hex } from "viem";
 import { GlowCard } from "@/components/ui/GlowCard";
 import { ledgerAbi, STAGES, usdcAbi } from "@/lib/chain/abi";
 import { BASE_SEPOLIA_USDC, txUrl } from "@/lib/chain/addresses";
-import { answerTyped, openTyped, receiveAuthTyped, voyageIdOf } from "@/lib/chain/eip712";
+import { answerTyped, openTyped, receiveAuthTyped } from "@/lib/chain/eip712";
+import { useClaimKey } from "@/lib/claimKey";
 import { encode, explainError, viaRelayer } from "@/lib/chain/actions";
 import { computeStatement } from "@/lib/laytime/clock";
 import { formatUsd } from "@/lib/laytime/money";
@@ -29,7 +30,8 @@ export function ChartererView({ v }: { v: VoyageProps }) {
   const ownerSig = qs.get("ownerSig") as Hex | null;
   const sigDeadline = qs.get("deadline");
   const ledger = v.ledger as `0x${string}`;
-  const voyageId = useMemo(() => voyageIdOf(v.slug), [v.slug]);
+  const ck = useClaimKey(v.slug, v.completionTs);
+  const voyageId = ck.voyageId;
   const [claim, setClaim] = useState<Claim | null>(null);
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<{ kind: "ok" | "err"; text: string; hash?: string } | null>(null);
@@ -72,7 +74,7 @@ export function ChartererView({ v }: { v: VoyageProps }) {
       if (!ownerSig || !sigDeadline) throw new Error("Open the link Meera sent you. It carries her signature on the terms.");
       const deadline = BigInt(sigDeadline);
       const nonce = (await pub!.readContract({ address: ledger, abi: ledgerAbi, functionName: "nonces", args: [address!] })) as bigint;
-      const terms = { owner: v.ownerAddress as `0x${string}`, charterer: v.chartererAddress as `0x${string}`, token: BASE_SEPOLIA_USDC, completionOfDischarge: BigInt(v.completionTs), timeBarDays: 90, requiredDocsMask: v.requiredMask, charterPartyHash: v.charterPartyHash, rulebookHash: ("0x" + v.rulebookVersion) as Hex };
+      const terms = { owner: v.ownerAddress as `0x${string}`, charterer: v.chartererAddress as `0x${string}`, token: BASE_SEPOLIA_USDC, completionOfDischarge: BigInt(ck.completionTs), timeBarDays: 90, requiredDocsMask: v.requiredMask, charterPartyHash: v.charterPartyHash, rulebookHash: ("0x" + v.rulebookVersion) as Hex };
       const sig = await signTypedDataAsync(openTyped(ledger, voyageId, terms, nonce, deadline));
       await send("open", [voyageId, terms, deadline, ownerSig, sig], "Terms signed by both parties. The claim is open.");
     } catch (e) { setMsg({ kind: "err", text: explainError(e) }); } finally { setBusy(false); }
@@ -151,7 +153,7 @@ export function ChartererView({ v }: { v: VoyageProps }) {
         {(!claim || stage === 0) && <button disabled={!isDan || busy || !ledger} onClick={openClaim} className="h-12 rounded-[12px] bg-signal px-6 font-medium shadow-[var(--glow)] disabled:opacity-50 disabled:shadow-none">Sign the terms and open</button>}
         {stage === 2 && claim && claim.funded < claim.claimAmount && <button disabled={!isDan || busy} onClick={fund} className="h-12 rounded-[12px] bg-signal px-6 font-medium shadow-[var(--glow)] disabled:opacity-50">Fund the claim</button>}
         {stage === 2 && claim && claim.funded >= claim.claimAmount && (<><button disabled={!isDan || busy} onClick={() => answer(false)} className="h-12 rounded-[12px] bg-signal px-6 font-medium shadow-[var(--glow)] disabled:opacity-50">Answer and pay the accepted part</button><button disabled={!isDan || busy} onClick={() => answer(true)} className="h-12 rounded-[12px] border border-ink/20 px-6 font-medium disabled:opacity-50">Send it from my wallet</button></>)}
-        {stage === 3 && <a href={`/dispute/${v.slug}`} className="inline-flex h-12 items-center rounded-[12px] bg-ink px-6 font-medium text-paper">Go to the dispute room</a>}
+        {stage === 3 && <a href={`/dispute/${v.slug}${ck.query ? "?" + ck.query : ""}`} className="inline-flex h-12 items-center rounded-[12px] bg-ink px-6 font-medium text-paper">Go to the dispute room</a>}
       </div>
       {busy && <p className="mt-4 text-sm" role="status">Waiting for your wallet or the chain…</p>}
       {msg && <div role="status" className={`mt-4 rounded-[10px] border p-3 text-sm ${msg.kind === "err" ? "border-flare text-flare" : "border-ink/20"}`}>{msg.text} {msg.hash && <a className="underline" href={txUrl(msg.hash)} target="_blank" rel="noreferrer">View on Basescan</a>}</div>}

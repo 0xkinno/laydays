@@ -47,10 +47,6 @@ export function BreakPanel() {
           </div>
         );
       })}
-      <div className="rounded-[18px] border hair bg-paper-deep p-6 md:col-span-2">
-        <h2 className="display text-2xl">Onchain refusals</h2>
-        <p className="mt-2 text-sm text-ink-soft">A claim presented late, a claim without the bills of lading, a tampered statement digest and a replayed signature are each refused by the contract. The Foundry-style tests cover every refusal. The Base Sepolia transactions will be listed here once the contract is deployed and the proof run is recorded.</p>
-      </div>
     </div>
   );
 }

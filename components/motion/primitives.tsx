@@ -75,7 +75,7 @@ export function Parallax({ children, from = 0, to = -80, className = "" }: { chi
   return <motion.div ref={ref} style={{ y }} className={className}>{children}</motion.div>;
 }
 
-/** Endless horizontal ticker. Content is duplicated once for a seamless loop. */
+/** Endless horizontal ticker. Content is duplicated once so the loop has no visible seam. */
 export function Marquee({ items, speed = 38 }: { items: ReactNode[]; speed?: number }) {
   const reduce = useReducedMotion();
   const row = (k: string) => (
