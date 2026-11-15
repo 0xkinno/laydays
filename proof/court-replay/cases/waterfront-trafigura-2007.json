@@ -1,0 +1,27 @@
+{
+  "id": "waterfront-trafigura-2007",
+  "citation": "Waterfront Shipping Co Ltd v Trafigura AG (M/T Sabrewing) [2007] EWHC 2482 (Comm)",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewhc/comm/2007/2482",
+  "kind": "time_bar",
+  "decided": "Whether a demurrage claim was time-barred because the owners had not produced signed pumping logs or a note of protest within 90 days of discharge.",
+  "facts": "The owners claimed demurrage for a discharge that took about 47 hours. Within 90 days they did not produce pumping logs signed by a responsible officer of the vessel and by a terminal or charterers' representative, and they produced no note of protest about the missing countersignature.",
+  "clauses": [
+    {
+      "id": "CP-23",
+      "title": "Time bar",
+      "text": "The charterers are released from liability for any claim unless the claim is presented with supporting documentation within 90 days of completion of discharge."
+    },
+    {
+      "id": "CP-16",
+      "title": "Pumping",
+      "text": "The vessel must discharge within 24 hours, or maintain an average discharge pressure at the ship's manifold of 100 psig. Where discharge takes longer than 24 hours, the owners prove the pressure with pumping logs signed by a responsible vessel officer and by a terminal or charterers' representative, or with a note of protest if the countersignature is refused."
+    }
+  ],
+  "presentedWithin90Days": [
+    "statement",
+    "sof",
+    "nor"
+  ],
+  "courtAnswer": "barred",
+  "tests": "Time-bar Clerk reading a clause with no list, with a second clause that makes signed pumping logs the proof of the claim, then code comparing the document list"
+}

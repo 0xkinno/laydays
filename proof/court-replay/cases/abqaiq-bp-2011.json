@@ -1,0 +1,25 @@
+{
+  "id": "abqaiq-bp-2011",
+  "citation": "National Shipping Company of Saudi Arabia v BP Oil Supply Co (The Abqaiq) [2011] EWCA Civ 1127",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewca/civ/2011/1127",
+  "kind": "time_bar",
+  "decided": "Whether a claim first labelled as an invoice for waiting time, and later restated as demurrage, was time-barred when the charterers had received all supporting documentation within 90 days.",
+  "facts": "The owners presented an invoice for waiting time within 90 days. It was later recognised to be a claim for demurrage. All the supporting documentation that substantiates every part of the claim (notice of readiness, statement of facts, time logs, pumping logs) had reached the charterers within the 90 days.",
+  "clauses": [
+    {
+      "id": "CP-20.1",
+      "title": "Claims time bar",
+      "text": "Any claim for demurrage, deviation or detention must be presented in writing within 90 days of completion of discharge, with all supporting documentation substantiating each and every constituent part of the claim, or the charterers are discharged from liability."
+    }
+  ],
+  "presentedWithin90Days": [
+    "nor",
+    "sof",
+    "port_log",
+    "time_sheet",
+    "pumping",
+    "statement"
+  ],
+  "courtAnswer": "not_barred",
+  "tests": "Time-bar Clerk reading a clause with no list, then code comparing the document list, when every supporting document reached the charterers in time"
+}
