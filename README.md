@@ -194,9 +194,27 @@ The money moved exactly as signed: 3,993,750 units reached the owner and 181,250
 
 The contract has 22 tests run with `npm run test:sol`: every happy path, every refusal, three fuzz properties, and two invariants (the ledger's token balance always equals funded minus paid minus refunded across all claims, and no claim is ever overfunded). The clock has unit and property tests run with `npm test`.
 
-### Not yet measured, and said so
+### Measured against what courts decided
 
-Court replay of reported English judgments, the Multipath on against off ablation, both error directions, the Reppo feedback loop, a settled x402 payment, the SERV probe answers and the unattended time bar run are specified in [PROOF.md](PROOF.md) but have not been run in this release. The Proof page shows each of them as "not yet run" rather than a number. [PROGRESS.md](PROGRESS.md) lists exactly what is done and what is not.
+Five reported English judgments, opened and confirmed on the National Archives site, committed before any run ([`proof/court-replay`](proof/court-replay)). No prompt was tuned on them.
+
+| Case | Court | Laydays |
+|---|---|---|
+| [Tricon v MTM](https://caselaw.nationalarchives.gov.uk/ewhc/comm/2020/700) | barred (no bills of lading) | **miss**: it passed an incomplete list |
+| [Amalie Essberger](https://caselaw.nationalarchives.gov.uk/ewhc/comm/2019/3402) | not barred (documents already given) | agreed |
+| [The Adventure](https://caselaw.nationalarchives.gov.uk/ewhc/comm/2015/318) | barred (port logs and timesheets) | abstained, clause names no documents |
+| [Ocean Neptune](https://caselaw.nationalarchives.gov.uk/ewhc/comm/2018/163) | barred | agreed |
+| [Eagle Valencia](https://caselaw.nationalarchives.gov.uk/ewca/civ/2010/713) | notice invalid, laytime does not run | abstained |
+
+**2 of 5 agreed, interval 12% to 77%.** Documents wrongly passed 1, wrongly flagged 0, abstained 2. Five cases is a small sample, the interval says so, and the one miss points the dangerous way. Plain `gpt-6-luna`, Multipath, Kronos plus Multipath and Shadow Agent scored 1, 1, 2 and 2 of 5 on the same cases: one case apart, which is noise, so this test cannot say Multipath helps.
+
+**A wider test with answers set by code.** Seeded generated voyages ([`lib/laytime/generator.ts`](lib/laytime/generator.ts)), 12 new seeds, 96 intervals. Rulebook version 1: 62 agreed (55% to 73%), 33 sent to a person, 1 wrong. Version 2, five rules drafted by SERV from version 1's failures and from four Reppo critiques and approved by the owner before they ran: 65 agreed (58% to 76%), 31 sent to a person, none wrong. The gain is within noise; fog closures rose from 7 to 12 of 12, and the two kinds the rules targeted stayed at 0 of 12 because our cause-clause check, not the rules, holds them. In 24 of the abstentions the model's effect was already right. Detail in [PROOF.md](PROOF.md).
+
+**Also measured:** the whole two-party flow runs in a browser against the live site with two wallets (8 steps, every one a real transaction); Lighthouse on the live landing page scores 99 performance, 100 accessibility, 100 best practices, 100 SEO; the SERV probe answers nine questions in [FINDINGS.md](FINDINGS.md).
+
+**Not measured:** cost and latency percentiles over many full-voyage runs, a held-out court set larger than five, and a Reppo-measured before and after.
+
+A recording of the guided tour, the base of the demo video, is in [`docs/video/tour.webm`](docs/video/tour.webm).
 
 ## What is live, substituted, designed
 

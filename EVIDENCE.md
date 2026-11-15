@@ -22,3 +22,18 @@
 | Clause Reader, batch 3 | same | `fae14bfe-e368-47f1-b343-4dab213b278a` |
 | Clause Reader, batch 4 | same | `e31e3694-fa00-43ec-bf5b-9b20f1672eb4` |
 | Senior Reader | `gpt-6.1-sol-serv-multipath` | `c62abdf8-f303-43e9-ab6c-e1feac86e736` |
+
+## More evidence
+
+| Item | Where |
+|---|---|
+| Settled x402 payment | https://sepolia.basescan.org/tx/0xc3c29c24a23b59384659f1017891710c386b03fa1c67fd1c6e4636a2895a26a0 |
+| Court replay cases, committed before any run | commit `3e93ac5196057bb709bbed40c4ca9e275dde49be`, `proof/court-replay/cases/` |
+| Replay and ablation results | `proof/runs/replay-a.json` to `replay-d.json`, `replay.facts.json` |
+| Rulebook loop | `proof/runs/loop-v1-dev.json`, `loop-reppo.json`, `loop-draft.json`, `loop-approval.json`, `loop-compare.json` |
+| Reppo evaluations | `proof/runs/reppo-eval.json`, `proof/runs/loop-reppo.json` |
+| SERV probe | `proof/runs/serv-probe.json` |
+| Browser test | `proof/runs/e2e-flow.json` |
+| Lighthouse | `proof/runs/lighthouse.json` |
+| Responsive and accessibility sweep | `proof/runs/responsive-axe.json` |
+| Tour recording (base of the demo video) | `docs/video/tour.webm` |

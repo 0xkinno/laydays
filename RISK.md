@@ -25,7 +25,7 @@ Demurrage cents = rate in cents per day times minutes divided by 1,440, rounded 
 
 ## Known limits
 
-- Foundry could not be installed in the build environment, so the contract tests run on Hardhat 3 and there is no Foundry invariant test yet. The conservation property is covered by a fuzz test.
+- Foundry could not be installed in the build environment, so the contract tests run on Hardhat 3. It runs Solidity tests with forge-std, including two invariant tests and three fuzz properties.
 - The public relay cap is an in-memory counter per server instance, so it is a best-effort cap.
 - Live SERV rulings are limited by a daily dollar budget and a kill switch (`LAYDAYS_LIVE=0`).
 - The relayer key and the e2e keys are testnet keys and are to be disposed after the event.

@@ -20,12 +20,39 @@ Spreadsheet way, every hour counted: $61,250.00. Ruled by Laydays with the analy
 
 Four scripted bad models run through the real checks on `/break`: count everything (5 of 5 intervals with an excepting cause sent to review), invent a clause (22 of 22 refused), obey a planted remark (refused by the strict parser), invent a number (refused by the numbers-in-facts check).
 
+## Court replay (done)
+
+Five reported English judgments, opened on caselaw.nationalarchives.gov.uk on 15 November 2026. Cases committed before any run in [`3e93ac5`](proof/court-replay). Files in [`proof/court-replay/cases`](proof/court-replay/cases), results in `proof/runs/replay-*.json`, summary in `proof/runs/replay.facts.json`.
+
+| Case | Court | Laydays (Kronos plus Multipath) |
+|---|---|---|
+| Tricon v MTM [2020] EWHC 700 (Comm) | barred | **miss**: passed the document list, did not infer the bills of lading were required |
+| Tankreederei v Marubeni (Amalie Essberger) [2019] EWHC 3402 (Comm) | not barred | agreed |
+| Kassiopi v Fal Shipping (The Adventure) [2015] EWHC 318 (Comm) | barred | abstained: the clause names no documents |
+| Lukoil v Ocean Tankers (Ocean Neptune) [2018] EWHC 163 (Comm) | barred | agreed |
+| AET v Arcadia (Eagle Valencia) [2010] EWCA Civ 713 | notice invalid, laytime does not run | abstained |
+
+2 of 5 agreed, interval 12% to 77%. Both error directions: documents wrongly passed 1, wrongly flagged 0, abstained 2. Five cases is a small sample and the interval says so. The seed list had ten cases; the other five could not be opened and confirmed in this environment and were dropped. No prompt was tuned on any case.
+
+## Ablation (done, same five cases)
+
+Plain `gpt-6-luna` (three runs per case, majority) 1 of 5; Multipath 1 of 5; Kronos plus Multipath 2 of 5; plus Shadow Agent 2 of 5. A difference of one case out of five is noise. Median latency 2.6 to 3.0 s on every arm, token cost between $0.001 and $0.004 per arm.
+
+## Rulebook loop (done, generated voyages, answers set by code)
+
+`lib/laytime/generator.ts` builds seeded voyages whose correct answers come from the charter party table before any model sees them. Version 1 on 12 development seeds: 58 of 96 agreed, 38 sent to a person, none wrong. Reppo evaluated four failing rulings, de-identified (scores 71 to 96, all routed `review`). SERV drafted five corrective rules and the owner approved them ([`proof/runs/loop-approval.json`](proof/runs/loop-approval.json)). On 12 new seeds: version 1 62 of 96 (interval 55% to 73%), version 2 65 of 96 (58% to 76%). The gain is within noise. The two kinds the rules targeted stayed at 0 of 12. Fog closures went from 7 to 12 of 12. In 24 of the version 1 abstentions the model's effect was already right and our cause-clause check held it for a person.
+
+## SERV probe (done)
+
+[FINDINGS.md](FINDINGS.md), nine questions, request ids in `proof/runs/serv-probe.json`.
+
+## Revenue, end to end, performance (done)
+
+One x402 payment settled for a paid ruling (`proof/runs/x402-paid-call.json`). Two-wallet browser test passes on the live site, 8 steps (`proof/runs/e2e-flow.json`). Lighthouse desktop 99, 100, 100, 100 (`proof/runs/lighthouse.json`). Responsive, console and accessibility sweep on eight viewports (`proof/runs/responsive-axe.json`).
+
 ## Not yet run
 
-- **Court replay.** Cases to be written and committed before any run, then split 10 for development and the rest held out. Seed list: Tricon v MTM [2020] EWHC 700 (Comm), Tankreederei v Marubeni [2019] EWHC 3402 (Comm), The Adventure [2015] EWHC 318 (Comm), Lukoil v Ocean Tankers [2018] EWHC 163 (Comm), The Eagle Valencia [2010] EWCA Civ 713, The Happy Day [2002] EWCA Civ 1068, The Johanna Oldendorff [1974] AC 479, The Kyzikos [1989] AC 1264, The Agamemnon [1998] 1 Lloyd's Rep 675. Each citation must be verified before it is used.
-- **Ablation** of plain `gpt-6-luna`, Multipath, Kronos plus Multipath, and Shadow Agent added.
-- **Both error directions**, **cost and latency over many runs**, **generated trap voyages with answers set by code**, **Wilson 95% intervals** on every accuracy figure.
-- **SERV probe** (FINDINGS.md).
-- **One settled x402 payment**, **one unattended time bar run**.
-
-All of these need SERV credit or time and are listed in TASK.md.
+- Cost and latency percentiles over many full-voyage runs (one full run is recorded).
+- A held-out court set larger than five.
+- A Reppo-measured before and after of the rulebook change. The comparison above uses seeded voyages with answers set by code, not Reppo scores.
+- The first scheduled time bar watch record (scheduled, read from runtime logs when it has run).
