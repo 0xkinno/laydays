@@ -1,21 +1,21 @@
 {
-  "at": "2026-11-15T09:40:18.108Z",
+  "at": "2026-11-15T11:00:39.654Z",
   "base": "https://laydays.vercel.app",
   "results": [
     {
       "route": "/",
       "status": 200,
-      "ms": 483
+      "ms": 466
     },
     {
       "route": "/desk",
       "status": 200,
-      "ms": 262
+      "ms": 198
     },
     {
       "route": "/voyage/orla-jansen",
       "status": 200,
-      "ms": 143
+      "ms": 147
     },
     {
       "route": "/voyage/orla-jansen/charterer",
@@ -25,62 +25,62 @@
     {
       "route": "/voyage/new",
       "status": 200,
-      "ms": 401
+      "ms": 136
     },
     {
       "route": "/dispute/orla-jansen",
       "status": 200,
-      "ms": 118
+      "ms": 106
     },
     {
       "route": "/trace/I02",
       "status": 200,
-      "ms": 79
+      "ms": 76
     },
     {
       "route": "/proof",
       "status": 200,
-      "ms": 114
+      "ms": 178
     },
     {
       "route": "/break",
       "status": 200,
-      "ms": 114
+      "ms": 135
     },
     {
       "route": "/judge",
       "status": 200,
-      "ms": 121
+      "ms": 89
     },
     {
       "route": "/register",
       "status": 200,
-      "ms": 153
+      "ms": 133
     },
     {
       "route": "/agents",
       "status": 200,
-      "ms": 113
+      "ms": 110
     },
     {
       "route": "/api/status",
       "status": 200,
-      "ms": 346
+      "ms": 374
     },
     {
       "route": "/api/stats",
       "status": 200,
-      "ms": 193
+      "ms": 191
     },
     {
       "route": "/art/hero-tanker.svg",
       "status": 200,
-      "ms": 79
+      "ms": 80
     },
     {
       "route": "/art/mark.svg",
       "status": 200,
-      "ms": 66
+      "ms": 144
     },
     {
       "route": "POST /api/x402/ruling (expects 402)",
