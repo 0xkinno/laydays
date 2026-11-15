@@ -1,0 +1,31 @@
+{
+  "id": "trans-trade-sebat-2026",
+  "citation": "Trans Trade RK SA v Sebat Shipping and Trading Company [2026] EWHC 950 (Comm)",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/950",
+  "kind": "interval",
+  "decided": "When laytime starts to run if the only notice of readiness was invalid when tendered, no further notice was given, and there was no waiver: whether it starts when cargo operations begin.",
+  "facts": "On a voyage charter of barley the master tendered a notice of readiness at the discharge port's pilot station, before the vessel had arrived. The tribunal held that notice invalid. No further notice was ever tendered. The vessel later berthed and the hatches were opened for discharge. The charterers were not found to have waived the invalidity.",
+  "clauses": [
+    {
+      "id": "CP-8",
+      "title": "Notice of readiness",
+      "text": "A notice of readiness is tendered when the vessel is in the discharging berth and ready in all respects. Only when the berth is unavailable may the master tender the notice from a usual waiting place."
+    },
+    {
+      "id": "CP-T",
+      "title": "Time counting at discharge",
+      "text": "Laytime commences at 08:00 on the next working day after presentation of a valid notice of readiness."
+    },
+    {
+      "id": "CP-11",
+      "title": "Fumigation",
+      "text": "Time lost through fumigation counts as laytime or time on demurrage."
+    }
+  ],
+  "interval": {
+    "text": "Vessel at the discharge berth with the hatches opened for discharge. The only notice of readiness was tendered at the pilot station before the vessel had arrived, and no valid notice was tendered afterwards. Neither party has waived the invalidity of that notice.",
+    "minutes": 600
+  },
+  "courtAnswer": "excepted",
+  "tests": "Clause Reader ruling on an interval after an invalid notice with no waiver. Expected effect: laytime is not running, even though cargo operations have begun"
+}

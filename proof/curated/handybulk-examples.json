@@ -1,0 +1,129 @@
+{
+  "source": "https://www.handybulk.com/laytime-calculation-examples-demurrage-despatch-nor-and-charter-party-time-counting/",
+  "title": "Laytime Calculation Examples: Demurrage, Despatch, NOR, and Charter Party Time Counting (Handybulk)",
+  "openedOn": "2026-11-15",
+  "note": "Published worked examples with their published answers, copied as inputs and outputs, no excepted time. The clock must reproduce each published number to the cent. Despatch is paid at half the demurrage rate, as in every example. Example 3's discharge leg and the net settlements are not used because the page text for them was cut or is a sum of legs.",
+  "legs": [
+    {
+      "example": 1,
+      "leg": "loading",
+      "commences": "2026-04-01T16:00",
+      "completes": "2026-04-03T18:00",
+      "allowedHours": 48,
+      "demurrageRateUsdPerDay": 10000,
+      "publishedHoursUsed": 50,
+      "publishedOutcome": "demurrage",
+      "publishedCents": 83333
+    },
+    {
+      "example": 1,
+      "leg": "discharging",
+      "commences": "2026-04-10T08:00",
+      "completes": "2026-04-12T12:00",
+      "allowedHours": 72,
+      "demurrageRateUsdPerDay": 10000,
+      "publishedHoursUsed": 52,
+      "publishedOutcome": "despatch",
+      "publishedCents": 416667
+    },
+    {
+      "example": 2,
+      "leg": "loading",
+      "commences": "2026-05-05T18:00",
+      "completes": "2026-05-07T20:00",
+      "allowedHours": 36,
+      "demurrageRateUsdPerDay": 12000,
+      "publishedHoursUsed": 50,
+      "publishedOutcome": "demurrage",
+      "publishedCents": 700000
+    },
+    {
+      "example": 2,
+      "leg": "discharging",
+      "commences": "2026-05-14T09:00",
+      "completes": "2026-05-16T15:00",
+      "allowedHours": 60,
+      "demurrageRateUsdPerDay": 12000,
+      "publishedHoursUsed": 54,
+      "publishedOutcome": "despatch",
+      "publishedCents": 150000
+    },
+    {
+      "example": 3,
+      "leg": "loading",
+      "commences": "2026-06-01T08:00",
+      "completes": "2026-06-02T04:00",
+      "allowedHours": 24,
+      "demurrageRateUsdPerDay": 8000,
+      "publishedHoursUsed": 20,
+      "publishedOutcome": "despatch",
+      "publishedCents": 66667
+    },
+    {
+      "example": 4,
+      "leg": "loading",
+      "commences": "2026-07-10T05:00",
+      "completes": "2026-07-11T12:00",
+      "allowedHours": 30,
+      "demurrageRateUsdPerDay": 9000,
+      "publishedHoursUsed": 31,
+      "publishedOutcome": "demurrage",
+      "publishedCents": 37500
+    },
+    {
+      "example": 4,
+      "leg": "discharging",
+      "commences": "2026-07-19T01:00",
+      "completes": "2026-07-21T00:00",
+      "allowedHours": 50,
+      "demurrageRateUsdPerDay": 9000,
+      "publishedHoursUsed": 47,
+      "publishedOutcome": "despatch",
+      "publishedCents": 56250
+    },
+    {
+      "example": 5,
+      "leg": "loading",
+      "commences": "2026-08-03T20:00",
+      "completes": "2026-08-05T10:00",
+      "allowedHours": 42,
+      "demurrageRateUsdPerDay": 11000,
+      "publishedHoursUsed": 38,
+      "publishedOutcome": "despatch",
+      "publishedCents": 91667
+    },
+    {
+      "example": 5,
+      "leg": "discharging",
+      "commences": "2026-08-12T22:00",
+      "completes": "2026-08-15T08:00",
+      "allowedHours": 54,
+      "demurrageRateUsdPerDay": 11000,
+      "publishedHoursUsed": 58,
+      "publishedOutcome": "demurrage",
+      "publishedCents": 183333
+    },
+    {
+      "example": 6,
+      "leg": "loading",
+      "commences": "2026-09-04T20:00",
+      "completes": "2026-09-07T00:00",
+      "allowedHours": 60,
+      "demurrageRateUsdPerDay": 10000,
+      "publishedHoursUsed": 52,
+      "publishedOutcome": "despatch",
+      "publishedCents": 166667
+    },
+    {
+      "example": 6,
+      "leg": "discharging",
+      "commences": "2026-09-14T07:00",
+      "completes": "2026-09-16T20:00",
+      "allowedHours": 72,
+      "demurrageRateUsdPerDay": 10000,
+      "publishedHoursUsed": 61,
+      "publishedOutcome": "despatch",
+      "publishedCents": 229167
+    }
+  ]
+}
