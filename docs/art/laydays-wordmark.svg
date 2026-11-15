@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 300" width="1180" height="300" role="img" aria-label="Laydays">
+  <title>Laydays</title>
+  <g transform="translate(20 22) scale(.5)">
+    <rect width="512" height="512" rx="116" fill="#0F3A34"/>
+    <g transform="rotate(-90 256 256)" fill="none" stroke-linecap="round">
+      <circle cx="256" cy="256" r="156" stroke="#D7F34A" stroke-width="24" stroke-dasharray="893 1000"/>
+      <circle cx="256" cy="256" r="156" stroke="#FF5A2C" stroke-width="24" stroke-dasharray="52 1000" stroke-dashoffset="-928"/>
+    </g>
+    <path d="M138 262q29-52 59 0t59 0 59 0 59 0" fill="none" stroke="#F2F1EA" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="318" y="196" font-family="Fraunces, Georgia, serif" font-size="176" font-weight="400" letter-spacing="-4" fill="#14160F">Laydays</text>
+</svg>
