@@ -7,4 +7,6 @@ const run = await ruleVoyage({ sofRaw: DEMO.sof, cp: DEMO.cp as unknown as CpDat
 for (const i of run.intervals) console.log(`${i.id} ${i.startLine}->${i.endLine} ${String(i.to - i.from).padStart(5)}m ${i.kind}/${i.cause} => ${i.finalEffect ?? "REVIEW"} ${i.ruling.decidedBy ?? "-"} [${i.ruling.clause_ids.join(",")}] ${i.ruling.problems.join("; ")}`);
 console.log("review", run.reviewCount, "floor", formatUsd(run.floorCents), "ceiling", formatUsd(run.ceilingCents), "cost", run.totalCostUsd.toFixed(4), "expired", run.statement.expiredAt);
 console.log(run.steps.map((s) => `${s.role} ${s.model} ${s.latencyMs}ms $${s.costUsd.toFixed(4)} ${s.note ?? ""}`).join("\n"));
-writeFileSync("/tmp/claude-0/-home-user/aca4b397-4a48-5aaf-8f48-fab8e6747d26/scratchpad/demo-run.json", JSON.stringify(run, (_, v) => (typeof v === "bigint" ? v.toString() : v), 1));
+const failed = run.steps.filter((s) => s.note && !/^refused/.test(s.note));
+if (failed.length) { console.error("NOT RECORDED, steps failed:", failed.map((f) => f.role + ": " + f.note).join(" | ").slice(0, 400)); process.exit(1); }
+writeFileSync("data/demo/recorded-run.json", JSON.stringify(run, (_, v) => (typeof v === "bigint" ? v.toString() : v), 1));

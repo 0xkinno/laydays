@@ -1,0 +1,15 @@
+{
+  "network": "base-sepolia",
+  "chainId": 84532,
+  "contract": "LaydaysLedger",
+  "address": "0x73a25bd619a7ebdaa1d5773866a13e127358a1a4",
+  "deployTx": "0xcbf404ae8c4ad412edfdd0850f82471271e5c08220771e93fd509cd536095ab3",
+  "deployer": "0x6511265A6408Ad6F475053809a5961EdDfcB4650",
+  "block": "59035445",
+  "gasUsed": "2215012",
+  "compiler": "0.8.28+commit.7893614a",
+  "usdc": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "deployedAt": "2026-11-15T07:49:17.969Z",
+  "verification": "Pass - Verified",
+  "verifiedAt": "2026-11-15T07:49:42.295Z"
+}

@@ -67,7 +67,8 @@ export function buildTimeline(events: PortEvent[], lines: SofLine[], noticeMinut
   const norNote = norValid ? "free pratique granted before notice was tendered" : "notice was tendered before free pratique, or free pratique is not in the log";
 
   const gaps: string[] = [];
-  const changing = evs.filter((e) => !STATE_BREAKERS.has(e.kind) && e.t <= done.t);
+  // Only the last ops_completed ends the call. An earlier one (for example stripping complete) does not end the clock.
+  const changing = evs.filter((e) => !STATE_BREAKERS.has(e.kind) && e.t <= done.t && (e.kind !== "ops_completed" || e === done));
   const intervals: BuiltInterval[] = [];
   for (let i = 0; i < changing.length; i++) {
     const a = changing[i];

@@ -34,3 +34,37 @@ main, footer { position: relative; z-index: 1; }
 
 @media (prefers-reduced-motion: reduce) { * { animation-duration: .001ms !important; transition-duration: .001ms !important; } }
 :focus-visible { outline: 2px solid var(--color-ink); outline-offset: 2px; }
+
+/* ---------- premium layer ---------- */
+.glass {
+  background: linear-gradient(180deg, rgba(255,255,255,.72), rgba(255,255,255,.48));
+  backdrop-filter: blur(18px) saturate(1.5); -webkit-backdrop-filter: blur(18px) saturate(1.5);
+  border: 1px solid rgba(20,22,15,.08);
+  box-shadow: 0 1px 0 rgba(255,255,255,.8) inset, 0 24px 60px -28px rgba(15,58,52,.28);
+}
+.glass-dark {
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(242,241,234,.14);
+  box-shadow: 0 1px 0 rgba(255,255,255,.08) inset, 0 30px 80px -30px rgba(0,0,0,.6);
+}
+.edge { position: relative; }
+.edge::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: linear-gradient(135deg, rgba(215,243,74,.9), rgba(20,22,15,.08) 35%, rgba(15,58,52,.25) 70%, rgba(215,243,74,.5));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+}
+.aurora { position: absolute; border-radius: 9999px; filter: blur(70px); opacity: .55; will-change: transform; }
+@keyframes drift-a { 0%,100% { transform: translate3d(0,0,0) scale(1) } 50% { transform: translate3d(60px,40px,0) scale(1.15) } }
+@keyframes drift-b { 0%,100% { transform: translate3d(0,0,0) scale(1) } 50% { transform: translate3d(-50px,30px,0) scale(1.1) } }
+@keyframes bob { 0%,100% { transform: translateY(0) rotate(-.25deg) } 50% { transform: translateY(7px) rotate(.25deg) } }
+@keyframes spin-slow { to { transform: rotate(360deg) } }
+@keyframes float-y { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+@keyframes shimmer { 0% { background-position: -200% 0 } 100% { background-position: 200% 0 } }
+@keyframes pulse-ring { 0% { transform: scale(.8); opacity: .7 } 100% { transform: scale(2.2); opacity: 0 } }
+.anim-a { animation: drift-a 16s ease-in-out infinite } .anim-b { animation: drift-b 20s ease-in-out infinite }
+.anim-bob { animation: bob 7s ease-in-out infinite } .anim-spin { animation: spin-slow 120s linear infinite }
+.anim-float { animation: float-y 6s ease-in-out infinite }
+.shimmer-text { background: linear-gradient(100deg, var(--color-ink) 30%, #6a7d00 48%, var(--color-ink) 66%); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: shimmer 6s linear infinite; }
+.grid-lines { background-image: linear-gradient(rgba(20,22,15,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(20,22,15,.05) 1px, transparent 1px); background-size: 56px 56px; }
+@media (prefers-reduced-motion: reduce) { .anim-a, .anim-b, .anim-bob, .anim-spin, .anim-float, .shimmer-text { animation: none !important } }

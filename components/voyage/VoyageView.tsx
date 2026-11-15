@@ -23,7 +23,7 @@ export function VoyageView({ v }: { v: VoyageProps }) {
   const [own, setOwn] = useState<Record<string, Effect>>({});
   const [bolAttached, setBolAttached] = useState(false);
 
-  const rows = useMemo(() => v.intervals.map((i) => ({ ...i, final: i.effect ?? own[i.id] ?? null, person: !i.effect && !!own[i.id] })), [v.intervals, own]);
+  const rows = useMemo(() => v.intervals.map((i) => ({ ...i, final: own[i.id] ?? i.effect ?? null, person: !!own[i.id] })), [v.intervals, own]);
   const reviewLeft = rows.filter((r) => r.final === null).length;
 
   const stmt = useMemo(() => computeStatement({
@@ -83,12 +83,12 @@ export function VoyageView({ v }: { v: VoyageProps }) {
           </div>
           <p className="mt-4 text-sm"><span className="text-ink-soft">Ruling: </span>{active.reason}</p>
           {active.problems.length > 0 && <p className="mt-2 rounded-[10px] border border-dashed border-ink p-3 text-sm">Why it is in review: {active.problems.join("; ")}.</p>}
-          {active.verdict === "REVIEW" && (
+          {(
             <div className="mt-4">
-              <p className="text-sm">Your ruling for this interval is recorded as yours.</p>
+              <p className="text-sm">{active.verdict === "REVIEW" ? "Your ruling for this interval is recorded as yours." : "You can overrule any interval. Your ruling is recorded as yours and the clock moves."}</p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {(["counts", "excepted", "half"] as Effect[]).map((e) => (
-                  <button key={e} onClick={() => setOwn((o) => ({ ...o, [active.id]: e }))} className={`h-11 rounded-[10px] border px-4 text-sm capitalize ${own[active.id] === e ? "border-ink bg-signal" : "border-ink/20 hover:bg-paper-deep"}`}>{e}</button>
+                  <button key={e} aria-pressed={own[active.id] === e} onClick={() => setOwn((o) => (o[active.id] === e ? Object.fromEntries(Object.entries(o).filter(([k]) => k !== active.id)) as Record<string, Effect> : { ...o, [active.id]: e }))} className={`h-11 rounded-[10px] border px-4 text-sm capitalize ${own[active.id] === e ? "border-ink bg-signal" : "border-ink/20 hover:bg-paper-deep"}`}>{e}</button>
                 ))}
               </div>
             </div>

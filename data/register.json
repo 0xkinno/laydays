@@ -10,7 +10,7 @@
       "review": 1,
       "amountCents": "4175000",
       "reppo": "not sent yet",
-      "onchain": "not presented yet",
+      "onchain": "presented, funded, answered, settled on Base Sepolia",
       "costUsd": 0.0176,
       "kind": "demo voyage"
     }

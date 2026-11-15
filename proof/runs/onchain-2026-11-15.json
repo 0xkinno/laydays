@@ -1,0 +1,106 @@
+{
+  "at": "2026-11-15T07:58:54.798Z",
+  "ledger": "0x73a25bd619a7ebdaa1d5773866a13e127358a1a4",
+  "claimUnits": "4175000",
+  "acceptedUnits": "3812500",
+  "disputedUnits": "362500",
+  "statementDigest": "0x929d5de381a7b77cddec10d47e9134dfbb3fc6e231f9f6e3cb85a8bcd6efe10a",
+  "docsRoot": "0x06bb7e80e3ce0e6838e7994d12b11b217e12f0370d7226a74b006f8514ff45d9",
+  "finalStage": 4,
+  "paidToOwner": "3993750",
+  "refunded": "181250",
+  "steps": [
+    {
+      "step": "orla-jansen: both parties sign the terms, claim opened",
+      "kind": "transaction",
+      "tx": "0x40936656bdcc7f89911b3a64de1e5924b527e9827334051a70cc4bcb89779b71",
+      "url": "https://sepolia.basescan.org/tx/0x40936656bdcc7f89911b3a64de1e5924b527e9827334051a70cc4bcb89779b71",
+      "status": "success",
+      "gasUsed": "250535",
+      "signer": "owner and charterer"
+    },
+    {
+      "step": "orla-jansen: presented without the bills of lading",
+      "kind": "refusal (reverted onchain)",
+      "tx": "0x840c2faae4db5f1044475584ac307f8d5bdf89aa40c8d3e21cb903d41b5ecd98",
+      "url": "https://sepolia.basescan.org/tx/0x840c2faae4db5f1044475584ac307f8d5bdf89aa40c8d3e21cb903d41b5ecd98",
+      "status": "reverted",
+      "gasUsed": "32353",
+      "signer": "owner",
+      "decoded": "MissingSupportingDocuments(4)"
+    },
+    {
+      "step": "orla-jansen: signed by the wrong wallet",
+      "kind": "refusal (simulated)",
+      "decoded": "BadSignature()",
+      "signer": "charterer (not the owner)"
+    },
+    {
+      "step": "orla-jansen: statement digest changed after signing",
+      "kind": "refusal (simulated)",
+      "decoded": "BadSignature()",
+      "signer": "owner"
+    },
+    {
+      "step": "orla-jansen: owner presents the complete claim before day 90",
+      "kind": "transaction",
+      "tx": "0x72dd0f16f5233f19be2ec4cc9d5b67c77cbab3f267961e72c5558d1c98d07f7a",
+      "url": "https://sepolia.basescan.org/tx/0x72dd0f16f5233f19be2ec4cc9d5b67c77cbab3f267961e72c5558d1c98d07f7a",
+      "status": "success",
+      "gasUsed": "141305",
+      "signer": "owner"
+    },
+    {
+      "step": "orla-jansen: the same signature replayed",
+      "kind": "refusal (simulated)",
+      "decoded": "WrongStage(2)",
+      "signer": "owner"
+    },
+    {
+      "step": "orla-jansen: charterer funds the claim with a USDC authorization (no gas paid by Dan)",
+      "kind": "transaction",
+      "tx": "0x9fba19eed56caa8f435fd258a618617a3e61a5a5a2098cd85a5bc5d5320b0981",
+      "url": "https://sepolia.basescan.org/tx/0x9fba19eed56caa8f435fd258a618617a3e61a5a5a2098cd85a5bc5d5320b0981",
+      "status": "success",
+      "gasUsed": "147657",
+      "signer": "charterer"
+    },
+    {
+      "step": "orla-jansen: charterer accepts 3812500 units and disputes I21, I22; the accepted part is paid at once",
+      "kind": "transaction",
+      "tx": "0xc1de0000f868a3be212595e57a04bcc07cd60a56f66aa6fcbea905e8ad41f6a9",
+      "url": "https://sepolia.basescan.org/tx/0xc1de0000f868a3be212595e57a04bcc07cd60a56f66aa6fcbea905e8ad41f6a9",
+      "status": "success",
+      "gasUsed": "145712",
+      "signer": "charterer"
+    },
+    {
+      "step": "orla-jansen: both sign a settlement, held funds split",
+      "kind": "transaction",
+      "tx": "0x152572868531f0772c5c9611793e6d705993f9de7e8e9ba9778cfa4ffb1277fb",
+      "url": "https://sepolia.basescan.org/tx/0x152572868531f0772c5c9611793e6d705993f9de7e8e9ba9778cfa4ffb1277fb",
+      "status": "success",
+      "gasUsed": "129306",
+      "signer": "owner and charterer"
+    },
+    {
+      "step": "late-demo: both parties sign the terms, claim opened",
+      "kind": "transaction",
+      "tx": "0xd9d941cf2f969ac1439425f15b199b004e01623eaec31d9a58c0cd328872e46c",
+      "url": "https://sepolia.basescan.org/tx/0xd9d941cf2f969ac1439425f15b199b004e01623eaec31d9a58c0cd328872e46c",
+      "status": "success",
+      "gasUsed": "216311",
+      "signer": "owner and charterer"
+    },
+    {
+      "step": "late-demo: presented on day 148 of 90 (completion 20 Jun 2026)",
+      "kind": "refusal (reverted onchain)",
+      "tx": "0x3fdbb4b265271f3db44cafdce8469145d0301a9aa48c6dd8c39f8f8aa59c0a17",
+      "url": "https://sepolia.basescan.org/tx/0x3fdbb4b265271f3db44cafdce8469145d0301a9aa48c6dd8c39f8f8aa59c0a17",
+      "status": "reverted",
+      "gasUsed": "30232",
+      "signer": "owner",
+      "decoded": "TimeBarred(1789732800, 1794729534)"
+    }
+  ]
+}

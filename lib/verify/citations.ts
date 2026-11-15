@@ -73,7 +73,9 @@ export function checkRulings(
     for (const l of r.line_ids) if (!sofLineIds.has(l)) problems.push(`log line ${l} does not exist`);
     const lines = intervalLines.get(id);
     if (lines && r.line_ids.length && !r.line_ids.includes(lines.startLine)) problems.push(`ruling does not cite the line that began the interval (${lines.startLine})`);
-    if (r.reason.trim().length === 0) problems.push("no reason given");
+    const unusable = (t: string) => t.trim().length < 8 || /^\[?redacted\]?\.?$/i.test(t.trim());
+    if (unusable(r.reason)) problems.push("no usable reason given");
+    for (const b of r.branches) if (b.finding !== "silent" && unusable(b.reason)) problems.push(`${b.rulebook} gave no usable reason`);
 
     // Consistency check in code: if the log records a cause and the charter party has a clause for it, the ruling must have considered that clause.
     const cause = ctx?.causeByInterval.get(id);
