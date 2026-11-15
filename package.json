@@ -1,0 +1,46 @@
+{
+  "name": "laydays",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "check:copy": "tsx scripts/check-copy.ts"
+  },
+  "dependencies": {
+    "@openzeppelin/merkle-tree": "^1.0.8",
+    "@tanstack/react-query": "^5.107.1",
+    "geist": "^1.9.2",
+    "jszip": "^3.10.2",
+    "lenis": "^1.3.27",
+    "lucide-react": "^1.73.0",
+    "motion": "^14.14.0",
+    "next": "^16.4.6",
+    "pdf-lib": "^1.17.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "viem": "^2.57.19",
+    "wagmi": "^3.7.11",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "^5.6.1",
+    "@playwright/test": "^1.65.1",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "fast-check": "^4.10.2",
+    "forge-std": "github:foundry-rs/forge-std",
+    "hardhat": "^3.22.0",
+    "postcss": "^8.5.33",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  },
+  "type": "module"
+}

@@ -1,0 +1,9 @@
+reference/
+.env*
+node_modules
+out
+.next
+cache
+broadcast
+.vercel
+*.tsbuildinfo

@@ -1,0 +1,17 @@
+{
+  "port": "Houston, Texas",
+  "timezone": "America/Chicago",
+  "utcOffsetNote": "CDT, UTC-5, in August 2026",
+  "holidays": [
+    { "date": "2026-07-03", "name": "Independence Day observed" },
+    { "date": "2026-09-07", "name": "Labor Day" }
+  ],
+  "rules": [
+    { "id": "PR-1", "title": "Ship Channel closures",
+      "text": "When the Coast Guard closes the Houston Ship Channel for fog or other safety reasons, the closure is a port closure. Time lost to a port closure is excepted from laytime." },
+    { "id": "PR-2", "title": "Holidays",
+      "text": "Days listed in the port calendar as holidays are non-working days for laytime." },
+    { "id": "PR-3", "title": "Terminal hours",
+      "text": "Terminals at the Houston Ship Channel work around the clock. Saturday afternoon and Sunday are not port holidays." }
+  ]
+}

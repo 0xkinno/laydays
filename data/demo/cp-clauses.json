@@ -1,0 +1,40 @@
+{
+  "fictional": true,
+  "charterParty": "Saltmarsh Tankers and Gulfline Trading, voyage charter MT Orla Jansen (fictional), clauses in our own words",
+  "timezone": "America/Chicago",
+  "laytimeAllowedMinutes": 2160,
+  "demurrageRateCentsPerDay": "1800000",
+  "despatchHalfRate": true,
+  "noticeMinutes": 360,
+  "completionOfDischarge": "2026-08-22T14:10:00-05:00",
+  "timeBarDays": 90,
+  "clauses": [
+    { "id": "CP-1", "title": "Laytime", "appliesOnDemurrage": false,
+      "text": "Laytime for discharge is 36 running hours. Saturday after 12:00, Sundays and port holidays are excepted unless used." },
+    { "id": "CP-2", "title": "Notice of readiness", "appliesOnDemurrage": false,
+      "text": "Notice of readiness may be given on arrival, whether in berth or not, once free pratique is granted. Laytime starts six hours after notice is given, or when discharge begins, whichever is earlier." },
+    { "id": "CP-3", "title": "Shifting", "appliesOnDemurrage": false,
+      "text": "Time spent shifting between berths at the charterers' or the terminal's request counts as half laytime." },
+    { "id": "CP-4", "title": "Weather", "appliesOnDemurrage": false,
+      "text": "Time lost to rain that stops discharge is excepted from laytime." },
+    { "id": "CP-5", "title": "Strikes and lockouts", "appliesOnDemurrage": true,
+      "text": "Time lost to strikes or lockouts at the terminal is excepted, and this exception also applies once the vessel is on demurrage." },
+    { "id": "CP-6", "title": "Shore equipment", "appliesOnDemurrage": false,
+      "text": "Time lost through breakdown of shore hoses, pumps or lines is excepted from laytime." },
+    { "id": "CP-7", "title": "Demurrage and despatch", "appliesOnDemurrage": false,
+      "text": "Demurrage is USD 18,000 per day pro rata. Despatch is paid at half the demurrage rate on laytime saved." },
+    { "id": "CP-8", "title": "Once on demurrage", "appliesOnDemurrage": false,
+      "text": "Once the vessel is on demurrage, it stays on demurrage. Exceptions stop the clock only where the clause says it applies on demurrage." },
+    { "id": "CP-9", "title": "Time bar", "appliesOnDemurrage": false,
+      "text": "Any demurrage claim is waived unless it is presented to the charterers within 90 days of completion of discharge, together with all of the following: (a) notice of readiness, (b) the statement of facts signed by master and terminal, (c) bills of lading, (d) the pumping log, (e) the cargo manifest, (f) the laytime statement, (g) letters or notices covering any stoppage or shifting." }
+  ],
+  "requiredDocuments": [
+    { "bit": 0, "key": "nor", "label": "Notice of readiness" },
+    { "bit": 1, "key": "sof", "label": "Statement of facts, signed" },
+    { "bit": 2, "key": "bol", "label": "Bills of lading" },
+    { "bit": 3, "key": "pumping", "label": "Pumping log" },
+    { "bit": 4, "key": "manifest", "label": "Cargo manifest" },
+    { "bit": 5, "key": "statement", "label": "Laytime statement" },
+    { "bit": 6, "key": "notices", "label": "Stoppage and shifting notices" }
+  ]
+}
