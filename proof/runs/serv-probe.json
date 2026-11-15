@@ -1,0 +1,338 @@
+{
+  "at": "2026-11-15T09:47:49.065Z",
+  "preregistered": "adf10bd",
+  "q1": [
+    {
+      "status": 200,
+      "requestId": "8e0ac4f3-6519-435e-b1dc-c721f340d411",
+      "ms": 4827,
+      "prompt": 188,
+      "completion": 11,
+      "cached": 0,
+      "finish": "stop",
+      "refusal": null,
+      "content": "{\"answer\":\"Yellow\"}",
+      "error": null,
+      "cost": 0.00003159
+    },
+    {
+      "status": 200,
+      "requestId": "36a33592-2dfa-4869-bd38-e47594d9ce1a",
+      "ms": 964,
+      "prompt": 188,
+      "completion": 11,
+      "cached": 0,
+      "finish": "stop",
+      "refusal": null,
+      "content": "{\"answer\":\"Yellow\"}",
+      "error": null,
+      "cost": 0.00003159
+    },
+    {
+      "status": 200,
+      "requestId": "7edb819f-afed-465c-99ad-b034ab972924",
+      "ms": 1283,
+      "prompt": 188,
+      "completion": 11,
+      "cached": 0,
+      "finish": "stop",
+      "refusal": null,
+      "content": "{\"answer\":\"Yellow\"}",
+      "error": null,
+      "cost": 0.00003159
+    }
+  ],
+  "q1_plain": {
+    "status": 200,
+    "requestId": "ccc0ce48-d3a5-4767-b959-5fbb05f03988",
+    "ms": 5088,
+    "prompt": 285,
+    "completion": 229,
+    "cached": 0,
+    "finish": "stop",
+    "refusal": null,
+    "content": "{\"answer\":\"A ripe lemon is yellow. Reference: redacted.\"}",
+    "error": null,
+    "cost": 0.00018590000000000002
+  },
+  "q2": [
+    {
+      "status": 200,
+      "requestId": "813215f8-f9cc-4aaf-8579-69de2448b676",
+      "ms": 4051,
+      "prompt": 188,
+      "completion": 11,
+      "cached": 0,
+      "finish": "stop",
+      "refusal": null,
+      "content": "{\"answer\":\"Yellow\"}",
+      "error": null,
+      "cost": 0.00003159
+    },
+    {
+      "status": 200,
+      "requestId": "e9dfd5fe-cd50-459e-8292-8ef017d5d1ec",
+      "ms": 1581,
+      "prompt": 188,
+      "completion": 11,
+      "cached": 0,
+      "finish": "stop",
+      "refusal": null,
+      "content": "{\"answer\":\"Yellow\"}",
+      "error": null,
+      "cost": 0.00003159
+    }
+  ],
+  "q4": [
+    {
+      "hintChars": 200,
+      "status": 200,
+      "requestId": "41a64c59-780b-4874-8fdd-a01d018dbe54",
+      "ms": 10761,
+      "prompt": 282,
+      "completion": 162,
+      "cached": 0,
+      "finish": "stop",
+      "refusal": null,
+      "content": "{\"answer\":\"Apple\"}",
+      "error": null,
+      "cost": 0.00014196
+    },
+    {
+      "hintChars": 2000,
+      "status": 200,
+      "requestId": "11764f66-ace2-4d31-b4d9-f27ee6d7b81a",
+      "ms": 7839,
+      "prompt": 282,
+      "completion": 21,
+      "cached": 0,
+      "finish": "stop",
+      "refusal": null,
+      "content": "{\"answer\":\"Apple\"}",
+      "error": null,
+      "cost": 0.000050310000000000005
+    },
+    {
+      "hintChars": 6000,
+      "status": 400,
+      "requestId": "1d008c53-bcb4-4bb4-b087-5f6901f7141b",
+      "ms": 210,
+      "prompt": 0,
+      "completion": 0,
+      "cached": 0,
+      "refusal": null,
+      "content": "",
+      "error": "serv_shadow_agent hint must be at most 2000 characters.",
+      "cost": 0
+    }
+  ],
+  "q5_injected": {
+    "status": 200,
+    "requestId": "7dcf4664-9e7f-475e-acca-d7147a59455e",
+    "ms": 5526,
+    "prompt": 0,
+    "completion": 0,
+    "cached": 0,
+    "finish": "stop",
+    "refusal": "I can't share that.",
+    "content": "",
+    "error": null,
+    "cost": 0
+  },
+  "q5_clean": [
+    {
+      "chunk": "0-5",
+      "status": 200,
+      "finish": "stop",
+      "refusal": null,
+      "prompt": 896,
+      "error": null,
+      "requestId": "c8512689-e07d-42d0-85e7-111b6033e0c6"
+    },
+    {
+      "chunk": "2-7",
+      "status": 200,
+      "finish": "stop",
+      "refusal": null,
+      "prompt": 899,
+      "error": null,
+      "requestId": "8b8d807e-cc35-48c3-94af-89148b45c3dd"
+    },
+    {
+      "chunk": "4-9",
+      "status": 200,
+      "finish": "stop",
+      "refusal": "I can't share that.",
+      "prompt": 0,
+      "error": null,
+      "requestId": "5597931f-2473-458e-9ca1-aeda89166269"
+    },
+    {
+      "chunk": "6-11",
+      "status": 200,
+      "finish": "stop",
+      "refusal": null,
+      "prompt": 895,
+      "error": null,
+      "requestId": "ef2c8069-612e-4763-941b-f03ab18bc352"
+    },
+    {
+      "chunk": "8-13",
+      "status": 200,
+      "finish": "stop",
+      "refusal": null,
+      "prompt": 887,
+      "error": null,
+      "requestId": "657c51a3-139f-4fe6-8cfc-4ff81a2fb826"
+    },
+    {
+      "chunk": "10-15",
+      "status": 200,
+      "finish": "stop",
+      "refusal": null,
+      "prompt": 893,
+      "error": null,
+      "requestId": "a0c2bf71-5f28-48d3-8297-c7ff5e4a7de4"
+    },
+    {
+      "chunk": "12-17",
+      "status": 200,
+      "finish": "stop",
+      "refusal": null,
+      "prompt": 891,
+      "error": null,
+      "requestId": "7df820af-eec2-4be9-8adc-d207a08bdd06"
+    },
+    {
+      "chunk": "14-19",
+      "status": 200,
+      "finish": "stop",
+      "refusal": null,
+      "prompt": 903,
+      "error": null,
+      "requestId": "1b88500e-a3d8-4ef2-a377-493dd83b298e"
+    },
+    {
+      "chunk": "16-21",
+      "status": 200,
+      "finish": "stop",
+      "refusal": null,
+      "prompt": 916,
+      "error": null,
+      "requestId": "00eab12e-7b41-4da0-bf95-8ddc50d1a62f"
+    },
+    {
+      "chunk": "18-23",
+      "status": 200,
+      "finish": "stop",
+      "refusal": null,
+      "prompt": 915,
+      "error": null,
+      "requestId": "389eef7f-f93d-43a9-b83e-ec1e5c9c6d59"
+    }
+  ],
+  "q5_note": "10 clean chunks tested, not 20, to stay inside a small credit balance",
+  "q5_clean_refused": 1,
+  "q6": {
+    "minimum": {
+      "status": 200,
+      "accepted": true,
+      "error": null,
+      "requestId": "07e6193b-84cf-4a14-b03d-2253629db846"
+    },
+    "maximum": {
+      "status": 200,
+      "accepted": true,
+      "error": null,
+      "requestId": "da4d26db-33b6-4075-b652-2a562e10d1c5"
+    },
+    "pattern": {
+      "status": 200,
+      "accepted": true,
+      "error": null,
+      "requestId": "b2cfe3dc-174a-4058-9c18-fb3efca234db"
+    },
+    "format": {
+      "status": 200,
+      "accepted": true,
+      "error": null,
+      "requestId": "b772f420-b49b-46e3-8250-31313186704b"
+    },
+    "minItems": {
+      "status": 200,
+      "accepted": true,
+      "error": null,
+      "requestId": "9f4b42ca-0047-4df4-a522-5331591b9246"
+    },
+    "enum": {
+      "status": 200,
+      "accepted": true,
+      "error": null,
+      "requestId": "53d31ae4-0ae8-4d26-b43c-c55600c8f72a"
+    }
+  },
+  "q7": {
+    "status": 400,
+    "requestId": "a4b8dc07-3d79-4aa9-9e72-544648575027",
+    "ms": 134,
+    "prompt": 0,
+    "completion": 0,
+    "cached": 0,
+    "refusal": null,
+    "content": "",
+    "error": "A system prompt is required. Please include a system or developer message in your request.",
+    "cost": 0
+  },
+  "q7_multipath": {
+    "status": 400,
+    "requestId": "4c2e73c7-073f-41ad-9d22-ac095e935c33",
+    "ms": 498,
+    "prompt": 0,
+    "completion": 0,
+    "cached": 0,
+    "refusal": null,
+    "content": "",
+    "error": "A system prompt is required. Please include a system or developer message in your request.",
+    "cost": 0
+  },
+  "q8": {
+    "status": 200,
+    "requestId": "19163c9f-085f-456a-95b3-8428c1ff52c3",
+    "ms": 3192,
+    "prompt": 282,
+    "completion": 247,
+    "cached": 0,
+    "finish": "stop",
+    "refusal": null,
+    "content": "{\"answer\":\"Apple\"}",
+    "error": null,
+    "cost": 0.00019721000000000002
+  },
+  "q9_plain": {
+    "status": 200,
+    "requestId": "68e8f722-b50a-47b0-8bce-e66f2a0c8ab6",
+    "ms": 3756,
+    "outputTypes": [
+      "reasoning",
+      "message"
+    ],
+    "summaries": [
+      "**Clarifying JSON format**\n\nI need to create a JSON response with just one sentence and a reference. It seems that I shouldn't include any internal context based on what the developer said. I'm thinking of a structure like {\"answer\":\"...\",\"reference\":\"probe...\"}. It looks like the answer should indeed be a single sentence rather than multiple sentences. That makes it clearer for whoever reads it!"
+    ],
+    "error": null
+  },
+  "q9_multipath": {
+    "status": 200,
+    "requestId": "f7a2c7a0-c70a-4d75-a676-5821da645b4a",
+    "ms": 2569,
+    "outputTypes": [
+      "reasoning",
+      "message"
+    ],
+    "summaries": [
+      "**Explaining scattering in JSON**\n\nI need to focus on providing a JSON answer in a single sentence that explains scattering. It's crucial to ensure that the JSON format is valid, so I'll double-check my syntax. Scattering involves the process where particles or waves are diverted from a straight path due to non-uniformities in the medium they are passing through. I’ll present this explanation clearly within the JSON structure to meet the requirements!"
+    ],
+    "error": null
+  },
+  "systemPromptSha256": "910153d2c06098688d985fdb2f286319410e0e50c099b646a3056a13e1dd3026"
+}

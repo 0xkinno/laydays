@@ -155,7 +155,7 @@ Not used, so not claimed: reasoning summaries from `/v1/responses` are not captu
 
 ### What we learned about SERV
 
-The nine questions were committed before the probe ran, in [`adf10bd`](FINDINGS.md). The probe script is written; its run needs more SERV credit, so [FINDINGS.md](FINDINGS.md) shows the answers as pending. Three things we observed while building, which went against us:
+The nine questions were committed before the probe ran, in [`adf10bd`](FINDINGS.md). The probe ran, and [FINDINGS.md](FINDINGS.md) answers all nine with request ids. Prompt Guard refused 1 of 10 clean chunks of our own log, a system message is required, and a hint longer than 2000 characters is refused. Three things we observed while building, which went against us:
 
 - **The first call of a new system prompt is slow.** In the recorded run the four Clause Reader batches took between 129 and 163 seconds each, because Multipath and Kronos compile and audit the reasoning prompt on a cache miss. The same four batches on a warm prompt took 20 to 30 seconds. So the system prompt holds only the stable rulebook text, and every voyage's clauses go in the user message as numbered data.
 - **Billing is larger than the token counts show.** The reported usage for the demo claim is $0.0176. Our credit balance was nonetheless spent faster than that arithmetic allows, which suggests compile and audit calls are billed separately from the visible tokens. We could not confirm this from a billing endpoint, so treat it as an observation. Anyone budgeting a Multipath build should measure the balance, not the usage field.
