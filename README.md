@@ -193,7 +193,7 @@ The contract has 20 tests (every happy path, every refusal, three fuzz propertie
 
 ### Not yet measured, and said so
 
-Court replay of reported English judgments, the Multipath on against off ablation, both error directions, the Reppo feedback loop, a settled x402 payment and the unattended time bar run are specified in [PROOF_PLAN](PROOF.md) but have not been run in this release. The Proof page shows each of them as "not yet run" rather than a number. [TASK.md](TASK.md) lists exactly what is done and what is not.
+Court replay of reported English judgments, the Multipath on against off ablation, both error directions, the Reppo feedback loop, a settled x402 payment, the SERV probe answers and the unattended time bar run are specified in [PROOF_PLAN](PROOF.md) but have not been run in this release. The Proof page shows each of them as "not yet run" rather than a number. [TASK.md](TASK.md) lists exactly what is done and what is not.
 
 ## What is live, substituted, designed
 
@@ -205,8 +205,9 @@ Court replay of reported English judgments, the Multipath on against off ablatio
 | Funding with a USDC authorization | **Live**, test USDC |
 | Relayer that pays gas | **Live**, capped, testnet key only, and every page also offers "send it from my wallet" |
 | x402 paid ruling route | **Live** route returning a real 402 with price and payee. No settled payment is recorded yet |
-| Reppo evaluation of disputed rulings | **Designed**, not built in this release |
+| Reppo evaluation | **Live as advice**: the disputed ruling scored 98 and the statement 95, both routed `ship`, de-identified before sending. The feedback loop that changes the rulebook is not built, so the Reppo track is not entered |
 | Nightly time bar watch | **Designed**, not scheduled in this release |
+| Guided tour, dispute room, agents page | **Live** |
 | Try your own log | **Live** behind caps: 3 rulings an hour per visitor, a daily dollar budget, a kill switch |
 
 ## Risk and money

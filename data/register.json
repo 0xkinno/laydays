@@ -9,7 +9,7 @@
       "observed": 21,
       "review": 1,
       "amountCents": "4175000",
-      "reppo": "not sent yet",
+      "reppo": "ship: ruling 98, statement 95",
       "onchain": "presented, funded, answered, settled on Base Sepolia",
       "costUsd": 0.0176,
       "kind": "demo voyage"

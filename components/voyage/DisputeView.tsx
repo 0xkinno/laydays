@@ -16,7 +16,8 @@ import type { VoyageProps } from "@/lib/voyageData";
 
 interface Objection { interval_id: string; stance: string; their_reason: string }
 
-export function DisputeView({ v }: { v: VoyageProps }) {
+export interface ReppoCard { id: string; score: number | null; route: string | null; decision?: string; confidence?: string; reason?: string }
+export function DisputeView({ v, reppo }: { v: VoyageProps; reppo: ReppoCard | null }) {
   const { address } = useAccount();
   const role = useRole(address);
   const chainId = useChainId();
@@ -105,7 +106,14 @@ export function DisputeView({ v }: { v: VoyageProps }) {
       </div>
       {link && <div className="mt-4 break-all rounded-[10px] border hair bg-paper p-3 font-mono text-xs">{link}</div>}
       {msg && <div role="status" className={`mt-4 rounded-[10px] border p-3 text-sm ${msg.kind === "err" ? "border-flare text-flare-ink" : "border-ink/20"}`}>{msg.text} {msg.hash && <a className="underline" href={txUrl(msg.hash)} target="_blank" rel="noreferrer">View on Basescan</a>}</div>}
-      <p className="mt-6 text-xs text-ink-soft">Reppo evaluation of disputed rulings is not built in this release.</p>
+      {reppo ? (
+        <GlowCard className="mt-5 p-6">
+          <p className="tag text-ink-soft">Reppo, an outside evaluator, advice only</p>
+          <p className="display mt-1 text-3xl">Disputed ruling I02: {reppo.route} <span className="text-ink-soft">· score {reppo.score}</span></p>
+          <p className="mt-2 text-sm text-ink-soft">{reppo.reason}</p>
+          <p className="mt-2 font-mono text-[11px] text-ink-soft">evaluation {reppo.id} · de-identified before sending, because Reppo evaluations are public · the route never decides anything</p>
+        </GlowCard>
+      ) : <p className="mt-6 text-xs text-ink-soft">No Reppo evaluation has been recorded yet.</p>}
     </main>
   );
 }

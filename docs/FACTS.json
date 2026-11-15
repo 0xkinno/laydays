@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T07:59:04.027Z",
+  "generatedAt": "2026-11-15T08:17:46.807Z",
   "demo_intervals": 22,
   "demo_observed": 21,
   "demo_review": 1,
@@ -10,5 +10,7 @@
   "rulebook_version": "a3319b726b19b416e30b8c5eb0e828ac2bed29df1067685db40c67399a18ac22",
   "onchain_summary": "6 transactions, 5 refusals",
   "onchain_transactions": 6,
-  "onchain_refusals": 5
+  "onchain_refusals": 5,
+  "reppo_summary": "ruling 98 ship, statement 95 ship",
+  "reppo_credits_used": 880
 }

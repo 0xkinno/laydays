@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-15T08:14:46.185Z",
+  "disputed_ruling": {
+    "id": "cmwhk6ymr000007jqhlguj4jt",
+    "status": "COMPLETED",
+    "score": 98,
+    "route": "ship",
+    "decision": "accept",
+    "confidence": "high",
+    "reason": "The submission shipped because all three evaluators scored it near-perfectly (93–100, spread only 3.5) with both scope and safety gates passing cleanly, driving the aggregate score to 98 — well above the accept threshold of 85. The main driver was strong consensus on correctness of the PR-1 exception ruling, with the economic (net stake) weighting nudging the final score to 98.",
+    "creditsCharged": 440
+  },
+  "statement": {
+    "id": "cmwhk9sxg000107jqpywpnrkc",
+    "status": "COMPLETED",
+    "score": 95,
+    "route": "ship",
+    "decision": "accept",
+    "confidence": "high",
+    "reason": "The submission was accepted with a score of 95, primarily driven by strong rubric dimensions, particularly in scope, reversibility, and safety. The main driver was the correctness dimension, which scored lower than the others at 83, but still was adequate to meet the high confidence threshold for acceptance.",
+    "creditsCharged": 440
+  }
+}
