@@ -2,7 +2,8 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useState } from "react";
-import { useAccount, useChainId, useConnect, useDisconnect, useSwitchChain } from "wagmi";
+import { useAccount, useChainId, useDisconnect, useSwitchChain } from "wagmi";
+import { ConnectModal } from "./ConnectModal";
 import { baseSepolia } from "wagmi/chains";
 import { Menu, Power, X } from "lucide-react";
 import { useRole } from "@/lib/useRole";
@@ -18,7 +19,6 @@ const LINKS = [
 export function CapsuleNav() {
   const { address, isConnected } = useAccount();
   const { disconnect } = useDisconnect();
-  const { connectors, connect, isPending, error } = useConnect();
   const chainId = useChainId();
   const { switchChain } = useSwitchChain();
   const role = useRole(address);
@@ -27,22 +27,9 @@ export function CapsuleNav() {
   const wrong = isConnected && chainId !== baseSepolia.id;
 
   const connectBtn = (
-    <div className="relative">
-      <button onClick={() => setOpen((v) => !v)} className="h-10 min-w-[44px] rounded-[10px] bg-signal px-4 text-sm font-medium text-ink shadow-[var(--glow)] hover:brightness-95">
-        Connect wallet
-      </button>
-      {open && (
-        <div role="menu" className="absolute right-0 top-12 w-64 rounded-[14px] border border-ink/10 bg-paper p-2 shadow-xl">
-          {connectors.map((c) => (
-            <button key={c.uid} role="menuitem" disabled={isPending} onClick={() => { connect({ connector: c, chainId: baseSepolia.id }); setOpen(false); }}
-              className="flex h-11 w-full items-center rounded-[10px] px-3 text-left text-sm hover:bg-paper-deep">
-              {c.name}
-            </button>
-          ))}
-          {error && <p className="px-3 py-2 text-xs text-flare-ink">{error.message.slice(0, 120)}</p>}
-        </div>
-      )}
-    </div>
+    <button onClick={() => setOpen(true)} className="h-10 min-w-[44px] rounded-[10px] bg-signal px-4 text-sm font-medium text-ink shadow-[var(--glow)] hover:brightness-95">
+      Connect wallet
+    </button>
   );
 
   return (
@@ -80,6 +67,7 @@ export function CapsuleNav() {
           <button aria-label="Open menu" onClick={() => setMenu(true)} className="grid size-10 place-items-center rounded-[10px] border border-ink/10 md:hidden"><Menu size={18} /></button>
         </div>
       </motion.nav>
+      <ConnectModal open={open} onClose={() => setOpen(false)} />
       {menu && (
         <div className="fixed inset-0 z-[60] bg-paper p-6 md:hidden" role="dialog" aria-modal="true" aria-label="Menu">
           <button aria-label="Close menu" onClick={() => setMenu(false)} className="absolute right-5 top-5 grid size-11 place-items-center rounded-[10px] border border-ink/10"><X size={18} /></button>

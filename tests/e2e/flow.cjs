@@ -43,7 +43,13 @@ async function newWalletPage(browser, account) {
     throw new Error(`unsupported wallet method ${method}`);
   });
   await page.addInitScript(() => {
-    window.ethereum = { isMetaMask: true, request: ({ method, params }) => window.__e2e(method, params ?? []), on() {}, removeListener() {} };
+    const provider = { isMetaMask: false, request: ({ method, params }) => window.__e2e(method, params ?? []), on() {}, removeListener() {} };
+    window.ethereum = provider;
+    const icon = "data:image/svg+xml;utf8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="11" fill="#0F3A34"/><path d="M8 24q6-9 12 0t12 0" fill="none" stroke="#D7F34A" stroke-width="3" stroke-linecap="round"/></svg>');
+    const info = { uuid: "7f1d3a52-laydays-test-wallet", name: "Laydays test wallet", icon, rdns: "app.laydays.testwallet" };
+    const announce = () => window.dispatchEvent(new CustomEvent("eip6963:announceProvider", { detail: Object.freeze({ info, provider }) }));
+    window.addEventListener("eip6963:requestProvider", announce);
+    announce();
   });
   return { ctx, page, errors };
 }
@@ -55,7 +61,7 @@ async function connect(page) {
     await page.waitForTimeout(1500); // let wagmi finish its own reconnect before clicking
     if (await disc.isVisible().catch(() => false)) return;
     await page.getByRole("button", { name: "Connect wallet" }).click({ timeout: 8000 }).catch(() => {});
-    await page.getByRole("menuitem", { name: /MetaMask|Injected/ }).first().click({ timeout: 8000 }).catch(() => {});
+    await page.getByRole("button", { name: /Connect Laydays test wallet|Connect Browser wallet/ }).first().click({ timeout: 8000 }).catch(() => {});
     await disc.waitFor({ timeout: 8000 }).catch(() => {});
   }
   await disc.waitFor({ timeout: 5000 });

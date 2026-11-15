@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-15T13:47:28.053Z",
+  "runs": [
+    {
+      "n": 1,
+      "ms": 87214,
+      "tokenCostUsd": 0.01591008,
+      "intervals": 21,
+      "observed": 20,
+      "review": 1,
+      "steps": 5
+    }
+  ]
+}

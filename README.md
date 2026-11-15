@@ -42,7 +42,7 @@ Laydays is a demurrage desk for the analyst who bills a charterer for a ship's w
 | ![The ship's wait, ruled](docs/screenshots/voyage.png) | ![One ruling, three rulebooks](docs/screenshots/ruling.png) |
 | ![The trace of one ruling](docs/screenshots/trace.png) | ![Onchain proof and refusals](docs/screenshots/proof.png) |
 
-Meera, Dan, MT *Orla Jansen*, Saltmarsh Tankers and Gulfline Trading are fictional. The court cases and market figures cited are real and linked.
+The court cases and market figures cited are real and linked.
 
 ---
 
@@ -266,7 +266,7 @@ Environment names are in [`.env.example`](.env.example). Deploying: connect the 
 
 ## Disclosures
 
-- Meera Pillai, Dan Reyes, Saltmarsh Tankers, Gulfline Trading and MT *Orla Jansen* are fictional. The court cases and market figures are real and linked.
+- The people, companies and vessel in the walkthrough are invented for it, and are described in [MOMENT.md](MOMENT.md). The court cases and market figures are real and linked.
 - The author is pursuing STCW maritime certification. No practitioner reply has been received yet, and none is invented here.
 - AI coding assistants were used to write code. The author is the only author and committer of this repository.
 - Built during the event, 2 to 15 November 2026.
