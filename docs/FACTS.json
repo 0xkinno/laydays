@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T10:59:54.106Z",
+  "generatedAt": "2026-11-15T15:00:31.907Z",
   "demo_intervals": 22,
   "demo_observed": 21,
   "demo_review": 1,
@@ -8,6 +8,7 @@
   "demo_ruled_floor_cents": "4175000",
   "demo_ruled_ceiling_cents": "4337500",
   "rulebook_version": "a3319b726b19b416e30b8c5eb0e828ac2bed29df1067685db40c67399a18ac22",
+  "full_runs_summary": "5 full-voyage runs, median 93 s, p95 117 s, token cost median $0.0207",
   "lighthouse_summary": "performance 99, accessibility 100, best practices 100, SEO 100 (desktop)",
   "loop_v1_new": "62 of 96, interval 55% to 73%",
   "loop_v2_new": "65 of 96, interval 58% to 76%",

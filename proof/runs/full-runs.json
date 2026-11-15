@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-15T13:47:28.053Z",
+  "at": "2026-11-15T13:54:14.652Z",
   "runs": [
     {
       "n": 1,
@@ -9,6 +9,42 @@
       "observed": 20,
       "review": 1,
       "steps": 5
+    },
+    {
+      "n": 2,
+      "ms": 104553,
+      "tokenCostUsd": 0.02070633,
+      "intervals": 20,
+      "observed": 17,
+      "review": 3,
+      "steps": 5
+    },
+    {
+      "n": 3,
+      "ms": 92551,
+      "tokenCostUsd": 0.01729004,
+      "intervals": 22,
+      "observed": 21,
+      "review": 1,
+      "steps": 6
+    },
+    {
+      "n": 4,
+      "ms": 117301,
+      "tokenCostUsd": 0.02250389,
+      "intervals": 22,
+      "observed": 20,
+      "review": 2,
+      "steps": 6
+    },
+    {
+      "n": 5,
+      "ms": 92190,
+      "tokenCostUsd": 0.02166054,
+      "intervals": 22,
+      "observed": 20,
+      "review": 2,
+      "steps": 6
     }
   ]
 }

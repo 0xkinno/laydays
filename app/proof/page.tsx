@@ -19,6 +19,7 @@ export default function Proof() {
     ["Multipath on against off", show("ablation_summary"), "Same held-out cases with plain gpt-6-luna, Multipath, Kronos plus Multipath, and Shadow Agent added."],
     ["Both error directions", show("errors_summary"), "Hours wrongly excepted against wrongly counted. Documents wrongly flagged missing against wrongly passed."],
     ["Cost per claim", `$${s.costUsd.toFixed(4)}`, "From the recorded Orla Jansen run, summed over every SERV call."],
+    ["Full voyages, live", show("full_runs_summary"), "The whole Orla Jansen voyage ruled start to finish through live SERV, several times. Count, latency and token cost are measured, not estimated."],
     ["Onchain record", show("onchain_summary"), "Presentation, the two refusals, funding, answer and settlement on Base Sepolia."],
     ["Rulebook loop", show("loop_summary"), "Version 1 against version 2 of the house rules on new seeded voyages, answers set by code."],
     ["End to end", show("e2e_summary"), "Two wallets, a browser, and every step a real transaction."],
