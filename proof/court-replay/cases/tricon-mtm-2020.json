@@ -1,0 +1,32 @@
+{
+  "id": "tricon-mtm-2020",
+  "citation": "Tricon Energy Ltd v MTM Trading LLC (MTM Hong Kong) [2020] EWHC 700 (Comm)",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewhc/comm/2020/700",
+  "kind": "time_bar",
+  "decided": "Whether a demurrage claim presented without the bills of lading was barred by a clause requiring a claim and all supporting documents within 90 days of completion of discharge.",
+  "facts": "The owners presented a demurrage claim in writing within 90 days with a statement of facts and notices of readiness, but did not present the bills of lading within the 90 days.",
+  "clauses": [
+    {
+      "id": "CP-38",
+      "title": "Time bar",
+      "text": "The charterer is released from all liability for any claim or invoice unless the claim or invoice in writing and all supporting documents have been received by the charterer within 90 days after completion of discharge."
+    },
+    {
+      "id": "CP-10g",
+      "title": "Delay at berth for the account of others",
+      "text": "If the vessel is delayed in berthing and discharges for the account of others, the delay, waiting time and demurrage are prorated according to the bill of lading quantities."
+    },
+    {
+      "id": "CP-12",
+      "title": "Statement of facts",
+      "text": "The statement of facts must be signed by the supplier or receiver. The owner instructs each port agent to send the charterer the statement of facts and notice of readiness."
+    }
+  ],
+  "presentedWithin90Days": [
+    "sof",
+    "nor",
+    "statement"
+  ],
+  "courtAnswer": "barred",
+  "tests": "Time-bar Clerk reading a clause that lists no documents, with a second clause that makes the bills of lading relevant, then code comparing the document list"
+}

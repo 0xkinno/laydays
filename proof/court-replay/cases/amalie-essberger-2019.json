@@ -1,0 +1,25 @@
+{
+  "id": "amalie-essberger-2019",
+  "citation": "\"Amalie Essberger\" Tankreederei GmbH & Co KG v Marubeni Corporation [2019] EWHC 3402 (Comm)",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewhc/comm/2019/3402",
+  "kind": "time_bar",
+  "decided": "Whether a demurrage claim was time-barred because it was presented without time logs, notices of readiness, pumping logs and letters of protest, when the charterers had already been given those documents.",
+  "facts": "The owners presented the demurrage claim on 22 December 2017, within the period, without attaching the time logs, pumping logs and letters of protest. The charterers had already been sent those documents on 1 December 2017, after discharge.",
+  "clauses": [
+    {
+      "id": "CP-R5",
+      "title": "Time bar",
+      "text": "Any demurrage claim is waived unless it is received in writing with all supporting calculations and documents within 90 days after completion of discharge, and the claim must be supported by these documents: vessel or terminal time logs, notices of readiness, pumping logs, and letters of protest."
+    }
+  ],
+  "presentedWithin90Days": [
+    "port_log",
+    "time_sheet",
+    "nor",
+    "pumping",
+    "protest",
+    "statement"
+  ],
+  "courtAnswer": "not_barred",
+  "tests": "Time-bar Clerk reading a four-document list, with documents already in the charterer's hands before the claim, then code comparing the list"
+}

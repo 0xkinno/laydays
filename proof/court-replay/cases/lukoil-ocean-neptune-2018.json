@@ -1,0 +1,25 @@
+{
+  "id": "lukoil-ocean-neptune-2018",
+  "citation": "Lukoil Asia Pacific Pte Ltd v Ocean Tankers (Pte) Ltd (Ocean Neptune) [2018] EWHC 163 (Comm)",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewhc/comm/2018/163",
+  "kind": "time_bar",
+  "decided": "Whether a demurrage claim for time lost waiting for orders at a discharge port was subject to a clause requiring the specified supporting documents within 90 days of completion of discharge.",
+  "facts": "The owners claimed demurrage for the long wait at anchor at the first discharge port while the receivers refused delivery. The documents the clause specifies were not provided within 90 days of completion of discharge.",
+  "clauses": [
+    {
+      "id": "CP-2B",
+      "title": "Time bar",
+      "text": "A demurrage claim must be presented to the charterers with the documents the clause specifies, namely the notice of readiness, the statement of facts, the pumping log and the cargo documents, within 90 days of completion of discharge."
+    },
+    {
+      "id": "CP-4",
+      "title": "Waiting for orders",
+      "text": "Time lost by the vessel waiting for orders is paid at the demurrage rate."
+    }
+  ],
+  "presentedWithin90Days": [
+    "statement"
+  ],
+  "courtAnswer": "barred",
+  "tests": "Time-bar Clerk with a stated list, and a claim that is for waiting time rather than operational delay"
+}

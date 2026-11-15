@@ -1,0 +1,22 @@
+{
+  "id": "kassiopi-adventure-2015",
+  "citation": "Kassiopi Maritime Co Ltd v Fal Shipping Co Ltd (The Adventure) [2015] EWHC 318 (Comm)",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewhc/comm/2015/318",
+  "kind": "time_bar",
+  "decided": "Whether a claim presented without port logs and timesheets was time barred under a clause requiring all supporting documentation for each constituent part of the claim within 90 days.",
+  "facts": "The owners emailed the demurrage claim with some attachments within 90 days. The port logs and timesheets that support the laytime calculation were not provided within the 90 days.",
+  "clauses": [
+    {
+      "id": "CP-20",
+      "title": "Time bar",
+      "text": "The claim must be in writing and all supporting documentation substantiating each and every constituent part of the claim must be presented to the charterers within 90 days of completion of discharge, otherwise the charterers are discharged from liability."
+    }
+  ],
+  "presentedWithin90Days": [
+    "statement",
+    "sof",
+    "nor"
+  ],
+  "courtAnswer": "barred",
+  "tests": "Time-bar Clerk reading a clause with no list, then code comparing the document list. The laytime calculation depends on port logs and timesheets"
+}

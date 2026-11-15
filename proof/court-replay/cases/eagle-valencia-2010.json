@@ -1,0 +1,26 @@
+{
+  "id": "eagle-valencia-2010",
+  "citation": "AET Inc Ltd v Arcadia Petroleum Ltd (Eagle Valencia) [2010] EWCA Civ 713",
+  "url": "https://caselaw.nationalarchives.gov.uk/ewca/civ/2010/713",
+  "kind": "interval",
+  "decided": "Whether a notice of readiness was invalid, so that laytime did not start, when free pratique was granted more than six hours after the notice was tendered.",
+  "facts": "The vessel tendered a notice of readiness on arrival at anchor and waited. Free pratique was granted more than six hours after the notice was tendered. The question is whether the interval after the notice counts as laytime.",
+  "clauses": [
+    {
+      "id": "CP-22.1",
+      "title": "Clearance",
+      "text": "If the owners fail to obtain customs clearance or free pratique, or to have the papers on board, within six hours after the notice of readiness was originally tendered, the original notice of readiness is not valid."
+    },
+    {
+      "id": "CP-22.3",
+      "title": "Clearance and laytime",
+      "text": "Laytime would then commence in accordance with the other terms of the charter."
+    }
+  ],
+  "interval": {
+    "text": "Vessel at anchor, notice of readiness tendered, free pratique not yet granted, nine hours after the notice was tendered.",
+    "minutes": 540
+  },
+  "courtAnswer": "excepted",
+  "tests": "Clause Reader ruling on an interval governed by a validity clause. Expected effect: laytime is not running on the invalid notice"
+}
