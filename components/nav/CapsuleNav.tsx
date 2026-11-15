@@ -59,7 +59,7 @@ export function CapsuleNav() {
         </Link>
         <div className="hidden items-center gap-1 md:flex">
           {LINKS.map((l) => (
-            <Link key={l.href} href={l.href} className="rounded-[10px] px-3 py-2 text-sm text-ink-soft hover:bg-paper-deep hover:text-ink">{l.label}</Link>
+            <Link key={l.href} href={l.href} className="inline-flex min-h-[44px] items-center rounded-[10px] px-3 text-sm text-ink-soft hover:bg-paper-deep hover:text-ink">{l.label}</Link>
           ))}
         </div>
         <div className="flex items-center gap-2">

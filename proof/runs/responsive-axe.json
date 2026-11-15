@@ -1,5 +1,5 @@
 {
- "at": "2026-11-15T08:13:53.294Z",
+ "at": "2026-11-15T10:59:11.806Z",
  "report": [
   {
    "w": 360,
@@ -17,25 +17,25 @@
    "w": 360,
    "route": "/voyage/orla-jansen",
    "overflow": 0,
-   "small": 18
+   "small": 0
   },
   {
    "w": 360,
    "route": "/voyage/orla-jansen/charterer",
    "overflow": 0,
-   "small": 8
+   "small": 0
   },
   {
    "w": 360,
    "route": "/dispute/orla-jansen",
    "overflow": 0,
-   "small": 1
+   "small": 0
   },
   {
    "w": 360,
    "route": "/trace/I02",
    "overflow": 0,
-   "small": 1
+   "small": 0
   },
   {
    "w": 360,
@@ -94,25 +94,25 @@
    "w": 390,
    "route": "/voyage/orla-jansen",
    "overflow": 0,
-   "small": 18
+   "small": 0
   },
   {
    "w": 390,
    "route": "/voyage/orla-jansen/charterer",
    "overflow": 0,
-   "small": 8
+   "small": 0
   },
   {
    "w": 390,
    "route": "/dispute/orla-jansen",
    "overflow": 0,
-   "small": 1
+   "small": 0
   },
   {
    "w": 390,
    "route": "/trace/I02",
    "overflow": 0,
-   "small": 1
+   "small": 0
   },
   {
    "w": 390,
@@ -171,25 +171,25 @@
    "w": 430,
    "route": "/voyage/orla-jansen",
    "overflow": 0,
-   "small": 18
+   "small": 0
   },
   {
    "w": 430,
    "route": "/voyage/orla-jansen/charterer",
    "overflow": 0,
-   "small": 8
+   "small": 0
   },
   {
    "w": 430,
    "route": "/dispute/orla-jansen",
    "overflow": 0,
-   "small": 1
+   "small": 0
   },
   {
    "w": 430,
    "route": "/trace/I02",
    "overflow": 0,
-   "small": 1
+   "small": 0
   },
   {
    "w": 430,
@@ -236,73 +236,73 @@
    "w": 768,
    "route": "/",
    "overflow": 0,
-   "small": 2
+   "small": 0
   },
   {
    "w": 768,
    "route": "/desk",
    "overflow": 0,
-   "small": 2
+   "small": 0
   },
   {
    "w": 768,
    "route": "/voyage/orla-jansen",
    "overflow": 0,
-   "small": 20
+   "small": 0
   },
   {
    "w": 768,
    "route": "/voyage/orla-jansen/charterer",
    "overflow": 0,
-   "small": 10
+   "small": 0
   },
   {
    "w": 768,
    "route": "/dispute/orla-jansen",
    "overflow": 0,
-   "small": 3
+   "small": 0
   },
   {
    "w": 768,
    "route": "/trace/I02",
    "overflow": 0,
-   "small": 3
+   "small": 0
   },
   {
    "w": 768,
    "route": "/proof",
    "overflow": 0,
-   "small": 2
+   "small": 0
   },
   {
    "w": 768,
    "route": "/break",
    "overflow": 0,
-   "small": 2
+   "small": 0
   },
   {
    "w": 768,
    "route": "/judge",
    "overflow": 0,
-   "small": 2
+   "small": 0
   },
   {
    "w": 768,
    "route": "/register",
    "overflow": 0,
-   "small": 2
+   "small": 0
   },
   {
    "w": 768,
    "route": "/agents",
    "overflow": 0,
-   "small": 2
+   "small": 0
   },
   {
    "w": 768,
    "route": "/voyage/new",
    "overflow": 0,
-   "small": 2
+   "small": 0
   },
   {
    "w": 768,
@@ -313,73 +313,73 @@
    "w": 1024,
    "route": "/",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1024,
    "route": "/desk",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1024,
    "route": "/voyage/orla-jansen",
    "overflow": 0,
-   "small": 21
+   "small": 0
   },
   {
    "w": 1024,
    "route": "/voyage/orla-jansen/charterer",
    "overflow": 0,
-   "small": 13
+   "small": 0
   },
   {
    "w": 1024,
    "route": "/dispute/orla-jansen",
    "overflow": 0,
-   "small": 6
+   "small": 0
   },
   {
    "w": 1024,
    "route": "/trace/I02",
    "overflow": 0,
-   "small": 6
+   "small": 0
   },
   {
    "w": 1024,
    "route": "/proof",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1024,
    "route": "/break",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1024,
    "route": "/judge",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1024,
    "route": "/register",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1024,
    "route": "/agents",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1024,
    "route": "/voyage/new",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1024,
@@ -390,73 +390,73 @@
    "w": 1280,
    "route": "/",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1280,
    "route": "/desk",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1280,
    "route": "/voyage/orla-jansen",
    "overflow": 0,
-   "small": 18
+   "small": 0
   },
   {
    "w": 1280,
    "route": "/voyage/orla-jansen/charterer",
    "overflow": 0,
-   "small": 13
+   "small": 0
   },
   {
    "w": 1280,
    "route": "/dispute/orla-jansen",
    "overflow": 0,
-   "small": 6
+   "small": 0
   },
   {
    "w": 1280,
    "route": "/trace/I02",
    "overflow": 0,
-   "small": 6
+   "small": 0
   },
   {
    "w": 1280,
    "route": "/proof",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1280,
    "route": "/break",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1280,
    "route": "/judge",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1280,
    "route": "/register",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1280,
    "route": "/agents",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1280,
    "route": "/voyage/new",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1280,
@@ -467,73 +467,73 @@
    "w": 1440,
    "route": "/",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1440,
    "route": "/desk",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1440,
    "route": "/voyage/orla-jansen",
    "overflow": 0,
-   "small": 18
+   "small": 0
   },
   {
    "w": 1440,
    "route": "/voyage/orla-jansen/charterer",
    "overflow": 0,
-   "small": 13
+   "small": 0
   },
   {
    "w": 1440,
    "route": "/dispute/orla-jansen",
    "overflow": 0,
-   "small": 6
+   "small": 0
   },
   {
    "w": 1440,
    "route": "/trace/I02",
    "overflow": 0,
-   "small": 6
+   "small": 0
   },
   {
    "w": 1440,
    "route": "/proof",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1440,
    "route": "/break",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1440,
    "route": "/judge",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1440,
    "route": "/register",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1440,
    "route": "/agents",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1440,
    "route": "/voyage/new",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1440,
@@ -544,73 +544,73 @@
    "w": 1920,
    "route": "/",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1920,
    "route": "/desk",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1920,
    "route": "/voyage/orla-jansen",
    "overflow": 0,
-   "small": 18
+   "small": 0
   },
   {
    "w": 1920,
    "route": "/voyage/orla-jansen/charterer",
    "overflow": 0,
-   "small": 13
+   "small": 0
   },
   {
    "w": 1920,
    "route": "/dispute/orla-jansen",
    "overflow": 0,
-   "small": 6
+   "small": 0
   },
   {
    "w": 1920,
    "route": "/trace/I02",
    "overflow": 0,
-   "small": 6
+   "small": 0
   },
   {
    "w": 1920,
    "route": "/proof",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1920,
    "route": "/break",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1920,
    "route": "/judge",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1920,
    "route": "/register",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1920,
    "route": "/agents",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1920,
    "route": "/voyage/new",
    "overflow": 0,
-   "small": 5
+   "small": 0
   },
   {
    "w": 1920,
@@ -622,14 +622,7 @@
   {
    "w": 390,
    "route": "/",
-   "violations": [
-    {
-     "id": "color-contrast",
-     "impact": "serious",
-     "nodes": 1,
-     "sample": ".shadow-\\[0_18px_50px_-18px_rgba\\(20\\,22\\,15\\,\\.7\\)\\]"
-    }
-   ]
+   "violations": []
   },
   {
    "w": 390,
@@ -659,14 +652,7 @@
   {
    "w": 1440,
    "route": "/",
-   "violations": [
-    {
-     "id": "color-contrast",
-     "impact": "serious",
-     "nodes": 1,
-     "sample": ".shadow-\\[0_18px_50px_-18px_rgba\\(20\\,22\\,15\\,\\.7\\)\\]"
-    }
-   ]
+   "violations": []
   },
   {
    "w": 1440,

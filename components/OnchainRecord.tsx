@@ -3,7 +3,7 @@ import type { OnchainRun } from "@/lib/onchain";
 export function OnchainRecord({ run }: { run: OnchainRun | null }) {
   if (!run) return <p className="text-sm text-ink-soft">The onchain proof run has not been recorded yet.</p>;
   return (
-    <div className="overflow-x-auto rounded-[14px] border hair">
+    <div tabIndex={0} role="region" aria-label="Onchain record, scrolls sideways on small screens" className="overflow-x-auto rounded-[14px] border hair">
       <table className="w-full min-w-[760px] text-left text-sm">
         <thead className="bg-paper-deep text-xs"><tr>{["What happened", "Result", "Signer", "Gas", "Transaction"].map((h) => <th key={h} className="px-3 py-3 font-medium">{h}</th>)}</tr></thead>
         <tbody className="divide-y hair">

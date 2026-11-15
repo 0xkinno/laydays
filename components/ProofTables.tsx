@@ -3,7 +3,7 @@ import { fmtWilson } from "@/lib/proof/wilson";
 
 const read = <T,>(p: string): T | null => (existsSync(p) ? (JSON.parse(readFileSync(p, "utf8")) as T) : null);
 const Table = ({ head, rows }: { head: string[]; rows: (string | React.ReactNode)[][] }) => (
-  <div className="overflow-x-auto rounded-[14px] border hair">
+  <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-[14px] border hair">
     <table className="w-full min-w-[640px] text-left text-sm">
       <thead className="bg-paper-deep text-xs"><tr>{head.map((h) => <th key={h} className="px-3 py-3 font-medium">{h}</th>)}</tr></thead>
       <tbody className="divide-y hair">{rows.map((r, i) => <tr key={i}>{r.map((c, k) => <td key={k} className="px-3 py-3 align-top">{c}</td>)}</tr>)}</tbody>

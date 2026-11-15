@@ -90,7 +90,7 @@ export function DisputeView({ v, reppo }: { v: VoyageProps; reppo: ReppoCard | n
           <p className="display mt-1 text-4xl">{formatUsd(held)}</p>
           <p className="text-xs text-ink-soft">{(Number(held) / 1e6).toFixed(6)} test USDC at testnet scale</p>
           <label htmlFor="split" className="mt-5 block text-sm">To the owner: <span className="font-mono">{formatUsd(BigInt(toOwner))}</span>, back to the charterer: <span className="font-mono">{formatUsd(held - BigInt(toOwner))}</span></label>
-          <input id="split" type="range" min={0} max={Number(held)} step={1} value={toOwner} disabled={!!pendingAmt || held === 0n} onChange={(e) => setToOwner(Number(e.target.value))} className="mt-2 w-full accent-[#14160F]" />
+          <input id="split" type="range" min={0} max={Number(held)} step={1} value={toOwner} disabled={!!pendingAmt || held === 0n} onChange={(e) => setToOwner(Number(e.target.value))} className="mt-2 h-11 w-full accent-[#14160F]" />
           <button disabled={busy || !claim || claim.stage !== 3 || (role === null)} onClick={sign} className="mt-4 h-12 rounded-[12px] bg-signal px-6 font-medium shadow-[var(--glow)] disabled:opacity-50 disabled:shadow-none">{pending ? "Co-sign and settle" : "Sign this split"}</button>
           {claim && claim.stage !== 3 && <p className="mt-2 text-xs text-ink-soft">Nothing is held on this claim right now.</p>}
           {role === null && <p className="mt-2 text-xs text-ink-soft">Connect the owner or charterer wallet.</p>}

@@ -115,6 +115,8 @@ flowchart LR
 | Port Clerk | Reads the log into typed events | `gpt-6-luna` | Prompt Guard, strict schema | Rule on a clause |
 | Clause Reader | Rules each interval on three branches | `gpt-6-luna-serv-kronos-multipath` | Multipath, Kronos, Shadow Agent hint, strict schema | Produce hours or money |
 | Senior Reader | Re-reads intervals left ambiguous, once | `gpt-6.1-sol-serv-multipath` | Multipath | Override a code check |
+| Time-bar Clerk | Reads the time bar clause into a day count and the document list. The voyage page shows its read next to the declared list and code compares them | `gpt-6-luna-serv-kronos` | Kronos, strict schema | Mark a document present |
+| Statement Writer | Writes the cover note from facts code computed. A number not in the facts rejects the note | `gpt-6-luna` | Shadow Agent hint, strict schema | Introduce a number |
 | Citation Checker | Rejects invented clauses and log lines, resolves precedence | none, code | none | Be bypassed |
 | Laytime Clock | Minutes, exceptions, half rate, cents | none, code | none | Read model prose |
 
@@ -152,7 +154,7 @@ sequenceDiagram
 | Newest models | `gpt-6-luna` for volume, `gpt-6.1-sol` for the senior re-read | [`models.ts`](lib/serv/models.ts) |
 | The rulebook is versioned | The SHA-256 of the exact system prompt is the rulebook version and appears on every ruling. Multipath compiles one graph per source prompt, so changing one word is a new version | `rulebookVersion` on every ruling |
 
-Not used, so not claimed: reasoning summaries from `/v1/responses` are not captured in the recorded run (see [FINDINGS.md](FINDINGS.md)).
+Reasoning summaries from `/v1/responses` are captured for one ruling, interval I02, and shown on its [trace page](https://laydays.vercel.app/trace/I02). The endpoint returns an empty summary on some calls (three of our four calls did), so the recorded demo run, made on chat completions, does not carry one for every ruling.
 
 ### What we learned about SERV
 

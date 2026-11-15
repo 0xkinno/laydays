@@ -52,7 +52,7 @@ export default async function Trace({ params }: { params: Promise<{ id: string }
       ) : (
         <p className="mt-6 text-sm text-ink-soft">A reasoning summary is captured for interval I02 only, from the Responses endpoint. Open <a className="underline" href="/trace/I02">I02</a> to read it.</p>
       )}
-      <Link href="/voyage/orla-jansen" className="mt-6 inline-block text-sm underline underline-offset-4">Back to the voyage</Link>
+      <Link href="/voyage/orla-jansen" className="mt-6 inline-flex min-h-[44px] items-center text-sm underline underline-offset-4">Back to the voyage</Link>
     </Page>
   );
 }
