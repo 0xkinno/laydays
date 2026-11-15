@@ -10,7 +10,7 @@ Repository and authorship guards. Laytime clock, precedence and timeline with te
 - The owner: submission form, X post, demo video upload.
 
 ## Known gaps
-- Eight court cases, not fifteen. About 30 candidates were screened across three searches and the rest could not be encoded honestly.
+- Eight court cases, not fifteen. About 40 candidates were screened across four searches and the rest could not be encoded honestly.
 - Plain model against Multipath is not separated by the court replay (n = 8).
 - The rulebook loop's version 2 did not fix the two failure kinds it targeted, because those are held by the cause-clause check, not by the rules.
 - The Reppo track is not entered: there is no Reppo-measured before and after.

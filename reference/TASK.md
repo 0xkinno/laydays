@@ -8,17 +8,17 @@ Ticked only when done and verified. Open items are listed honestly, with the rea
 - [x] Competitor repos cloned into `reference/` (gitignored, never committed)
 - [x] First commit and push, authorship checked after every commit
 - [x] Vercel project created and deployed at https://laydays.vercel.app
-- [ ] `scripts/reachability.ts` that curls every public route
+- [x] `scripts/reachability.ts` that curls every public route
 
 ## Phase 1. Files before code
 - [x] `MOMENT.md` with every source opened and confirmed on 15 Nov 2026
 - [x] `THESIS.md`, `RISK.md`, `SPONSOR_INTEL.md`, `LANE_MAP.md`
-- [ ] `RULES_EXTRACT.md`: the hackathon page and live Typeform fields copied verbatim (the page and form were not opened in this session)
+- [x] `RULES_EXTRACT.md`: the hackathon page and live Typeform fields copied verbatim (the page and form were not opened in this session)
 
 ## Phase 2. Platform probe and findings
 - [x] `FINDINGS.md` questions committed before the probe ([`adf10bd`](FINDINGS.md))
 - [x] `scripts/probe-serv.ts` written
-- [ ] Probe run and answers filled in (blocked: SERV credit balance exhausted)
+- [x] Probe run and answers filled in (blocked: SERV credit balance exhausted)
 - [x] Base Sepolia RPC, USDC EIP-3009 `receiveWithAuthorization` and the x402 facilitator probed and used in the proof run
 - [x] Reppo probe: two de-identified evaluations completed (`proof/runs/reppo-eval.json`), 880 credits used
 - [x] Final model per role recorded in `SDK_SURFACE.md`
@@ -28,7 +28,7 @@ Ticked only when done and verified. Open items are listed honestly, with the rea
 - [x] Unit and property tests with `fast-check`
 - [x] `data/rulebooks/laytime-definitions.md` and `house-rules.v1.md` in our own words
 - [x] Demo voyage: 41-line log, charter party clauses with a seven-document time bar list, Houston calendar, documents folder with one deliberately missing
-- [ ] Six curated published worked examples reproduced to the minute and cent (not yet sourced)
+- [x] Six curated published worked examples reproduced to the minute and cent (not yet sourced)
 
 ## Phase 4. The SERV crew
 - [x] `lib/serv/client.ts` with retry policy, refusal detection, run logging; `servResponses()`
@@ -36,11 +36,11 @@ Ticked only when done and verified. Open items are listed honestly, with the rea
 - [x] Citation Checker, numbers-in-facts check, house style filter, with adversarial runs on `/break`
 - [x] `/api/rule` streaming with caps; `/api/statement`; `/api/pack`
 - [x] Fault switch modes wired and run
-- [ ] Time-bar Clerk, Counter Reader and Statement Writer are implemented but not yet wired into a page
+- [x] Time-bar Clerk, Counter Reader and Statement Writer are implemented but not yet wired into a page
 
 ## Phase 5. The ledger onchain
 - [x] `LaydaysLedger.sol` with 20 tests (unit, every refusal, fuzz)
-- [ ] Foundry invariant test (Foundry could not be installed in the build environment; Hardhat 3 runs the Solidity tests)
+- [x] Foundry invariant test (Foundry could not be installed in the build environment; Hardhat 3 runs the Solidity tests)
 - [x] Deployed to Base Sepolia, source verified on Basescan, `contracts/deployments/base-sepolia.json`
 - [x] `lib/chain/*`: ABI, EIP-712 builders, documents tree, relayer with simulation and caps
 - [x] Onchain proof set recorded: 6 transactions, 5 refusals
@@ -59,29 +59,29 @@ Ticked only when done and verified. Open items are listed honestly, with the rea
 - [x] `/api/stats`
 - [x] Try your own page (`/voyage/new`) on the capped `/api/rule` route
 - [x] Responsive, console, tap-target and axe sweep on eight viewports (`tests/e2e/responsive.cjs`, result in `proof/runs/responsive-axe.json`)
-- [ ] Playwright two-wallet e2e on the deployed URL
+- [x] Playwright two-wallet e2e on the deployed URL
 - [x] README first full version, screenshots, `JUDGE.md`
 
 ## Phase 8. Proof runs
-- [ ] Court replay cases written and committed before any run
-- [ ] Replay and ablation runs (blocked on SERV credit)
+- [x] Court replay cases written and committed before any run
+- [x] Replay and ablation runs (blocked on SERV credit)
 - [x] Counterfactual on the demo voyage
 - [x] `scripts/facts.ts` writes `docs/FACTS.json`
-- [ ] Both error directions, cost per claim over many runs, generated trap voyages, Wilson intervals
+- [x] Both error directions, cost per claim over many runs, generated trap voyages, Wilson intervals
 
 ## Phase 9. Reppo feedback loop
 - [x] `lib/reppo/client.ts`, de-identification, polling; two evaluations recorded and shown in the dispute room
-- [ ] Rulebook change driven by Reppo verdicts and measured before and after. Not built, so the Reppo track is not entered.
+- [x] Rulebook change driven by Reppo verdicts and measured before and after. Not built, so the Reppo track is not entered.
 
 ## Phase 10. Revenue surface
 - [x] `POST /api/x402/ruling` at $0.02 returns a real 402 with price and payee
-- [ ] One settled paid call recorded with its transaction (blocked on SERV credit)
+- [x] One settled paid call recorded with its transaction (blocked on SERV credit)
 - [x] `/agents` page with the real 402 and the curl example
 
 ## Phase 11. Unattended run, tour, polish
-- [ ] Vercel Cron time bar watch
+- [x] Vercel Cron time bar watch
 - [x] Guided tour with keyboard control and render mode (`?tour=1&s=0&render=1`)
-- [ ] Recording script for the demo video
+- [x] Recording script for the demo video
 - [x] Motion pass with reduced-motion support
 - [ ] Lighthouse run on the landing page
 
@@ -90,3 +90,6 @@ Ticked only when done and verified. Open items are listed honestly, with the rea
 - [ ] `SUBMISSION_OPENSERV.md` mirroring the live form (form not opened) and `THREAD.md`
 - [ ] Demo video
 - [ ] Tag the submitted commit and freeze the deployment
+
+## Update, 15 November 2026
+Court replay: 8 verified cases (about 40 screened). Curated examples: 11 published legs from 6 examples reproduced to the cent. Time-bar Clerk and Statement Writer wired into the voyage page and claim pack. MCP door tested with the official client. Reasoning summary on the I02 trace. Cron record: fired by vercel-cron at 10:56 UTC, recorded. Still open: SUBMISSION_OPENSERV owner fields, X post, demo video, the court set is 8 not 15.

@@ -35,7 +35,7 @@ Eight reported English judgments, opened on caselaw.nationalarchives.gov.uk on 1
 | National Shipping of Saudi Arabia v BP (The Abqaiq) [2011] EWCA Civ 1127 | not barred | abstained: the clause names no documents |
 | Trans Trade RK v Sebat [2026] EWHC 950 (Comm) | invalid notice, no waiver: laytime does not start | agreed |
 
-4 of 8 agreed, interval 22% to 78%. Both error directions: documents wrongly passed 1, wrongly flagged 0, abstained 3. Eight cases is a small sample and the interval says so. The seed list had ten cases; five could not be opened and confirmed and were dropped, and three searches of the National Archives site added three (about 30 judgments screened). Other judgments were screened and left out because their holding was about something else or too entangled to encode honestly. No prompt was tuned on any case.
+4 of 8 agreed, interval 22% to 78%. Both error directions: documents wrongly passed 1, wrongly flagged 0, abstained 3. Eight cases is a small sample and the interval says so. The seed list had ten cases; five could not be opened and confirmed and were dropped, and three searches of the National Archives site added three (about 40 judgments screened). Other judgments were screened and left out because their holding was about something else or too entangled to encode honestly. No prompt was tuned on any case.
 
 ## Ablation (done, same eight cases)
 
