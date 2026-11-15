@@ -1,0 +1,1501 @@
+{
+ "rulebookVersion": "a3319b726b19b416e30b8c5eb0e828ac2bed29df1067685db40c67399a18ac22",
+ "timeline": {
+  "commencesAt": 29783370,
+  "completedAt": 29790430,
+  "norAt": 29783010,
+  "norValid": true,
+  "norNote": "free pratique granted before notice was tendered",
+  "gaps": []
+ },
+ "intervals": [
+  {
+   "id": "I01",
+   "from": 29783370,
+   "to": 29783400,
+   "startLine": "L07",
+   "endLine": "L08",
+   "kind": "waiting",
+   "cause": "none",
+   "text": "2026-08-17T14:00-05:00 Vessel waiting at anchor, Pasadena Terminal berth 4 still occupied.",
+   "ruling": {
+    "interval_id": "I01",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-3"
+    ],
+    "line_ids": [
+     "L07",
+     "L08"
+    ],
+    "reason": "The vessel was waiting for a berth during running laytime, and no applicable exception is recorded.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "The laytime exception for berth waiting does not apply, and CP-1 excepts only the stated days and hours unless used."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-3",
+      "reason": "Waiting for a berth counts under the charter’s whether-in-berth-or-not provision."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "No port rule addresses this berth wait."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I02",
+   "from": 29783400,
+   "to": 29783530,
+   "startLine": "L08",
+   "endLine": "L09",
+   "kind": "closure_start",
+   "cause": "port_closure",
+   "text": "2026-08-17T17:00-05:00 Houston Ship Channel closed to all traffic by the Coast Guard, dense fog.",
+   "ruling": {
+    "interval_id": "I02",
+    "modelEffect": "ambiguous",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": true,
+    "clause_ids": [
+     "CP-1",
+     "L-7",
+     "PR-1"
+    ],
+    "line_ids": [
+     "L08",
+     "L09"
+    ],
+    "reason": "The port rule excepts the closure while the charter and definitions count it, and no charter clause settles that conflict.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "CP-1 does not except a channel closure."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-7",
+      "reason": "A weather-caused port closure is not a charter-party weather exception."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "excepted",
+      "clause_id": "PR-1",
+      "reason": "PR-1 excepts time lost to a Coast Guard channel closure."
+     }
+    ],
+    "problems": [
+     "model effect ambiguous differs from code resolution counts"
+    ],
+    "verdict": "REVIEW"
+   },
+   "finalEffect": null,
+   "appliesOnDemurrage": false,
+   "by": null,
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I03",
+   "from": 29783530,
+   "to": 29783560,
+   "startLine": "L09",
+   "endLine": "L10",
+   "kind": "closure_end",
+   "cause": "port_closure",
+   "text": "2026-08-17T19:10-05:00 Houston Ship Channel reopened.",
+   "ruling": {
+    "interval_id": "I03",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-3"
+    ],
+    "line_ids": [
+     "L09",
+     "L10"
+    ],
+    "reason": "The channel had reopened and the vessel was awaiting the pilot without an applicable exception.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "No stated laytime exception applies after the channel reopened."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-3",
+      "reason": "Unexcepted time during laytime counts."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "No port rule addresses the period after reopening."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I04",
+   "from": 29783560,
+   "to": 29783710,
+   "startLine": "L10",
+   "endLine": "L11",
+   "kind": "pilot_on_board",
+   "cause": "none",
+   "text": "2026-08-17T19:40-05:00 Pilot on board, anchor aweigh.",
+   "ruling": {
+    "interval_id": "I04",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-3"
+    ],
+    "line_ids": [
+     "L10",
+     "L11"
+    ],
+    "reason": "The vessel was proceeding to its berth during laytime, and no listed exception applies.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "This transit to the berth is not a shifting between berths under CP-3."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-3",
+      "reason": "Unexcepted time during laytime counts."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "No port rule addresses this transit."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I05",
+   "from": 29783710,
+   "to": 29783850,
+   "startLine": "L11",
+   "endLine": "L12",
+   "kind": "all_fast",
+   "cause": "none",
+   "text": "2026-08-17T22:10-05:00 All fast Pasadena Terminal berth 4.",
+   "ruling": {
+    "interval_id": "I05",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-2",
+     "L-1"
+    ],
+    "line_ids": [
+     "L11",
+     "L12"
+    ],
+    "reason": "This interval falls after laytime started and before any recorded stoppage.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-2",
+      "reason": "Laytime had started six hours after the valid notice and no exception applies while alongside."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-1",
+      "reason": "Laytime runs continuously unless the charter party stops it."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "No port rule addresses this period."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I06",
+   "from": 29783850,
+   "to": 29784170,
+   "startLine": "L12",
+   "endLine": "L13",
+   "kind": "formalities",
+   "cause": "none",
+   "text": "2026-08-18T00:30-05:00 Customs and immigration cleared, agent left the vessel.",
+   "ruling": {
+    "interval_id": "I06",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-4"
+    ],
+    "line_ids": [
+     "L12",
+     "L13"
+    ],
+    "reason": "The vessel was awaiting the surveyor, and no applicable exception is recorded.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "No charter-party exception covers customs and immigration clearance after the vessel is alongside."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-4",
+      "reason": "Unexcepted delay not named by an exception counts."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "No port rule addresses this period."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I07",
+   "from": 29784170,
+   "to": 29784330,
+   "startLine": "L13",
+   "endLine": "L14",
+   "kind": "inspection",
+   "cause": "none",
+   "text": "2026-08-18T05:50-05:00 Cargo surveyor on board, tank inspection started.",
+   "ruling": {
+    "interval_id": "I07",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-1"
+    ],
+    "line_ids": [
+     "L13",
+     "L14"
+    ],
+    "reason": "Laytime was running during the tank inspection and no applicable exception is recorded.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "No stated exception covers the tank inspection before discharge."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-1",
+      "reason": "Laytime runs continuously unless the charter party stops it."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "No port rule addresses the inspection."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I08",
+   "from": 29784330,
+   "to": 29784620,
+   "startLine": "L14",
+   "endLine": "L15",
+   "kind": "ops_commenced",
+   "cause": "none",
+   "text": "2026-08-18T08:30-05:00 Hoses connected, discharge commenced.",
+   "ruling": {
+    "interval_id": "I08",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-1"
+    ],
+    "line_ids": [
+     "L14",
+     "L15"
+    ],
+    "reason": "Both applicable branches treat this discharge interval as counting.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "Discharge time is within the running laytime period and no exception applies."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-1",
+      "reason": "Laytime runs continuously unless the charter party stops it."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "No port rule addresses this interval."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I09",
+   "from": 29784620,
+   "to": 29784890,
+   "startLine": "L15",
+   "endLine": "L16",
+   "kind": "stoppage_start",
+   "cause": "rain",
+   "text": "2026-08-18T13:20-05:00 Rain squall, terminal stopped discharge on its own instruction.",
+   "ruling": {
+    "interval_id": "I09",
+    "modelEffect": "excepted",
+    "resolvedEffect": "excepted",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-4",
+     "L-4"
+    ],
+    "line_ids": [
+     "L15",
+     "L16"
+    ],
+    "reason": "The charter party's rain exception applies to the entire interval.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "excepted",
+      "clause_id": "CP-4",
+      "reason": "Rain stopped discharge, so the rain exception applies."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "excepted",
+      "clause_id": "L-4",
+      "reason": "The charter party expressly excepts delay caused by rain that stops discharge."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "No port rule addresses this interval."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "excepted",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I10",
+   "from": 29784890,
+   "to": 29785170,
+   "startLine": "L16",
+   "endLine": "L17",
+   "kind": "stoppage_end",
+   "cause": "rain",
+   "text": "2026-08-18T17:50-05:00 Rain stopped, discharge resumed.",
+   "ruling": {
+    "interval_id": "I10",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-1"
+    ],
+    "line_ids": [
+     "L16",
+     "L17"
+    ],
+    "reason": "Both applicable branches treat this discharge interval as counting.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "Discharge resumed and no exception applies."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-1",
+      "reason": "Laytime runs continuously unless the charter party stops it."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "No port rule addresses this interval."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I11",
+   "from": 29785170,
+   "to": 29785510,
+   "startLine": "L17",
+   "endLine": "L18",
+   "kind": "stoppage_start",
+   "cause": "shore_equipment",
+   "text": "2026-08-18T22:30-05:00 Shore hose failure at the manifold, discharge stopped.",
+   "ruling": {
+    "interval_id": "I11",
+    "modelEffect": "excepted",
+    "resolvedEffect": "excepted",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-6",
+     "L-4"
+    ],
+    "line_ids": [
+     "L17",
+     "L18"
+    ],
+    "reason": "The shore hose breakdown is expressly excepted by the charter party.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "excepted",
+      "clause_id": "CP-6",
+      "reason": "A shore hose failure stopped discharge, and the clause excepts that delay."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "excepted",
+      "clause_id": "L-4",
+      "reason": "The charter party expressly names shore hose breakdown as an exception."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "No port rule addresses this interval."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "excepted",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I12",
+   "from": 29785510,
+   "to": 29785920,
+   "startLine": "L18",
+   "endLine": "L19",
+   "kind": "stoppage_end",
+   "cause": "shore_equipment",
+   "text": "2026-08-19T04:10-05:00 Hose replaced by the terminal, discharge resumed.",
+   "ruling": {
+    "interval_id": "I12",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-1"
+    ],
+    "line_ids": [
+     "L18",
+     "L19"
+    ],
+    "reason": "Both applicable branches treat this interval as counting.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "Discharge resumed and no exception applies."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-1",
+      "reason": "Laytime runs continuously unless the charter party stops it."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "No port rule addresses this interval."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I13",
+   "from": 29785920,
+   "to": 29786060,
+   "startLine": "L19",
+   "endLine": "L20",
+   "kind": "shifting_start",
+   "cause": "terminal_request",
+   "text": "2026-08-19T11:00-05:00 Vessel began shifting from berth 4 to berth 7 at the terminal's request, hoses disconnected.",
+   "ruling": {
+    "interval_id": "I13",
+    "modelEffect": "half",
+    "resolvedEffect": "half",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-3",
+     "L-6"
+    ],
+    "line_ids": [
+     "L19",
+     "L20"
+    ],
+    "reason": "The charter party specifies half laytime for this requested berth shift.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "half",
+      "clause_id": "CP-3",
+      "reason": "The vessel shifted berths at the terminal's request, so half laytime applies."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "half",
+      "clause_id": "L-6",
+      "reason": "The shifting clause provides a different rate for shifting time."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "No port rule addresses this interval."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "half",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I14",
+   "from": 29786060,
+   "to": 29786820,
+   "startLine": "L20",
+   "endLine": "L23",
+   "kind": "shifting_end",
+   "cause": "terminal_request",
+   "text": "2026-08-19T13:20-05:00 All fast berth 7, hoses connected, discharge resumed.",
+   "ruling": {
+    "interval_id": "I14",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-1"
+    ],
+    "line_ids": [
+     "L20",
+     "L23"
+    ],
+    "reason": "This interval is counting discharge time until the strike begins.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "Discharge resumed and no exception applies during this interval."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-1",
+      "reason": "Laytime runs continuously unless the charter party stops it."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "No port rule addresses this interval."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I15",
+   "from": 29786820,
+   "to": 29787570,
+   "startLine": "L23",
+   "endLine": "L25",
+   "kind": "stoppage_start",
+   "cause": "strike",
+   "text": "2026-08-20T02:00-05:00 Terminal workers' strike began, shore stopped discharge.",
+   "ruling": {
+    "interval_id": "I15",
+    "modelEffect": "excepted",
+    "resolvedEffect": "excepted",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-5",
+     "L-4"
+    ],
+    "line_ids": [
+     "L23",
+     "L25"
+    ],
+    "reason": "The charter-party and definitions branches both except the terminal strike interval.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "excepted",
+      "clause_id": "CP-5",
+      "reason": "The interval is a terminal strike stoppage, which CP-5 excepts."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "excepted",
+      "clause_id": "L-4",
+      "reason": "The strike is a cause expressly named by the charter party's exception."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "The port rules say nothing about strike stoppages."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "excepted",
+   "appliesOnDemurrage": true,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I16",
+   "from": 29787570,
+   "to": 29788340,
+   "startLine": "L25",
+   "endLine": "L27",
+   "kind": "stoppage_end",
+   "cause": "strike",
+   "text": "2026-08-20T14:30-05:00 Strike ended, discharge resumed.",
+   "ruling": {
+    "interval_id": "I16",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-1"
+    ],
+    "line_ids": [
+     "L25",
+     "L27"
+    ],
+    "reason": "Both applicable branches treat the interval after the strike ended as counting.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "The strike has ended and no listed exception applies during the resumed discharge."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-1",
+      "reason": "Laytime runs continuously unless the charter party stops it."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "The port rules say nothing about this post-strike interval."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I17",
+   "from": 29788340,
+   "to": 29788690,
+   "startLine": "L27",
+   "endLine": "L28",
+   "kind": "ops_commenced",
+   "cause": "none",
+   "text": "2026-08-21T03:20-05:00 Tanks 1 and 2 stripping started.",
+   "ruling": {
+    "interval_id": "I17",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-1"
+    ],
+    "line_ids": [
+     "L27",
+     "L28"
+    ],
+    "reason": "Both applicable branches treat the stripping interval as counting.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "Stripping is underway and no listed exception applies."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-1",
+      "reason": "Laytime runs continuously unless the charter party stops it."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "The port rules say nothing about stripping."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I18",
+   "from": 29788690,
+   "to": 29788745,
+   "startLine": "L28",
+   "endLine": "L29",
+   "kind": "stoppage_start",
+   "cause": "terminal_request",
+   "text": "2026-08-21T09:10-05:00 Terminal asked for a pause to pig the shore line, discharge paused.",
+   "ruling": {
+    "interval_id": "I18",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-4"
+    ],
+    "line_ids": [
+     "L28",
+     "L29"
+    ],
+    "reason": "The pigging pause is not an excepted cause under either applicable branch.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "The terminal-requested pause to pig the shore line is not a listed exception."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-4",
+      "reason": "The shore-side delay is not covered by an exception naming this cause."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "The port rules say nothing about shore-line pigging."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I19",
+   "from": 29788745,
+   "to": 29789940,
+   "startLine": "L29",
+   "endLine": "L31",
+   "kind": "stoppage_end",
+   "cause": "terminal_request",
+   "text": "2026-08-21T10:05-05:00 Shore line pigged, discharge resumed.",
+   "ruling": {
+    "interval_id": "I19",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-1"
+    ],
+    "line_ids": [
+     "L29",
+     "L31"
+    ],
+    "reason": "Both applicable branches treat the resumed-discharge interval as counting.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "Discharge has resumed and no listed exception applies."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-1",
+      "reason": "Laytime runs continuously unless the charter party stops it."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "The port rules say nothing about resumed discharge."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I20",
+   "from": 29789940,
+   "to": 29790140,
+   "startLine": "L31",
+   "endLine": "L32",
+   "kind": "inspection",
+   "cause": "none",
+   "text": "2026-08-22T06:00-05:00 Surveyor gauged the final tank.",
+   "ruling": {
+    "interval_id": "I20",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-1"
+    ],
+    "line_ids": [
+     "L31",
+     "L32"
+    ],
+    "reason": "The interval precedes recorded completion of discharge and no exception is recorded.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "Discharge has not yet been recorded as complete and no exception applies."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-1",
+      "reason": "Laytime runs continuously unless the charter party stops it."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "The port rules say nothing about tank gauging."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I21",
+   "from": 29790140,
+   "to": 29790270,
+   "startLine": "L32",
+   "endLine": "L33",
+   "kind": "waiting",
+   "cause": "none",
+   "text": "2026-08-22T09:20-05:00 Vessel waiting for the surveyor's report and cargo documents.",
+   "ruling": {
+    "interval_id": "I21",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-1"
+    ],
+    "line_ids": [
+     "L32",
+     "L33"
+    ],
+    "reason": "The interval ends before recorded discharge completion and no exception is recorded.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "Discharge is not recorded as complete until after this waiting interval."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-1",
+      "reason": "Laytime runs continuously unless the charter party stops it."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "silent",
+      "clause_id": "none",
+      "reason": "The port rules say nothing about waiting for reports or cargo documents."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  },
+  {
+   "id": "I22",
+   "from": 29790270,
+   "to": 29790430,
+   "startLine": "L33",
+   "endLine": "L35",
+   "kind": "formalities",
+   "cause": "none",
+   "text": "2026-08-22T11:30-05:00 Cargo documents on board.",
+   "ruling": {
+    "interval_id": "I22",
+    "modelEffect": "counts",
+    "resolvedEffect": "counts",
+    "decidedBy": "charter_party",
+    "conflict": false,
+    "clause_ids": [
+     "CP-1",
+     "L-1",
+     "PR-3"
+    ],
+    "line_ids": [
+     "L33",
+     "L35"
+    ],
+    "reason": "All three branches find that the interval counts.",
+    "branches": [
+     {
+      "rulebook": "charter_party",
+      "finding": "counts",
+      "clause_id": "CP-1",
+      "reason": "Saturday afternoon is excepted unless used, and the log records discharge completing during this interval."
+     },
+     {
+      "rulebook": "laytime_definitions",
+      "finding": "counts",
+      "clause_id": "L-1",
+      "reason": "Laytime runs unless the charter party stops it, and the interval is used for discharge completion."
+     },
+     {
+      "rulebook": "port_rules",
+      "finding": "counts",
+      "clause_id": "PR-3",
+      "reason": "Saturday afternoon is not a port holiday under the port rules."
+     }
+    ],
+    "problems": [],
+    "verdict": "OBSERVED"
+   },
+   "finalEffect": "counts",
+   "appliesOnDemurrage": false,
+   "by": "serv",
+   "requestId": null,
+   "model": ""
+  }
+ ],
+ "quarantined": [],
+ "instructionsFound": [],
+ "steps": [
+  {
+   "role": "Port Clerk",
+   "model": "gpt-6-luna",
+   "requestId": "5bbdbd1d-4ebb-4ae8-8e39-3af539d8fcc6",
+   "latencyMs": 22570,
+   "costUsd": 0.00179725,
+   "tokens": {
+    "prompt": 1860,
+    "completion": 2393,
+    "cached": 1857,
+    "reasoning": 654
+   }
+  },
+  {
+   "role": "Clause Reader (batch 4)",
+   "model": "gpt-6-luna-serv-kronos-multipath",
+   "requestId": "e31e3694-fa00-43ec-bf5b-9b20f1672eb4",
+   "latencyMs": 128850,
+   "costUsd": 0.0008941400000000001,
+   "tokens": {
+    "prompt": 2973,
+    "completion": 781,
+    "cached": 0,
+    "reasoning": 586
+   }
+  },
+  {
+   "role": "Clause Reader (batch 2)",
+   "model": "gpt-6-luna-serv-kronos-multipath",
+   "requestId": "3c7365f2-9fad-4116-83b5-0a912e89bade",
+   "latencyMs": 135911,
+   "costUsd": 0.0012836199999999999,
+   "tokens": {
+    "prompt": 3374,
+    "completion": 1300,
+    "cached": 1255,
+    "reasoning": 253
+   }
+  },
+  {
+   "role": "Clause Reader (batch 1)",
+   "model": "gpt-6-luna-serv-kronos-multipath",
+   "requestId": "10ce55eb-73b8-454c-86f2-c0b84c6fa605",
+   "latencyMs": 141022,
+   "costUsd": 0.0014978600000000002,
+   "tokens": {
+    "prompt": 3367,
+    "completion": 1631,
+    "cached": 0,
+    "reasoning": 507
+   }
+  },
+  {
+   "role": "Clause Reader (batch 3)",
+   "model": "gpt-6-luna-serv-kronos-multipath",
+   "requestId": "fae14bfe-e368-47f1-b343-4dab213b278a",
+   "latencyMs": 163089,
+   "costUsd": 0.0014963,
+   "tokens": {
+    "prompt": 3365,
+    "completion": 1629,
+    "cached": 1255,
+    "reasoning": 531
+   }
+  },
+  {
+   "role": "Senior Reader",
+   "model": "gpt-6.1-sol-serv-multipath",
+   "requestId": "c62abdf8-f303-43e9-ab6c-e1feac86e736",
+   "latencyMs": 38461,
+   "costUsd": 0.0106728,
+   "tokens": {
+    "prompt": 2942,
+    "completion": 301,
+    "cached": 0,
+    "reasoning": 117
+   }
+  }
+ ],
+ "statement": {
+  "lines": [
+   {
+    "id": "I01",
+    "from": 29783370,
+    "to": 29783400,
+    "effect": "counts",
+    "elapsedMinutes": 30,
+    "countedMinutes": 30,
+    "demurrageMinutes": 0,
+    "usedAfterMinutes": 30
+   },
+   {
+    "id": "I02",
+    "from": 29783400,
+    "to": 29783530,
+    "effect": "excepted",
+    "elapsedMinutes": 130,
+    "countedMinutes": 0,
+    "demurrageMinutes": 0,
+    "usedAfterMinutes": 30
+   },
+   {
+    "id": "I03",
+    "from": 29783530,
+    "to": 29783560,
+    "effect": "counts",
+    "elapsedMinutes": 30,
+    "countedMinutes": 30,
+    "demurrageMinutes": 0,
+    "usedAfterMinutes": 60
+   },
+   {
+    "id": "I04",
+    "from": 29783560,
+    "to": 29783710,
+    "effect": "counts",
+    "elapsedMinutes": 150,
+    "countedMinutes": 150,
+    "demurrageMinutes": 0,
+    "usedAfterMinutes": 210
+   },
+   {
+    "id": "I05",
+    "from": 29783710,
+    "to": 29783850,
+    "effect": "counts",
+    "elapsedMinutes": 140,
+    "countedMinutes": 140,
+    "demurrageMinutes": 0,
+    "usedAfterMinutes": 350
+   },
+   {
+    "id": "I06",
+    "from": 29783850,
+    "to": 29784170,
+    "effect": "counts",
+    "elapsedMinutes": 320,
+    "countedMinutes": 320,
+    "demurrageMinutes": 0,
+    "usedAfterMinutes": 670
+   },
+   {
+    "id": "I07",
+    "from": 29784170,
+    "to": 29784330,
+    "effect": "counts",
+    "elapsedMinutes": 160,
+    "countedMinutes": 160,
+    "demurrageMinutes": 0,
+    "usedAfterMinutes": 830
+   },
+   {
+    "id": "I08",
+    "from": 29784330,
+    "to": 29784620,
+    "effect": "counts",
+    "elapsedMinutes": 290,
+    "countedMinutes": 290,
+    "demurrageMinutes": 0,
+    "usedAfterMinutes": 1120
+   },
+   {
+    "id": "I09",
+    "from": 29784620,
+    "to": 29784890,
+    "effect": "excepted",
+    "elapsedMinutes": 270,
+    "countedMinutes": 0,
+    "demurrageMinutes": 0,
+    "usedAfterMinutes": 1120
+   },
+   {
+    "id": "I10",
+    "from": 29784890,
+    "to": 29785170,
+    "effect": "counts",
+    "elapsedMinutes": 280,
+    "countedMinutes": 280,
+    "demurrageMinutes": 0,
+    "usedAfterMinutes": 1400
+   },
+   {
+    "id": "I11",
+    "from": 29785170,
+    "to": 29785510,
+    "effect": "excepted",
+    "elapsedMinutes": 340,
+    "countedMinutes": 0,
+    "demurrageMinutes": 0,
+    "usedAfterMinutes": 1400
+   },
+   {
+    "id": "I12",
+    "from": 29785510,
+    "to": 29785920,
+    "effect": "counts",
+    "elapsedMinutes": 410,
+    "countedMinutes": 410,
+    "demurrageMinutes": 0,
+    "usedAfterMinutes": 1810
+   },
+   {
+    "id": "I13",
+    "from": 29785920,
+    "to": 29786060,
+    "effect": "half",
+    "elapsedMinutes": 140,
+    "countedMinutes": 70,
+    "demurrageMinutes": 0,
+    "usedAfterMinutes": 1880
+   },
+   {
+    "id": "I14",
+    "from": 29786060,
+    "to": 29786820,
+    "effect": "counts",
+    "elapsedMinutes": 760,
+    "countedMinutes": 280,
+    "demurrageMinutes": 480,
+    "usedAfterMinutes": 2160
+   },
+   {
+    "id": "I15",
+    "from": 29786820,
+    "to": 29787570,
+    "effect": "excepted",
+    "elapsedMinutes": 750,
+    "countedMinutes": 0,
+    "demurrageMinutes": 0,
+    "usedAfterMinutes": 2160
+   },
+   {
+    "id": "I16",
+    "from": 29787570,
+    "to": 29788340,
+    "effect": "counts",
+    "elapsedMinutes": 770,
+    "countedMinutes": 0,
+    "demurrageMinutes": 770,
+    "usedAfterMinutes": 2160
+   },
+   {
+    "id": "I17",
+    "from": 29788340,
+    "to": 29788690,
+    "effect": "counts",
+    "elapsedMinutes": 350,
+    "countedMinutes": 0,
+    "demurrageMinutes": 350,
+    "usedAfterMinutes": 2160
+   },
+   {
+    "id": "I18",
+    "from": 29788690,
+    "to": 29788745,
+    "effect": "counts",
+    "elapsedMinutes": 55,
+    "countedMinutes": 0,
+    "demurrageMinutes": 55,
+    "usedAfterMinutes": 2160
+   },
+   {
+    "id": "I19",
+    "from": 29788745,
+    "to": 29789940,
+    "effect": "counts",
+    "elapsedMinutes": 1195,
+    "countedMinutes": 0,
+    "demurrageMinutes": 1195,
+    "usedAfterMinutes": 2160
+   },
+   {
+    "id": "I20",
+    "from": 29789940,
+    "to": 29790140,
+    "effect": "counts",
+    "elapsedMinutes": 200,
+    "countedMinutes": 0,
+    "demurrageMinutes": 200,
+    "usedAfterMinutes": 2160
+   },
+   {
+    "id": "I21",
+    "from": 29790140,
+    "to": 29790270,
+    "effect": "counts",
+    "elapsedMinutes": 130,
+    "countedMinutes": 0,
+    "demurrageMinutes": 130,
+    "usedAfterMinutes": 2160
+   },
+   {
+    "id": "I22",
+    "from": 29790270,
+    "to": 29790430,
+    "effect": "counts",
+    "elapsedMinutes": 160,
+    "countedMinutes": 0,
+    "demurrageMinutes": 160,
+    "usedAfterMinutes": 2160
+   }
+  ],
+  "gaps": [],
+  "allowedMinutes": 2160,
+  "laytimeUsedMinutes": 2160,
+  "expiredAt": 29786340,
+  "demurrageMinutes": 3340,
+  "demurrageCents": "4175000",
+  "despatchMinutes": 0,
+  "despatchCents": "0"
+ },
+ "floorCents": "4175000",
+ "ceilingCents": "4337500",
+ "reviewCount": 1,
+ "totalCostUsd": 0.01764197
+}

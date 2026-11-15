@@ -8,11 +8,15 @@
     "build": "next build",
     "start": "next start",
     "test": "vitest run",
+    "test:sol": "hardhat test solidity",
+    "gen": "tsx scripts/gen-rulebooks.ts",
     "check:copy": "tsx scripts/check-copy.ts"
   },
   "dependencies": {
+    "@coinbase/wallet-sdk": "^4.4.0",
     "@openzeppelin/merkle-tree": "^1.0.8",
     "@tanstack/react-query": "^5.107.1",
+    "@walletconnect/ethereum-provider": "^2.26.0",
     "geist": "^1.9.2",
     "jszip": "^3.10.2",
     "lenis": "^1.3.27",
