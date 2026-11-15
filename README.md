@@ -237,7 +237,7 @@ A recording of the guided tour, the base of the demo video, is in [`docs/video/t
 | Relayer that pays gas | **Live**, capped, testnet key only, and every page also offers "send it from my wallet" |
 | x402 paid ruling route | **Live**, one payment settled (linked above). It defaults to a plain model, because a Multipath cache miss is slow and billed beyond the visible tokens, which would cost more than the price |
 | Reppo evaluation | **Live as advice**: the disputed ruling scored 98 and the statement 95, both routed `ship`, de-identified before sending. The feedback loop that changes the rulebook is not built, so the Reppo track is not entered |
-| Time bar watch | **Live** as a scheduled route (`/api/cron/watch`, daily). Its run record is read from the deployment's runtime logs |
+| Time bar watch | **Live**: a daily scheduled route (`/api/cron/watch`). One run that nobody started is recorded (15 Nov 2026, 10:56 UTC, fired by `vercel-cron/1.0`) in [`proof/runs/watch-2026-11-15.json`](proof/runs/watch-2026-11-15.json) and shown in `/api/status` |
 | Guided tour, dispute room, agents page | **Live** |
 | Try your own log | **Live** behind caps: 3 rulings an hour per visitor, a daily dollar budget, a kill switch |
 

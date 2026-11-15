@@ -49,6 +49,10 @@ Plain `gpt-6-luna` (three runs per case, majority) 3 of 8; Multipath 2 of 8; Kro
 
 `scripts/reppo-compare.ts` and `scripts/reppo-compare-finish.ts`, results in `proof/runs/reppo-compare.json`. For each of the 8 trap kinds the lowest-numbered new seed was taken, and the ruling that version 1 gave and the one version 2 gave for that interval were both evaluated by Reppo, de-identified and unlabelled: 16 evaluations, 7,040 credits. Mean score 97.6 for version 1 and 100 for version 2; version 2 higher on 1 interval, 7 ties, version 1 higher on none. The scores sit at the ceiling, so Reppo cannot separate the versions here. The one interval that moved was a clean wait: version 1 scored 81 and `review`, version 2 scored 100 and `ship`.
 
+## Unattended run (done)
+
+The daily time bar watch fired on its own at 10:56 UTC on 15 November 2026, started by `vercel-cron/1.0`. It read two claims: the settled demo claim with 5 days left and the late demo claim, open and 58 days past its bar. The record is [`proof/runs/watch-2026-11-15.json`](proof/runs/watch-2026-11-15.json), copied from the deployment's runtime log, and `/api/status` reports the latest recorded run.
+
 ## Curated published examples (done)
 
 `proof/curated/handybulk-examples.json`: eleven legs from six published worked examples, with the source URL. The clock reproduces every published hours-used figure and every published demurrage or despatch amount to the cent (`tests/unit/curated.test.ts`, 12 tests). None has excepted time, so this checks the arithmetic, not the ruling. Example 3's discharge leg and the net settlements were left out because the page text for them was cut or is a sum of legs.
@@ -65,4 +69,3 @@ One x402 payment settled for a paid ruling (`proof/runs/x402-paid-call.json`). T
 
 - Cost and latency percentiles over many full-voyage runs (one full run is recorded).
 - A court set larger than eight.
-- The first scheduled time bar watch record (scheduled, read from runtime logs when it has run).

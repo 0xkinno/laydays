@@ -1,0 +1,26 @@
+{
+  "source": "Vercel runtime log of the deployment, GET /api/cron/watch, dpl_61Zsag1LAsqFN4M4w7QrcmJquupa, region iad1",
+  "scheduled": "40 10 * * * (daily, UTC)",
+  "note": "Fired by the Vercel scheduler at 10:56 UTC, about 16 minutes after its slot. Nobody started it: the user agent is vercel-cron/1.0.",
+  "record": {
+    "run": "time-bar-watch",
+    "at": "2026-11-15T10:56:13.484Z",
+    "startedBy": "vercel-cron/1.0",
+    "claims": [
+      {
+        "claim": "orla-jansen",
+        "stage": "Settled",
+        "daysLeft": 5,
+        "flagged": false,
+        "barred": false
+      },
+      {
+        "claim": "late-demo",
+        "stage": "Open",
+        "daysLeft": -58,
+        "flagged": false,
+        "barred": true
+      }
+    ]
+  }
+}

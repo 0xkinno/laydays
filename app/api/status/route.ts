@@ -34,5 +34,7 @@ export async function GET() {
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     return { reachable: true };
   });
-  return NextResponse.json({ at, live: process.env.LAYDAYS_LIVE !== "0", serv, chain, contract, relayer, reppo }, { headers: { "cache-control": "no-store" } });
+  // The last scheduled time bar watch run, as recorded from the deployment log. It is a stored record, not a probe made now.
+  const watch = await probe(async () => { const { readdirSync, readFileSync } = await import("node:fs"); const f = readdirSync("proof/runs").filter((x) => /^watch-\d{4}-\d{2}-\d{2}\.json$/.test(x)).sort().pop(); if (!f) throw new Error("no watch run recorded yet"); const j = JSON.parse(readFileSync(`proof/runs/${f}`, "utf8")) as { record: { at: string; startedBy: string; claims: unknown[] } }; return { file: f, at: j.record.at, startedBy: j.record.startedBy, claims: j.record.claims.length, kind: "recorded run" }; });
+  return NextResponse.json({ at, live: process.env.LAYDAYS_LIVE !== "0", serv, chain, contract, relayer, reppo, lastWatchRun: watch }, { headers: { "cache-control": "no-store" } });
 }
